@@ -62,13 +62,13 @@ for (let i = 0; i < links.length; i++) {
     let label = links[i].label;
     //let href = links[i].url;//not working
     let li = document.createElement('li');
-    //for (let j = 0; j < 1; j++){
+
     let a = document.createElement('a');
     a.setAttribute('href', label);//not working
     li.appendChild(a);//not working
     li.appendChild(document.createTextNode(label));
     ol.appendChild(li);
-//}
+
 }
 let names2 = ["John","Mike","George"]
 for (let i = 0; i < names2.length; i++) {
