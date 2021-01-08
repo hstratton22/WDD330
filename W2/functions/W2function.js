@@ -56,3 +56,128 @@ console.log(['red','green','blue'].map( color => `<p> ${color.toUpperCase()}</p>
 console.log([1,2,3,4,5].reduce( (acc,val) => acc + val ));
 //The reduce() method also takes a second parameter after the callback, which is the initial value of the accumulator, acc 
 console.log([1,2,3,4,5].reduce( (acc,val) => acc + val,10)); // <---- second parameter of 10 here
+//find avg word length in sentence
+const sentence = 'The quick brown fox jumped over the lazy dog';
+//convert to array with split()
+console.log(words=sentence.split(" "));
+//reduce to calc letters by starting count at 0 and adding length of each word
+const total = words.reduce( (acc,word) => acc + word.length,0 );
+const average = total/words.length;
+console.log(average);
+//filter() returns a new array that only contains items from the original array 
+//that return true when passed to the callback.
+const nums = [ 2, 7, 6, 5, 11, 23, 12 ]
+console.log(nums.filter(x => x%2 === 0 ));//this returns true if the number is even
+//look up info about reduceRight() , every() , find() and some()
+
+//calculate the sum of square numbers using the map() method to square each number in 
+//the array and then chain the reduce() method on the end to add the results together
+console.log([1,2,3].map( x => x*x ).reduce((acc,x) => acc + x ));
+//apply salestac
+const sales = [ 100, 230, 55];
+totalAfterTaxSales = sales.map( (amount) => amount * 1.15 ).reduce( (acc,val) => acc + val );
+console.log(totalAfterTaxSales);
+//inproved mean()
+function meanImproved(array) {
+    const total = array.reduce((a, b) => a + b);
+    return total/array.length;
+}
+//improved mean() with callback
+function meanWithCallback(array,callback) {
+    if (callback) {
+    array.map( callback );
+    } 
+    const total = array.reduce((a, b) => a + b);
+    return total/array.length;
+}
+//.....eloquent javascript
+
+const hummus = function(factor) {
+    const ingredient = function(amount, unit, name) {
+      let ingredientAmount = amount * factor;
+      if (ingredientAmount > 1) {
+        unit += "s";
+      }
+      console.log(`${ingredientAmount} ${unit} ${name}`);
+    };
+    ingredient(1, "can", "chickpeas");
+    ingredient(0.25, "cup", "tahini");
+    ingredient(0.25, "cup", "lemon juice");
+    ingredient(1, "clove", "garlic");
+    ingredient(2, "tablespoon", "olive oil");
+    ingredient(0.5, "teaspoon", "cumin");
+  };
+
+//next two are the same
+const square1 = (x) => { return x * x; };
+const square2 = x => x * x;
+//recursive
+function power(base, exponent) {
+    if (exponent == 0) {
+      return 1;
+    } else {
+      return base * power(base, exponent - 1);
+    }
+  }
+console.log(power(2,3));
+ //recursive
+ function findSolution(target) {
+    function find(current, history) {
+      if (current == target) {
+        return history;
+      } else if (current > target) {
+        return null;
+      } else {
+        return find(current + 5, `(${history} + 5)`) ||
+               find(current * 3, `(${history} * 3)`);
+      }
+    }
+    return find(1, "1");
+  }
+console.log(findSolution(24));
+
+function printFarmInventory(cows, chickens) {
+    let cowString = String(cows);
+    while (cowString.length < 3) {
+      cowString = "0" + cowString;
+    }
+    console.log(`${cowString} Cows`);
+    let chickenString = String(chickens);
+    while (chickenString.length < 3) {
+      chickenString = "0" + chickenString;
+    }
+    console.log(`${chickenString} Chickens`);
+  }
+  printFarmInventory(7, 11);
+  //revised
+  function printZeroPaddedWithLabel(number, label) {
+    let numberString = String(number);
+    while (numberString.length < 3) {
+      numberString = "0" + numberString;
+    }
+    console.log(`${numberString} ${label}`);
+  }
+  
+  function printFarmInventory(cows, chickens, pigs) {
+    printZeroPaddedWithLabel(cows, "Cows");
+    printZeroPaddedWithLabel(chickens, "Chickens");
+    printZeroPaddedWithLabel(pigs, "Pigs");
+  }
+  
+  printFarmInventory(7, 11, 3);
+  //clearly named and organized
+  function zeroPad(number, width) {
+    let string = String(number);
+    while (string.length < width) {
+      string = "0" + string;
+    }
+    return string;
+  }
+  
+  function printFarmInventory(cows, chickens, pigs) {
+    console.log(`${zeroPad(cows, 3)} Cows`);
+    console.log(`${zeroPad(chickens, 3)} Chickens`);
+    console.log(`${zeroPad(pigs, 3)} Pigs`);
+  }
+  
+
