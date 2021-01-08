@@ -179,5 +179,24 @@ function printFarmInventory(cows, chickens) {
     console.log(`${zeroPad(chickens, 3)} Chickens`);
     console.log(`${zeroPad(pigs, 3)} Pigs`);
   }
-  
+  printFarmInventory(7, 16, 3);
 
+  //min
+  function min(a,b) {
+    if (a < b)
+      return a;
+    else if (b < a)
+      return b;
+  }
+console.log(min(0, 10));
+console.log(min(0, -10));
+//recursive exercise
+function isEven(n) {
+    if (n == 0) return true;
+    else if (n == 1) return false;
+    else if (n < 0) return isEven(-n);
+    else return isEven(n - 2);
+  }
+console.log(isEven(50));
+console.log(isEven(75));
+console.log(isEven(-1));
