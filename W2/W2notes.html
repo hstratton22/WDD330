@@ -29,7 +29,28 @@
                 being garbage-collected, which can cause a memory leak. 
             </li>
             <li>To use the rest operator, simply place three dots in front of the last parameter 
-                in a function declaration. This will then collect all the arguments entered into an array.</li>
+                in a function declaration. This will then collect all the arguments entered into an array.
+            </li>
+            <li>Arrow Functions<br>Arrow functions can be identified by the 'arrow' symbol, => that gives 
+                them their name. The parameters come before the arrow and the main body of the function comes 
+                after. Arrow functions are always anonymous, so if you want to refer to them, you must assign 
+                them to a variable. <br>
+                advantages:<br>
+                •	They are much less verbose than normal function declarations.<br>
+                •	Single parameters don't need putting into parentheses.<br>
+                •	The body of the function doesn't need placing inside a block if it's only one line.<br>
+                •	The return keyword isn't required if the return statement is the only statement in the body of the function.<br>
+                •	They don't bind their own value of this to the function <br>
+            </li>
+            <li>Hoisting<br>
+                Variable declarations that use the var keyword are automatically 
+                moved to the top of the current scope. Variable assignment is not hoisted, 
+                however. This means that a variable assigned at the end of a function will 
+                have a value of undefined until the assignment is made.
+            </li>
+            <li>callback<br>
+                A function that is passed as an argument to another is known as a callback.
+            </li>
         </ul>
     </section>
 
