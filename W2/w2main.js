@@ -32,5 +32,25 @@ for (let y = 0; y < size; y++) {
   board += "\n";
 }
 console.log(board);
+function sumAll(num) {
+  let result = 0;
+  for ( let i = 0; i <= num; i++){
+      result += i;
+
+  }return result;
+}
+console.log(sumAll(4));
+function sumAllIncNeg(num) {
+  let result = 0;
+  let multiplier = 1;
+
+  if (num < 0) {
+     multiplier = -1; 
+     num = Math.abs(num)};
+  for ( let i = 0; i <= num; i++){
+      result += i;
+     }
+     return result * multiplier; }
+     console.log(sumAllIncNeg(-5));
 
 

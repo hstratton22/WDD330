@@ -111,6 +111,8 @@ const hummus = function(factor) {
 //next two are the same
 const square1 = (x) => { return x * x; };
 const square2 = x => x * x;
+console.log(square1(3));
+console.log(square2(4));
 //recursive
 function power(base, exponent) {
     if (exponent == 0) {

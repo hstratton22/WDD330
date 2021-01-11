@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+  <title>WDD330 W2</title>
+<link rel="stylesheet" href="../../index.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+ <script>
+     function readThis() {
+         let textInput = document.getElementById("textInput").value;
+         document.getElementById("result_display").innerHTML = textInput;
+     }
+     function sumAll(num) {
+         let result = 0;
+         let multiplier = 1;
+
+         if (num < 0) {
+            multiplier = -1; 
+            num = Math.abs(num)};
+         for ( let i = 0; i <= num; i++){
+             result += i;
+            }
+            return result * multiplier; }
+        
+    
+     function getSum(){
+        let n = document.getElementById("textInput").value;
+        console.log(n);
+        let notNumber="is not a number";
+        
+        
+        if (Number.isFinite(Number(n))){
+            let total =sumAll(Number(n));
+             document.getElementById("result_display").innerHTML = total;
+
+        }
+        else document.getElementById("result_display").innerHTML = n +" "+ notNumber;
+    }
+    function add(a,b) {
+        return a + b;//Number(a) + Number(b);
+    }
+    function addInput() {
+        let f = document.getElementById("firstInput").value;
+        let n = document.getElementById("textInput").value;
+        //console.log(f, n);
+        if (Number.isFinite(Number(f)) && Number.isFinite(Number(n))) {
+
+            let sum = add(Number(f),Number(n));
+            document.getElementById("result_display").innerHTML = f + " + " + n + " = " + sum;
+        }
+        else {
+            document.getElementById("result_display").innerHTML = "not a number";
+        }
+
+        
+    }
+
+
+    const sub = function subtract(fNum, nNum) {
+        return fNum - nNum;
+    }
+
+    function subInput(fI, nI) {
+        let fIn = document.getElementById("firstInput").value;
+        let nIn = document.getElementById("textInput").value;
+        if (Number.isFinite(Number(fIn)) && Number.isFinite(Number(nIn))) {
+            let diff = sub(Number(fIn), Number(nIn));
+            document.getElementById("result_display").innerHTML = fIn + " - " + nIn + " = " + diff;
+        }
+        else {
+            document.getElementById("result_display").innerHTML = "not a number";
+        }
+        }
+
+    
+    function multInput(x,y) {
+        x = document.getElementById("firstInput").value;
+        y = document.getElementById("textInput").value;
+        if (Number.isFinite(Number(x)) && Number.isFinite(Number(y))) {
+            let product = mult(x,y);
+            document.getElementById("result_display").innerHTML = x + " * " + y + " = " + product;
+        }
+        else {
+            document.getElementById("result_display").innerHTML = "not a number";
+        }
+    }
+    const mult = (x, y) => x*y;
+
+
+    
+             
+
+</script>
+</head>
+
+<body>
+  <section class=headline>
+  <h1>WDD330 Portfolio</h1>
+  <h2>Heather Stratton</h2>
+  </section>
+  <section>
+      <input id="firstInput">+
+      <input id="textInput">
+      <button onclick="subInput()">Button</button>
+      <div id="result_display"></div>
+  </section>
+  
+</body>
+</html>
