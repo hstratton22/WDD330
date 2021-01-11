@@ -40,13 +40,13 @@
         return a + b;//Number(a) + Number(b);
     }
     function addInput() {
-        let f = document.getElementById("firstInput").value;
-        let n = document.getElementById("textInput").value;
+        let x = document.getElementById("firstInput").value;
+        let y = document.getElementById("textInput").value;
         //console.log(f, n);
-        if (Number.isFinite(Number(f)) && Number.isFinite(Number(n))) {
+        if (Number.isFinite(Number(x)) && Number.isFinite(Number(y))) {
 
-            let sum = add(Number(f),Number(n));
-            document.getElementById("result_display").innerHTML = f + " + " + n + " = " + sum;
+            let sum = add(Number(x),Number(y));
+            document.getElementById("result_display").innerHTML = x + " + " + y + " = " + sum;
         }
         else {
             document.getElementById("result_display").innerHTML = "not a number";
@@ -56,16 +56,16 @@
     }
 
 
-    const sub = function subtract(fNum, nNum) {
-        return fNum - nNum;
+    const sub = function subtract(x, y) {
+        return x - y;
     }
 
-    function subInput(fI, nI) {
-        let fIn = document.getElementById("firstInput").value;
-        let nIn = document.getElementById("textInput").value;
-        if (Number.isFinite(Number(fIn)) && Number.isFinite(Number(nIn))) {
-            let diff = sub(Number(fIn), Number(nIn));
-            document.getElementById("result_display").innerHTML = fIn + " - " + nIn + " = " + diff;
+    function subInput(){
+        let x = document.getElementById("firstInput").value;
+        let y = document.getElementById("textInput").value;
+        if (Number.isFinite(Number(x)) && Number.isFinite(Number(y))) {
+            let diff = sub(Number(x), Number(y));
+            document.getElementById("result_display").innerHTML = x + " - " + y + " = " + diff;
         }
         else {
             document.getElementById("result_display").innerHTML = "not a number";
@@ -73,9 +73,9 @@
         }
 
     
-    function multInput(x,y) {
-        x = document.getElementById("firstInput").value;
-        y = document.getElementById("textInput").value;
+    function multInput() {
+        let x = document.getElementById("firstInput").value;
+        let y = document.getElementById("textInput").value;
         if (Number.isFinite(Number(x)) && Number.isFinite(Number(y))) {
             let product = mult(x,y);
             document.getElementById("result_display").innerHTML = x + " * " + y + " = " + product;
@@ -101,7 +101,7 @@
   <section>
       <input id="firstInput">+
       <input id="textInput">
-      <button onclick="subInput()">Button</button>
+      <button onclick="addInput()">Button</button>
       <div id="result_display"></div>
   </section>
   
