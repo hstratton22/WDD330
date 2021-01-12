@@ -106,9 +106,14 @@
         let x = document.getElementById("firstInput").value;
         let y = document.getElementById("textInput").value;
         let result = "not a valid number";
+        //OR
+        let newX = parseInt(x);
+        let newY = parseInt(y);
         displayResults("");
         console.log(x, y);
-        if ((isNaN(x)) || (isNaN(y))){
+        console.log(newX, newY);
+        result = mult(newX, newY);
+        /*if ((isNaN(x)) || (isNaN(y))){
             //result = "not a number";
         }
         else if (isValidNumber(Number(x)) && isValidNumber(Number(y))){
@@ -119,7 +124,7 @@
         else{
             //result = "not a valid number";
             //displayResults(result);
-        }
+        }*/
         displayResults(result);
 
 
