@@ -1,6 +1,7 @@
 <!doctype html>
-<html>
+<html lang="en-us">
 <head>
+    <meta charset="utf-8">
   <title>WDD330 W2</title>
 <link rel="stylesheet" href="../../index.css">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,7 +38,7 @@
         else document.getElementById("result_display").innerHTML = n +" "+ notNumber;
     }
     function add(a,b) {
-        return a + b;//Number(a) + Number(b);
+        return a + b;
     }
     function addInput() {
         let x = document.getElementById("firstInput").value;
@@ -51,11 +52,8 @@
         else {
             document.getElementById("result_display").innerHTML = "not a number";
         }
-
-        
+  
     }
-
-
     const sub = function subtract(x, y) {
         return x - y;
     }
@@ -71,7 +69,6 @@
             document.getElementById("result_display").innerHTML = "not a number";
         }
         }
-
     
     function multInput() {
         let x = document.getElementById("firstInput").value;
@@ -85,10 +82,49 @@
         }
     }
     const mult = (x, y) => x*y;
+    //if isNan(x) { }
+    //None of these work right
+    function isValidNumber(num){
+        if (Number.isFinite(num)) {
+            return true;
+        }
+    }
+    function getX(){
+        let x = document.getElementById("firstInput").value;
+        return x;
+    }
+    function getY() {
+        let y = document.getElementById("textInput").value;
+        return y;
+    }
+    function displayResults(result){
+        document.getElementById("result_display").innerHTML = result;
+    }
+    function multiplyNumbers(){
+        //let x =getX;
+        //let y =getY;
+        let x = document.getElementById("firstInput").value;
+        let y = document.getElementById("textInput").value;
+        let result = "not a valid number";
+        displayResults("");
+        console.log(x, y);
+        if ((isNaN(x)) || (isNaN(y))){
+            //result = "not a number";
+        }
+        else if (isValidNumber(Number(x)) && isValidNumber(Number(y))){
+            result = mult(x,y);
+            //displayResults(result);
+        }
+        
+        else{
+            //result = "not a valid number";
+            //displayResults(result);
+        }
+        displayResults(result);
 
 
-    
-             
+    }
+
 
 </script>
 </head>
@@ -99,9 +135,10 @@
   <h2>Heather Stratton</h2>
   </section>
   <section>
-      <input id="firstInput">+
-      <input id="textInput">
-      <button onclick="addInput()">Button</button>
+      <input id="firstInput" size=10>
+      <input id="operand" size=5>
+      <input id="textInput" size=10>
+      <button onclick="multiplyNumbers()">Button</button>
       <div id="result_display"></div>
   </section>
   
