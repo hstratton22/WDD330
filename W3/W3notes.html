@@ -24,8 +24,52 @@
                     Remember that computer programs start counting at zero, so January is 0, February is 1, 
                     and so on up to December, which is 11.<br>
                     The Epoch is 1st January 1970.<br>
-                    Themoment.js librarygives you a large number of methods that make it easier to work with dates, 
+                    Themoment.js library gives a large number of methods that make it easier to work with dates, 
                     as well as support for multiple locales.</li>
+                    <li>RegExp<br>
+                        The global property makes the pattern return all matches. By default, the pattern only looks 
+                        for the first occurrence of a match. (g)<br>
+                        The ignoreCase property makes the pattern case-insensitive. By default, they are case sensitive. (i)<br>
+                        The multiline property makes the pattern multiline. By default, a pattern will stop at the end of a line. (m)<br>
+                        
+                        </li>
+                        <li>Special Characters<br>
+                            . matches any character, except line breaks<br>
+
+                            \w matches any word character, and is equivalent to [A-Za-z0-9_]<br>
+                           
+                            \W matches any non-word character, and is equivalent to [\^A-Za-z0-9_]<br>
+                           
+                            \d matches any digit character, and is equivalent to [0-9]<br>
+                           
+                            \D matches any non-digit character, and is equivalent to [^0-9]<br>
+                           
+                            \s matches any whitespace character, and is equivalent to [ \t\r\n\f]<br>
+                           
+                            \S matches any non-whitespace character, and is equivalent to [^ \t\r\n\f]<br>
+                        </li>
+                        <li>
+                            Modifiers<br>
+                            Modifiers can be placed after a token to deal with multiple occurrences of that token:
+
+                            ? makes the preceding token in the regular expression optional<br>
+
+                            * matches one or more occurrences of the preceding token<br>
+
+                            + matches one or more occurrences of the preceding token<br>
+
+                            {n} matches n occurrences of the preceding token<br>
+
+                            {n,} matches at least n occurrences of the pattern<br>
+
+                            {,m} matches at most m occurrences of the preceding token<br>
+
+                            {n,m} matches at leastnand at mostmoccurrences of the preceding token<br>
+
+                            ^ marks the position immediately before the first character in the string<br>
+
+ $                           marks the position immediately after the last character in the string<br>
+                        </li>
 
         </ul>
     </section>

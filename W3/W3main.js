@@ -210,6 +210,62 @@ const pattern = /[a-zA-Z]+ing$/;
 const language = 'JavaScript';
 const pattern2 = new RegExp(language);
 console.log(pattern2);
+//.test()
+console.log(pattern.test('joke'));
+console.log(pattern.test('joking'));
+//exec() same as test() but returns array with first match found or null
+console.log(pattern.exec('joking'));
+const pat = /JavaScript/;
+console.log(pat);
+const vowels = /[aeiou]/
+//sequence includes -
+// /[0-9]/
+// /[^A-Z]/ not capital letter ^means not
+pat2 = /[Jj][aeiou]v[aeiou]/;
+console.log(pat2.test('JavaScript'));
+console.log(pat2.test('jive'));
+p = /java/i
+console.log(p.test("JavaScript"));
+//The only way to change the ignoreCase 
+//property to false is to redefine the regular expression:
+//p = /java/
+//Any special characters or modifiers can be escaped using a backslash.
+//so if you wanted to match a question mark, ? , you would need to use 
+//the regular expression /\?/
+
+//starts with J followed by one or more vowels, then any letters or numbers ending in ing :
+
+
+
+patJ =/^J[aeiou]+\w+ing$/
+console.log(patJ.test('Joling'));
+console.log(patJ.test('Jeering'));
+//greedy and lazy modifiers
+const word = 'abracadabra';
+const greedyPattern = /a.+a/;
+console.log(greedyPattern.exec(word));
+const lazyPattern = /a.+?a/;
+console.log(lazyPattern.exec(word));
+//This looks for zero or more occurrences of any character, 
+//followed by an escaped period, followed by the letters " pdf "
+//that must come at the end of the string
+const pdf = /.*\.pdf$/;
+console.log(pdf.test('chapter5.pdf'));
+//string methods
+console.log('Hello World!'.split(/\s+/));
+console.log('JavaScript'.match(/[aeiou]/));
+
+console.log('JavaScript'.match(/[aeiou]/g));//return array of all vowels.
+//search ()returns position of first match or -1 if none
+console.log("I'm learning JavaScript".search(/java/i));
+//replace
+console.log('JavaScript'.replace(/[aeiou]/ig,'*'));
+//capturing groups
+//searches a string and replaces any HTML anchor tags with Markdownnotation
+const link = "<a href='https://www.sitepoint.com' title='Oh Yeah!'>Awesome Web Resources</a>"
+const mdLink = link.replace(/<a href='(.*?)'.*?>(.*?)<\/a>/g, "[$2]($1)");
+console.log(mdLink);
+
 
 
 
