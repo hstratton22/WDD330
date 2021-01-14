@@ -29,10 +29,42 @@
                 top, respectively, where the event took place in thedocument. This property 
                 takes account of whether the page has been scrolled.
             </li>
+            <li>Key evnets<br>
+                The keydown event occurs when a key is pressed and willcontinue to occurif the key is held down.<br>
+                The keypress event occurs after a keydown event but before a keyup event. The keypress event only 
+                occurs for keys that produce character input (plus the 'Delete' key). This means that it’s the most 
+                reliable way to find out the character that was pressed on the keyboard.<br>
+                The keyup event occurs when a key is released.<br>
+            </li>
+            <li>Pressing the modifier keys such as Shift,Ctrl,Alt and meta(Cmd on Mac) will fire the keydown and keyup events, 
+                but not the keypress event as they don't produce any characters on the screen.
+            </li>
+            <li><touchstart<br>
+            Be careful when using the touchstart event as it fires as soon as a user touches the screen. They may be touching 
+            the screen because they want to zoom in or swipe, and a touchstart event listener could prevent them from doing this.
+            The click event is often a much safer option as it still fires when the screen is touched, but there’s a slight delay 
+            of 300ms, allowing the user time to perform another action with the device. The click event can be thought of as a "tap" 
+            in the context of a touch event.</li>
+            <li>
+                The touchmove event occurs after a user has touched the screen then moves around without leaving. It will continue 
+                to occur as long as the user is still touching the screen, even if they leave the element to which the event listener is attached.<br>
+                The touchenter event occurs when a user has already started touching the surface, but then passes over the element to which the event 
+                listener is attached.<br>
+                The touchleave event occurs when the user is still touching the surface, but leaves the element to which the event listener is attached.<br>
+                The touchcancel event occurs when a touch event is interrupted, such as a user’s finger moving outside the document wi
+                fingers being used at once. A pop-up dialog will also cancel a touch event.<br>
+            </li>
+            <li>Hammer.JS or zingtouch libraries make events such as swipe, pinch and rotate easy to implement.</li>
+            <li>Bubbling<br>
+                Bubbling is when the event fires on the element clicked on first, then bubbles up the document tree, 
+                firing an event on each parent element until it reaches the root node.</li>
+            <li>Capturing<br>
+                Capturing starts by firing an event on the root element, then propagates downwards, firing an event 
+                on each child element until it reaches the target element that was clicked on.</li>
+
         </ul>
     </section>
 
 	
 </body>
-<script src="events.js"></script>
 </html>

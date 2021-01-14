@@ -33,3 +33,69 @@ const mouseParagraph = document.getElementById('mouse');
 mouseParagraph.addEventListener('mouseover', highlight);
 mouseParagraph.addEventListener('mouseout', highlight);
 mouseParagraph.addEventListener('mousemove', () =>  console.log('You Moved!') );
+addEventListener('keydown',highlight);
+addEventListener('keyup', (event) => console.log(`You stopped pressing the key on ${new Date}`));
+addEventListener('keypress', (event) => console.log(`You pressed the ${event.key} character`));
+addEventListener('keydown', (event) => console.log(`You pressed the ${event.key} character`));
+addEventListener('keydown', (event) => {
+    if (event.key === 'c' && event.ctrlKey) {
+            console.log('Action canceled!');
+        }
+    });
+addEventListener('click', (event) => {
+        if (event.shiftKey) {
+            console.log('A Shifty Click!');
+        }
+    });
+//addEventListener('touchend', () => console.log('Touch stopped');//error with code
+//remove only allows for click to occur once
+const onceParagraph = document.getElementById('once');
+onceParagraph.addEventListener('click', remove);
+function remove(event) {
+    console.log('Enjoy this while it lasts!');
+    onceParagraph.style.backgroundColor = 'pink';
+    onceParagraph.removeEventListener('click',remove);
+}
+//stop default behavior of moving to link and print to console instead
+const brokenLink = document.getElementById('broken');
+brokenLink.addEventListener('click',(event) => {
+    event.preventDefault();
+    console.log('Broken Link!');
+});
+//bubbling
+ulElement = document.getElementById('list');
+liElement = document.querySelector('#list li');
+/*
+ulElement.addEventListener('click', (event) =>
+console.log('Clicked on ul') );
+liElement.addEventListener('click', (event) =>
+console.log('Clicked on li') );
+*/
+//capturing
+ulElement.addEventListener('click', (event) =>
+console.log('Clicked on ul'),true);
+liElement.addEventListener('click', (event) =>
+console.log('Clicked on li'),true);
+//if want both must do this
+/*
+// capturing
+ulElement.addEventListener('click', (event) =>
+console.log('Clicked on ul'),true);
+liElement.addEventListener('click', (event) =>
+console.log('Clicked on li'),true);
+// bubbling
+ulElement.addEventListener('click', (event) =>
+console.log('Clicked on ul'),false );
+liElement.addEventListener('click', (event) =>
+console.log('Clicked on li'),false );
+*/
+//The bubble phase can be stopped from occurring by 
+//adding the event.stopPropagation() but be wary to not cancel other event listeners
+liElement.addEventListener('click', (event) => {
+    console.log('clicked on li');
+    event.stopPropagation(); }, false);
+//Now clicking on the first <li> element will only log one message, since the click event will not propagate to the <ul> element.
+
+//attach the event listener to the parent <ul> element, 
+//then use the target property to identify the element that was clicked on.
+ulElement.addEventListener('click',highlight);
