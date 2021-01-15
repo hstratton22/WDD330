@@ -59,6 +59,7 @@ const game = {
             view.render(view.result,'Correct!',{'class':'correct'});
             alert('Correct!');
             this.score++;
+            view.render(view.score,this.score);
         } else {
             view.render(view.result,`Wrong! The correct answer was ${answer}`,{'class':'wrong'});
             alert(`Wrong! The correct answer was ${answer}`);
@@ -69,7 +70,7 @@ const game = {
         view.render(view.info,`Game Over, you scored ${this.score} point${this.score !== 1 ? 's' : ''}`);
     }
 }
-game.start(quiz);
+//game.start(quiz);
 view.start.addEventListener('click', () => game.start(quiz), false);
 
 
