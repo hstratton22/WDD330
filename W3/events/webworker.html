@@ -1,16 +1,13 @@
-<!--
-    how does any of this work?
-    <script>
-    addEventListener("message", event => {
-  postMessage(event.data * event.data);
-});
+
+   
+<script>
 
 
-let squareWorker = new Worker("code/squareworker.js");
+
+let squareWorker = new Worker("squareworker.js");
 squareWorker.addEventListener("message", event => {
   console.log("The worker responded:", event.data);
 });
 console.log(squareWorker.postMessage(10));
 console.log(squareWorker.postMessage(24));
 </script>
-<-->
