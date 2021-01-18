@@ -9,6 +9,8 @@
     <a href = "https://gist.github.com/ljharb/58faf1cfcb4e6808f74aae4ef7944cff" target="_blank">arrays link</a>
     <hr>
     <a href  = "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort" target = "_blank">mozilla compare</a>
+    <hr>
+    <p>check console</p>
     <script>
       // Get your shorts on - this is an array workout!
       // ## Array Cardio Day 1
@@ -107,13 +109,20 @@
             console.log(sum);*/
 
       // 5. Sort the inventors by years lived
-      const inv_years_lived = inventors.sort(function(a,b){
-        let years2 = inventors.passed - inventors.year;
-        for (let i = 0; i < length.inventors; i++) {
-        //let years2 = inventors.passed - inventors.year;
-        return a.years2 - b.years2;}});
+      //not correct yet*************************
+      const inv_years_lived = inventors.sort(function(a,b) {
+        //let years2 = a.passed - a.year;
+        //let years3 = b.passed - b.year;
+        
+        //console.log(years2);
+        //console.log(years3);
+        //return years2-years3;
+        return (a.passed - a.year)- (b.passed-b.year);
+    })
+        
+    ;
         console.log(inv_years_lived);
-        //not correct yet*************************
+        
 
 
       // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
