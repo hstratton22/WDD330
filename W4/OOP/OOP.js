@@ -267,3 +267,112 @@ function mixin(target,...objects) {
     }
     return target;
 }
+//const a = {}, b = { foo: 'bar' }, 
+c = { numbers: [1,2,3] };
+console.log(mixin(a,b,c));
+console.log(c.numbers.push(4));
+console.log(a.numbers);
+console.log(c.numbers);
+
+const wonderWoman = Object.create(Superhuman);
+//wonderWoman.name = 'Wonder Woman';
+//wonderWoman.realName = 'Diana Prince';
+mixin(wonderWoman,{ name: 'Wonder Woman', realName: 'Diana Prince' });
+console.log(wonderWoman.change());
+
+function copy(target) {
+    const object =  Object.create(Object.getPrototypeOf(target));
+    mixin(object,target);
+    return object;
+}
+const bizarro = copy(superman);//deep copy so won't affect original
+bizarro.name = 'Bizarro';
+bizarro.realName = 'Subject B-0';
+console.log(bizarro.change());
+
+//factory function
+function createSuperhuman(...mixins) {
+    const object = copy(Superhuman);
+    return mixin(object,...mixins);
+}
+const hulk = createSuperhuman({name: 'Hulk', realName: 'Bruce Banner'});
+console.log(hulk.change());
+//mixin objects (has-a)
+const flight = {
+    fly() {
+        console.log(`Up, up and away! ${this.name} soars through the air!`);
+        return this;
+    }
+}
+const superSpeed = {
+    move() {
+        console.log(`${this.name} can move faster than a speeding bullet!`);
+        return this;
+    }  
+}
+const xRayVision = {
+    xray() {
+        console.log(`${this.name} can see right through you!`);
+        return this;
+    }  
+}
+mixin(superman,flight,superSpeed,xRayVision);
+mixin(wonderWoman,flight,superSpeed);
+console.log(superman.xray());
+console.log(wonderWoman.fly());
+
+const flash = createSuperhuman({ name: 'Flash', realName: 'Barry Allen' }, superSpeed);
+console.log(flash.change());
+console.log(flash.move());
+//chaining if return is this
+console.log(superman.fly().move().xray());
+//binding this  
+superman.friends = [batman,wonderWoman,aquaman]
+/*will not work this becomes global and window this is undefined
+superman.findFriends = function(){
+    this.friends.forEach(function(friend) {
+        console.log(`${friend.name} is friends with ${this.name}`);
+    }
+    );
+}*/
+//use that// can also use self or _this
+superman.findFriends = function(){
+    const that = this;
+    this.friends.forEach(function(friend) {
+        console.log(`${friend.name} is friends with ${that.name}`);
+    }
+    );
+}
+
+//or bind(this)
+/*
+superman.findFriends = function() {
+    this.friends.forEach(function(friend) {
+        console.log(`${friend.name} is friends with ${this.name}`);
+    }.bind(this);)
+}*/
+//or use for-of loop 
+/*superman.findFriends = function() {
+    for(const friend of this.friends) {
+        console.log(`${friend.name} is friends with ${this.name}`);
+    };
+}*/
+//or use =>
+/*
+superman.findFriends = function() {
+    this.friends.forEach((friend) => {
+        console.log(`${friend.name} is friends with ${this.name}`);
+    }
+    );
+}*/
+//arrow functions should be used when anonymous functions are required in callbacks 
+
+
+
+console.log(superman.findFriends());
+//borrowing from Prototype
+//use other objects methods
+const fly = superman.fly;
+console.log(fly.call(batman));
+
+//borrowing Array method
