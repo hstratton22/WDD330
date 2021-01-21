@@ -20,9 +20,64 @@
   <section class=weeks>
       <h3>Week4 OOP</h3>
       <ul>
-          <li></li>
+          <li>Encapsulation<br>
+            Programming logic inside an object and making methods available to 
+            implement the functionality.
+        </li>
+        <li>Polymorphism<br>
+            Various objects can share the same method, but also have the ability 
+            to override shared methods with a more specific implementation.
+        </li>
+        <li>Inheritance<br>
+            Take an object that already exists and inherit all its properties and methods. 
+            We can then improve on its functionality by adding new properties and methods.
+        </li>
+        <li>Constructor function defines the properties and methods of an object. 
+        
+        </li>
+        <li>A static method is called by the class directly rather than by instances of the class.
+            Static methods are not available to instances of the class.
+        </li>
+        <li>Prototype<br>
+            You cannot add a new property to a constructor function.(Person.nationality = "English";) To add a new property to a constructor, 
+            you must add it to the constructor function (this.nationality = "English").
+            Or use (Person.prototype.nationality = "English";).<br>
+            The prototype can be used to add any new properties and methods after the class has been declared. It should be used to define any 
+            properties that will remain the same for every instance of the class. <br>
+            A golden rule to remember is:Never use arrays or objects as a default value in prototype.
+            This is not a problem if arrays or objects are set as default values from within the constructor 
+            function in the class declaration.
+        </li>
+        <li>Built-in methods to be non-enumerable, and any user-defined methods to be made enumerable. 
+        </li>
+        <li>monkey patching<br>
+            Add more methods to the prototype of JavaScript’s built-in objects.
+         </li>
+         <li>The instanceof operator only works when using constructor functions to create objects.
+         </li>
+         <li>A mixin is a way of adding properties and methods of some objects to another object 
+             without using inheritance. 
+            </li>
+            <li>Shallow Copy<br>
+                When objects are copied by assignment, they are only copied by reference. This means that 
+                another object is not actually created in memory; the new reference will just point to the 
+                old object. Any changes that are made to either objects will affect both of them. Arrays and 
+                functions are objects, so whenever they’re copied by assignment they will just point to the same 
+                object. And when one changes, they all change. When a shallow copy is changed, the original changes too.
+            </li>
+            <li>Deep Copy<br>
+                A deep or hard copy will create a completely new object that has all the same properties as the old object. 
+                The difference is that when a hard copy is changed, the original remains the same. 
+            </li>
+
+
+
+
+
+
           
       </ul>
   </section>
 </body>
+<script src="OOP.js"></script>
 </html>
