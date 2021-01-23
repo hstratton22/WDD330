@@ -18,7 +18,7 @@ para.appendChild(newPara);
 //import { PI } from './pi.js';
 //import  { mean, variance } from './equations.js';
 //or 
-i//mport  { mean } from './equations.js';
+//import  { mean } from './equations.js';
 //or import * as stats from './equations.js';
  //console.log(equations.mean([2,6,10]));
 
@@ -31,3 +31,26 @@ i//mport  { mean } from './equations.js';
 //import square from './square.js';
 //import stats from './stats.js';
 //console.log()
+
+//with ECMASCript import ordinal from "ordinal";
+//import {days, months} from "date-names";
+
+//export function formatDate(date, format) { /* ... */ }
+//import {days as dayNames} from "date-names";//reassign name
+
+/*
+//not usable but proper addition of dependencies and export
+const {buildGraph} = require("./graph");
+
+const roads = [
+  "Alice's House-Bob's House",   "Alice's House-Cabin",
+  "Alice's House-Post Office",   "Bob's House-Town Hall",
+  "Daria's House-Ernie's House", "Daria's House-Town Hall",
+  "Ernie's House-Grete's House", "Grete's House-Farm",
+  "Grete's House-Shop",          "Marketplace-Farm",
+  "Marketplace-Post Office",     "Marketplace-Shop",
+  "Marketplace-Town Hall",       "Shop-Town Hall"
+];
+
+exports.roadGraph = buildGraph(roads.map(r => r.split("-")));
+*/
