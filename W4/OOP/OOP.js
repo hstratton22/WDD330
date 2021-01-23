@@ -376,3 +376,13 @@ const fly = superman.fly;
 console.log(fly.call(batman));
 
 //borrowing Array method
+const slice = Array.prototype.slice;
+console.log(slice.call(arguments, 1, 3));
+//The call() method takes the object that the function is to be 
+//applied to as its first argument, then the usual arguments come afterwards.
+[].slice.call(arguments, 1, 3)
+//const argumentsArray = Array.prototype.slice.call(arguments);
+//Array.from() better than previous
+const argumentsArray = Array.from(arguments);
+//or const argumentsArray = [...arguments];
+//banana = Gorilla.prototype.banana; instead of entire Gorilla

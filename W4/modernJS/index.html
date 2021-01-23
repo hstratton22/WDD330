@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en-us"> 
+<head>
+  <meta charset="utf-8">
+  <title>WDD330 W4</title>
+<link rel="stylesheet" href="../../index.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <script>
+
+</script>
+
+
+</head>
+
+<body>
+  <section class=headline>
+  <h1>WDD330 Portfolio</h1>
+  <h2>Heather Stratton</h2>
+  </section>
+  <section class=weeks>
+      <h3>Week4 Modern JavaScript</h3>
+      <ul>
+          <li>jQuery<br>
+        $ - alias for the the global jQuery object that contains all of jQuery's methods.
+        </li>
+        <li>Underscor & Lodash<br>
+            _.<br>
+            Lodash can be thought of as a 'superset' of Underscore as it does everything Underscore 
+            does, but also adds some extra features. Lodash also has a modular architecture that allows 
+            you to selectively use only the functions that you require in your projects, rather than 
+            having to include the whole library.
+        </li>
+        <li>library advantages<br>
+        optimized and battle-tested, online documentation and community help<br>
+        library disadvantages<br>
+        must include library with code, increases amount to dowload with possibly performance issues
+        might fail to implement functionality and must code own functions to achieve it, can make code slower,
+        useful for large team and large projects, useful in supporting older browsers and ironing out any 
+        browser-specific bugs or quirks, or if performance isn’t the most important factor.
+        must learn library's notation, library may become obsolete
+    </li>
+    <li>
+        <a href = "https://en.wikipedia.org/wiki/List_of_JavaScript_libraries" targt="_blank"
+            >wikipedia list of JS libraries</a><br>
+        <a href = "http://microjs.com/#" target="_blank"> microjs list of JS libraries</a><br>
+     </br>
+    <a href = "http://anguscroll.com/just/" target="_blank"> Just library of functions</a>   
+</li>
+<li>Modular JavaScript<br>
+    A module is a self-contained piece of code that provides functions and methods that can then be used 
+    in other files and by other modules. This helps to keep code organized in separate, reusable files, 
+    which improves code maintainability. The code in a module should have a single purpose, and group 
+    together functions with distinct functionality. Keeping code modular helps to make it moreloosely 
+    coupledand interchangeable, meaning you can easily swap one module for another without affecting 
+    other parts of a project. Indeed, small single-purpose modules are the exact opposite of large monolithic 
+    libraries as they enable developers to use only the modules that are needed, avoiding any wasted code. 
+    Modules also allow a public API to be exposed, while keeping the implementation hidden away inside the module.
+</li>
+<li>Coupling<br>
+    The coupling of code refers to how dependent certain elements or modules of code are on each other. 
+    Two pieces of code are said to be tightly coupled if one relies on the other to run. This often occurs 
+    if a piece of code makes hard-coded references to another piece of code, requiring it to be used. This 
+    will often mean that changes to one piece of code will necessitate changes in the other. On the other hand, 
+    two pieces of code are said to loosely coupled if one piece of code can be easily substituted by another without 
+    affecting the final outcome. This is often achieved by referring to common methods that are shared by the alternative modules.<br>
+    connect()
+</li>
+<li>Modules<br>
+    All code in modules is always in strict mode without the need for 'use strict' and there is no way to opt out of this.<br>
+    A module has its own global scope, so any variables created in the top-level of a module can only be accessed within that module.<br>
+    The value of this in the top level of a module is undefined , rather than the global object.<br>
+    You can't use HTML-style comments in modules (although this isn't very common in any JavaScript program these days).<br>
+    Keyword export to specify any values or functions that are to be made available from the module.
+</li>
+<li>a singlevariable, function or class in a module that can be imported without having to be explicitly named. Don't have more than one default export.
+</li>
+
+
+
+
+    </ul>
+</section>
+</body>
+<script src="equations.js" type="module"></script> 
+<script src="pi.js" type = "module"></script>
+<script src="modernJS.js"></script>
+</html>
