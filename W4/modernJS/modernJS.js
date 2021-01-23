@@ -17,7 +17,8 @@ para.appendChild(newPara);
 
 //import { PI } from './pi.js';
 //import  { mean, variance } from './equations.js';
-or import  { mean } from './equations.js';
+//or 
+import  { mean } from './equations.js';
 //or import * as stats from './equations.js';
  console.log(equations.mean([2,6,10]));
 
