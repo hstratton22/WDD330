@@ -54,3 +54,6 @@ const roads = [
 
 exports.roadGraph = buildGraph(roads.map(r => r.split("-")));
 */
+//from squareFunction.js
+//const square = require('./squareFunction');
+//square(6);
