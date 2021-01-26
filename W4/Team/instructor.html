@@ -19,8 +19,6 @@
         height: 300px;
         background-color: grey;
         grid-gap: 4px;
-        
-
     }
 
     .board div {
@@ -81,6 +79,7 @@
                 //children.forEach((child) => child.innerText = "");
 
             }
+            divBoard.addEventListener("touchend", addPiece);
             divBoard.addEventListener("click", addPiece);
             resetButton.addEventListener("click", resetBoardDiv);
         </script>
