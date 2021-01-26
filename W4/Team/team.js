@@ -79,7 +79,7 @@ function handleRestart() {
 
 }
 document.querySelectorAll('.square').forEach(square => square.addEventListener('touchend', handleSquareClick));
-//document.querySelectorAll('.square').forEach(square => square.addEventListener('click', handleSquareClick));
+document.querySelectorAll('.square').forEach(square => square.addEventListener('click', handleSquareClick));
 
 document.querySelector('.restart').addEventListener('click', handleRestart);
 
