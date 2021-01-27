@@ -66,6 +66,7 @@ const view = {
 };
 const game = {
     start(quiz) {
+        console.log('start() invoked');
         this.score = 0;
         this.questions = [...quiz];
         view.setup();
@@ -101,6 +102,7 @@ const game = {
     },
     
     gameOver() {
+        console.log('gameOver() invoked');
         view.render(view.info, `Game Over, you scored ${this.score} point${this.score !== 1 ? 's' : ''}`);
         view.teardown();
     }

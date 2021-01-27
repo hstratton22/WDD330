@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>WDD330 W4</title>
+    <link rel="stylesheet" href="../../index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+
+    </script>
+
+
+</head>
+
+<body>
+    <section class=headline>
+        <h1>WDD330 Portfolio</h1>
+        <h2>Heather Stratton</h2>
+    </section>
+    <section class=weeks>
+        <h3>Week5 Debugging notes</h3>
+        <ul>
+            <li>System Error<br>
+                There’s a problem with the system or external devices with which the program is interacting.
+            </li>
+            <li>Programmer error<br>
+                The program contains incorrect syntax or faulty logic; it could even be as simple as a typo.
+            </li>
+            <li>User error<br>
+                The user has entered data incorrectly, which the program is unable to handle.
+            </li>
+            <li>Exception<br>
+                An exception is an error that produces a return value that can then be used by the program to deal with
+                the error.
+            </li>
+            <li>Stack Trace<br>
+                a sequence of functions or method calls that lead to the point where the error occurred.
+                A stack trace will work backwards from the point at which the error occurred to identify the original
+                function or method that started the sequence.
+            </li>
+            <li>Warning<br>
+                A warning can occur if there’s an error in the code that isn't enough to cause the program to crash.
+                This means the program will continue to run after a warning. This might sound good, but it can be
+                problematic, since the issue that produced the warning may cause the program to continue running
+                incorrectly.
+            </li>
+            <li>Strict Mode<br>
+                'use strict'; as first line of code. <br>
+                Produces more exceptions and warnings and prohibits the use of some deprecated features. Considers
+                coding practices that were previously accepted as just being 'poor style' as actual errors.
+            </li>
+            <li>Linting Tools<br>
+                They are designed to highlight any sloppy programming practices or syntax errors, and will complain if
+                certain style conventions are not followed, such as how code is indented. They can be very unforgiving
+                and use some opinionated coding conventions.
+            </li>
+            <li>Feature Detection<br>
+                The recommended way to determine browser support for a feature is to use feature detection. This is done
+                using an if statement to check whether an object or method exists before trying to actually call the
+                method.
+                if (window.holoDeck) {
+                virtualReality.activate();
+                }
+            </li>
+            <li>Modernizr for feature detection and CanIUse? for browser support.
+            </li>
+            <li>Debugging in Browser<br>
+                alert()<br>
+                console.log()<br>
+                breakpoint, debugger;
+            </li>
+            <li>Error Objects<br>
+                Can be created by host environment or created in code with constructor function<br>
+                const error = new Error('Oops, something went wrong');<br>
+            <li>
+
+                EvalError is not used in the current ECMAScript specification and only retained for backwards
+                compatibility. It was used to identify errors when using the global eval() function.<br>
+
+                RangeError is thrown when a number is outside an allowable range of values.<br>
+
+                ReferenceError is thrown when a reference is made to an item that doesn’t exist. For example, calling a
+                function that hasn't been defined.<br>
+
+                SyntaxError is thrown when there’s an error in the code’s syntax.<br>
+
+                TypeError is thrown when there’s an error in the type of value used; for example, a string is used when
+                a number is expected.<br>
+
+                URIError is thrown when there’s a problem encoding or decoding the URI.<br>
+
+                InternalError is a non-standard error that is thrown when an error occurs in the JavaScript engine. A
+                common cause of this too much recursion.<br>
+            </li>
+            These error objects can also be used as constructors to create custom error objects:<br>
+            const error = new TypeError('You need to use numbers in this function');
+
+            </li>
+            <li>The name property returns the name of the error constructor function used as a string, such as 'Error'
+                or 'ReferenceError'.<br>
+
+                The message property returns a description of the error and should be provided as an argument to the
+                Error constructor function.<br>
+
+                The stack property will return a stack trace for that error. This is a non-standard property and it’s
+                recommended that it is not safe to use in production sites.
+            </li>
+            <li>Throw, throw new Error()
+            </li>
+            <li>try, catch, finally
+            </li>
+            <li>Test-driven development(TDD) is the process of writing tests before any actual code. Obviously these
+                tests will initially fail,
+                because there is no code to test. The next step is to write some code to make the tests pass. After
+                this, the code is refactored
+                to make it faster, more readable, and remove any repetition. The code is continually tested at each
+                stage to make sure it continues
+                to work. This process should be followed in small piecemeal chunks every time a new feature is
+                implemented.<br>
+                “red-green-refactor” cycle of TDD<br>
+                <li>
+                Write tests (that initially fail)<br>
+
+                Write code to pass the tests<br>
+
+                Refactor the code<br>
+
+                Test refactored code<br>
+
+                Write more tests for new features
+            </li>
+
+            </li>
+            <li>Jest<br>
+            TDD framework created by Facebook
+        </li>
+
+
+
+
+
+
+        </ul>
+    </section>
+</body>
+<script src="script.js"></script>
+<script src="numberCruncher.test.js"></script>
+
+</html>
