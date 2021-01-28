@@ -1,0 +1,22 @@
+h1 {
+    color:green;
+    text-align: center;
+}
+section {
+    margin: 50px auto;
+    width:250px;
+    
+}
+.box {
+    border: 1px solid green;
+    margin-bottom: 2rem;
+    padding:1rem;
+    
+}
+input {
+    padding-right:4rem;
+}
+.items {
+    color:blueviolet;
+}
+

@@ -53,6 +53,7 @@
             const Player1 = "X";
             const Player2 = "O";
             let player = Player1;
+            
 
 
             function addPiece(event) {
@@ -74,7 +75,7 @@
                 verticalWin();
                 diagonalDownWin();
                 diagonalUpWin();
-                noWin();
+                
 
             }
             function diagonalUpWin() {
@@ -203,6 +204,7 @@
                 const children = divBoard.children;
                 for (let i = 0; i < children.length; i++) {
                     children[i].innerHTML = "";
+                    player = Player1;
                 }
                 //or
                 //const children = Array.from(divBoard.children);
