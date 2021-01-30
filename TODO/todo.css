@@ -4,19 +4,65 @@ h1 {
 }
 section {
     margin: 50px auto;
-    width:250px;
+    /*width:300px;*/
+    width:75%;
     
 }
-.box {
-    border: 1px solid green;
-    margin-bottom: 2rem;
-    padding:1rem;
+ul {
+    padding:0;
     
+}
+.outline {
+    border: 1px solid green;
+    /*margin-bottom: 2rem;*/
+    /*padding-top:1rem;*/
+    
+}
+.outline-no-top {
+    border-bottom:1px solid green ;
+    border-left: 1px solid green;
+    border-right:1px solid green ;
 }
 input {
-    padding-right:4rem;
+    margin-top:2rem;
+    padding-right:1rem;
+    width:50%;
 }
 .items {
     color:blueviolet;
+    border-bottom: 1px solid green;
+    padding:.25rem;
+    display:flex;
+    justify-content: space-between;
 }
+.summaryBar{
+    text-align: center;
+    padding-top:.25rem;
+    padding-bottom:.25rem;
+    
 
+}
+.summaryBar p:nth-child(2){
+    border: 1px solid black;
+    
+
+}
+.summaryBar p:nth-child(3){
+
+    border-radius:25px;
+    border:1px solid black;
+}
+.summaryBar p{
+    display:inline;
+    padding-left:.25rem;
+    padding-right: .25rem;
+    
+}
+.checkBox {
+    /*border:1px solid black;*/
+    display:inline;
+    width:1rem;
+    height:1rem;
+    text-align: center;
+    
+}

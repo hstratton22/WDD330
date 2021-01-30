@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html lang="en-us">
-    <head>
 
-        <meta charset="utf-8">
-        <title>WDD330 TODO</title>
-        <link rel="stylesheet" href="todo.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <section>
-            <h1>Todos</h1>
-            <div class="box">
+<head>
 
+    <meta charset="utf-8">
+    <title>WDD330 TODO</title>
+    <link rel="stylesheet" href="todo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <section>
+        <h1>Todos</h1>
+        <div class="outline" id="box">
+            <ul>
+
+            </ul>
+        </div>
+        <div class="outline-no-top" id="summary">
+            <div class="summaryBar">
+                <p><span id="tasksLeft"></span> tasks left</p>
+                <p> All </p>
+                <p> Active </p>
+                <p> Completed </p>
             </div>
-            <form id="addEntry" >
-                <label for="newEntry">
-        
-                <input type="text" name="newEntry" id="newEntry">
+        </div>
+        <form id="addEntry">
+            <label for="newEntry">
+                <input type="text" name="newEntry" id="newEntry" placeholder="Add task">
             </label>
-                <button type="submit" >+</button>
-            </form>
-        </section>
-        
-    </body>
-    <script src="ToDos.js"></script></script>
-    <script src="utilities.js"></script>
+            <button type="submit">+</button>
+        </form>
+    </section>
+
+</body>
+<script src="ToDos.js"></script>
+</script>
+<script src="utilities.js"></script>
+
 </html>
