@@ -1,0 +1,1 @@
+export const thing1="Little red guy1";
