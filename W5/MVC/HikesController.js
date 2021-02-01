@@ -12,7 +12,8 @@ export default class HikesController {
   }
   
   showHikeList() {
-    //  this will get called each time we need to display our full hike list. It should grab the list of hikes from the Model, and then send them to the view.
+    //  this will get called each time we need to display our full hike list. It should grab the list of hikes 
+    //from the Model, and then send them to the view.
   }
 
   showOneHike(hikeName) {
