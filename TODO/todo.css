@@ -5,7 +5,8 @@ h1 {
 section {
     margin: 50px auto;
     /*width:300px;*/
-    width:75%;
+    /*width:75%;*/
+    max-width: 300px;
     
 }
 ul {
@@ -25,8 +26,18 @@ ul {
 }
 input {
     margin-top:2rem;
-    padding-right:1rem;
-    width:50%;
+    padding-right:1.25rem;
+    
+    /*width:50%;*/
+    width:80%;
+}
+button {
+    width: 10%;
+    
+    font-size:1rem;
+    padding:1px 1px;
+    line-height: 100%;
+    
 }
 .items {
     color:blueviolet;
@@ -54,8 +65,8 @@ input {
 }
 .summaryBar p{
     display:inline;
-    padding-left:.25rem;
-    padding-right: .25rem;
+    padding-left:.5rem;
+    padding-right: .5rem;
     
 }
 .checkBox {
