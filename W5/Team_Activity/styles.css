@@ -53,7 +53,7 @@ p {
     grid-template-columns: 1fr 1fr;
 }
 
-#hikes h2 {
+h2 {
     grid-column: span 2;
     grid-row: 0/1;
     padding: .5em;
@@ -62,15 +62,19 @@ p {
     margin-top: 0;
 }
 
-#hikes h3 {
+h3 {
     color: #1A1D1A;
 }
-#hikes img {
+img {
     grid-column: 0/1;
     grid-row: 1/2;
-    max-width: 80%;
+    max-width: 100%;
+    margin-left:1rem;
 }
 
 #hikes p {
     grid-column: 1/2;
 }
+.hidden {
+    display: none;
+  }
