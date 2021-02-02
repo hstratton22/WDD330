@@ -267,7 +267,7 @@ class Group {
   for (let value of Group.from(["a", "b", "c"])) {
     console.log(value);
   }
-//
+//call
   let map = {one: true, two: true, hasOwnProperty: true};
 
 console.log(Object.prototype.hasOwnProperty.call(map, "one"));
