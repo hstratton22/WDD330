@@ -83,7 +83,7 @@ export default class Hikes {
     }
     buildBackButton() {
         const backButton = document.createElement('button');
-        backButton.innerHTML = '&lt;- All Hikes';
+        backButton.innerHTML = '&lt; - All Hikes';
         backButton.addEventListener('click', () => {//touchend
             this.showHikeList();
         });

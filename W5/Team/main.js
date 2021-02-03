@@ -1,5 +1,8 @@
 import Hikes from './hikes.js';
 
-const myHike = new Hikes('hikeListId');
+const myHikes = new Hikes('hikes');
+window.addEventListener("load", () => {
+    myHikes.showHikeList();
+});
 
-myHike.showHikeList();
+myHikes.hikeList;
