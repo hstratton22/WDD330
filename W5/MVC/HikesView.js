@@ -1,6 +1,6 @@
 //View - A visual representation of the model
 // Hike View handler
-
+ 
 // the dataset only has a relative path in it...we need more to find the images...
 //so we have a path variable below. Why isn't this in the model object? What  
 //vantages are there to having it here instead of as part of the View object?

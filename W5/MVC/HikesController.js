@@ -2,6 +2,7 @@
 import HikeModel from './hikeModel.js';
 import HikesView from './hikesView.js';
 
+
 // Just like with the view we should organize the functions we need to our controller. 
 //Let's use a class for this one
 
