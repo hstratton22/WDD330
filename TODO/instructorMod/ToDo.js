@@ -34,6 +34,7 @@ function createTodoElement(todo) {
     //complete btn
     const completeBtn = document.createElement("button");
     completeBtn.classList.add("complete-btn");
+    completeBtn.onclick=toggleCompleted;
 
     //todo content
     const todoContent = document.createElement("div");
@@ -63,4 +64,12 @@ function deleteTodo(e) {
     ls.deleteTodo(btn.getAttribute("data-id"));
     document.querySelector("#todos").innerHTML = "";
     loadTodos();
+}
+//unfinished
+function toggleCompleted(e) {
+    const btn = e.currentTarget;
+    ls.toggleCompleted(btn.getAttribute("data-id"));
+    /*document.querySelector("#todos").innerHTML = "CLICKEDHERE";
+    loadTodos();*/
+        /*classList.toggle("completed");*/
 }

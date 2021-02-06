@@ -10,6 +10,11 @@ function deleteTodo(id) {
     const updatedTodos = toDoList.filter( todo => todo.id != id)
     localStorage.setItem("toDoList", JSON.stringify(updatedTodos));
 }
+/*
+function toggleCompleted(id) {
+    const toDoList = getToDoList();
+    const toggledList = toDoList.map( todo => todo.id {if (parent.todo.classList.contains("completed")){remove} else {add}})
+}*/
 function getTodoList() {
     const toDoListString = localStorage.getItem("toDoList");
     let todoList = [];
