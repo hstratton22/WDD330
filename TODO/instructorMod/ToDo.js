@@ -2,6 +2,7 @@ import utils from "./utils.js";
 import ls from "./ls.js";
 
 document.querySelector("#addBtn").onclick = newTodo;
+document.addEventListener("DOMContentLoaded", loadTodos);
 
 function loadTodos() {
     const todoList = ls.getTodoList();
@@ -16,12 +17,12 @@ function newTodo() {
     const todo = createTodo();
     const todoDiv = createTodoElement(todo);
     addToList(todoDiv);
-    ls.saveTodo;
+    ls.saveTodo(todo);
 
 }
 function createTodo() {
     const input = document.querySelector("#todoInput");
-    const newTodo = {id: Date.now(), content: input.value, completed:false};
+    const newTodo = {id: Date.now(), content: input.value, completed: false};
     input.value = "";
     console.log(newTodo);
     return newTodo;
@@ -33,7 +34,9 @@ function createTodoElement(todo) {
 
     //complete btn
     const completeBtn = document.createElement("button");
+    completeBtn.setAttribute("data-id", todo.id);
     completeBtn.classList.add("complete-btn");
+    
     completeBtn.onclick=toggleCompleted;
 
     //todo content
@@ -43,7 +46,7 @@ function createTodoElement(todo) {
 
     //delete btn
     const deleteBtn = document.createElement("button");
-    deleteBtn.setAttribute("data-d", todo.id);
+    deleteBtn.setAttribute("data-id", todo.id);
     deleteBtn.classList.add("todo-delete-btn");
     deleteBtn.innerText = "X";
     deleteBtn.onclick=deleteTodo;
@@ -68,8 +71,16 @@ function deleteTodo(e) {
 //unfinished
 function toggleCompleted(e) {
     const btn = e.currentTarget;
+    
+    /*document.querySelector("#todos").innerHTML = "X";*/
+    /*console.log(btn.parentElement.todoContent.classList.toggleCompleted);*/
+    /*console.log(btn.nextSibling);*/
+    btn.nextSibling.classList.add("completed");
+    btn.innerText="X";
+
     ls.toggleCompleted(btn.getAttribute("data-id"));
-    /*document.querySelector("#todos").innerHTML = "CLICKEDHERE";
-    loadTodos();*/
+    /*
+    console.log(btn.nextSibling);
+    /*loadTodos();*/
         /*classList.toggle("completed");*/
 }
