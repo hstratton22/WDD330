@@ -31,10 +31,42 @@ h1 {
 
 }
 .todo-filters {
-    /*padding-top:;
-    display:flex;*/
+    
+    display:flex;
+    border:1px solid black;
+    width: 100%;
+    padding:10px;
+    align-items: center;
+    justify-content: space-evenly ;
     
 }
+.filter-button {
+    color:green;
+    border:none;
+    background-color:white;
+    
+}
+/*button:hover {
+    color:white;
+    background-color: green;
+}*/
+/*
+.activated-button {
+    border:1px solid green;
+    border-radius:10px;
+    /*color:white;
+    background-color: green;*/
+
+/*}*/
 .completed {
     text-decoration: line-through;
 }
+.add-todo-wrapper{
+    margin-top:1rem;
+    width:400px;
+    
+}
+input {
+    width:80%;
+}
+

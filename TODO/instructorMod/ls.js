@@ -6,6 +6,7 @@ function saveTodo(todo) {
 }
 function deleteTodo(id) {
     const toDoList = getTodoList();
+    
 
     const updatedTodos = toDoList.filter( todo => todo.id != id)
     localStorage.setItem("toDoList", JSON.stringify(updatedTodos));
@@ -14,18 +15,24 @@ function deleteTodo(id) {
 function toggleCompleted(id) {
     const toDoList = getTodoList();
     console.log(id);
-    const togList = toDoList.map(todo => {
-        if(todo.id == id) {
-            
-            console.log("inside toggleCompleted " + todo.content);
-            
-            
+    toDoList.forEach(todo => {
+        
+        if(todo.id==id){
+
+            if(todo.completed) {
+                todo.completed = false;
+
             }
-
-    } );return togList;
-
+            else {
+                todo.completed = true;
+            }
+            console.log(todo.completed);
+        }
+    });
+    localStorage.setItem("toDoList", JSON.stringify(toDoList));
     
-  
+    
+
 }
 
 function getTodoList() {
