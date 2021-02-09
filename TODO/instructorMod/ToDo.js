@@ -12,7 +12,8 @@ function loadTodos() {
     todoList.forEach(todo => {
         const el = createTodoElement(todo);
         addToList(el);
-    })
+    });
+    createFilters();
 }
 
 function loadFilters() {
@@ -92,11 +93,12 @@ function toggleCompleted(e) {
 
 function createFilters() {
     const filters = document.querySelector(".todo-filters");
+    filters.innerHTML="";
     const tasksLeft = document.createElement("p");
     //tasksLeft.classList.add("todo-filters-item");
     
     const tasksSpan = document.createElement("span");
-    tasksLeft.innerHTML="tasks left ";
+    tasksLeft.innerHTML="tasks left: ";
     tasksSpan.innerText=utils.getTasksCount();
     tasksLeft.appendChild(tasksSpan);
     
@@ -166,6 +168,3 @@ function applyFilter(e) {
     
     
 }
-//document.addEventListener("#filterActive").onclick= applyFilter;
-//document.querySelector("#filterAll").onclick= applyFilter;
-//document.querySelector("#filterComplete").onclick= applyFilter;

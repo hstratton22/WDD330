@@ -1,4 +1,5 @@
 //maybe?
+
 function getComplete() {
     const list = getList();
     let allDone = list.filter(todo => todo.complete == true);
@@ -45,6 +46,8 @@ function completeFilter(todos) {
 }
 
 export default{
-    getComplete, getActive, getAll, getTasksCount, activeFilter, completeFilter
+    getComplete, getActive, getAll, 
+    getTasksCount, 
+    activeFilter, completeFilter
 
 }
