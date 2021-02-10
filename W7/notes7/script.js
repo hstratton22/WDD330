@@ -265,3 +265,136 @@ const frenchGreeter = greeter('Bonjour');
 console.log(frenchGreeter());
 const germanGreeter = greeter('Guten Tag');
 console.log(germanGreeter());
+
+//closure example
+function outer() {
+    const outside = 'Outside!';
+    function inner() {
+        const inside = 'Inside!';
+        console.log(outside);
+        console.log(inside);
+    }
+    //console.log(outside);
+    //inner();
+    return inner;
+}
+const clos=outer();
+console.log(clos());//undefined but shouldn't be
+//console.log("closure: " + outer());//undefined but shouldn't be
+
+function closure() {
+    const a = 1.8;
+    const b = 32;
+    return c => c * a + b;
+}
+const toFahrenheit = closure();
+console.log(toFahrenheit(30));//does work
+//
+function counter(start){
+    let i = start;
+    return function() {
+        return i++;
+    }
+}
+const count = counter(1);
+console.log(count());
+console.log(count());
+//generators
+function* fibonacci(a,b) {
+    let [ prev,current ] = [ a,b ];
+    while(true) {
+        [prev, current] = [current, prev + current];
+        yield current;
+    }
+}
+const sequence = fibonacci(1,1);
+//iterate of generator
+for (n of sequence) {
+    // stop the sequence after it reaches 100
+    if (n > 10) break;
+    console.log(n);
+}
+//impure
+let number = 42;
+let result = 0;
+function impureAdd(x) {
+    result = number + x;
+}
+impureAdd(10);
+result;
+
+//pure function
+const num = 42;
+function pureAdd(x,y) {
+    return x + y;
+}
+result = pureAdd(num,10);
+
+function hypotenuse(a,b) {
+    return Math.sqrt(square(a) + square(b));
+}
+console.log(hypotenuse(3,4));
+
+function sum(array, callback) {
+    if(callback) {
+        array = array.map(callback);
+    }
+    return array.reduce((a,b) => a + b );
+}
+console.log(sum([1,2,3]));
+console.log(sum([1,2,3], square));
+
+function mean(array) {
+    return sum(array)/array.length;
+}
+console.log(mean([1,2,3]));
+
+function variance(array) {
+    return sum(array,square)/array.length - square(mean(array))
+}
+console.log(variance([1,2,3]));
+//higher order functions
+function multiplier(x){
+    return function(y){
+        return x*y;
+    }
+}
+doubler = multiplier(2);
+console.log(doubler(10));
+tripler = multiplier(3);
+console.log(tripler(10));
+
+function power(x) {
+    return function(power) {
+        return Math.pow(x,power);
+    }
+}
+twoExp = power(2);
+console.log(twoExp(5));
+tenExp = power(10);
+console.log(tenExp(6));
+
+console.log(power(3)(5));
+//currying
+function mult(x,y) {
+    if (y === undefined) {
+        return function(z) {
+        return x * z;
+        }
+    } else {
+        return x * y;
+    }
+}
+calcTax = mult(0.22);
+console.log(calcTax(400));
+//generic curry
+function curry(func,...oldArgs) {
+    return function(...newArgs) {
+        const allArgs = [...oldArgs,...newArgs];
+        return func(...allArgs);
+    }
+}
+const divider = (x,y) => x/y;
+console.log(divider(10,5));
+const reciprocal = curry(divider,1);
+console.log(reciprocal(2));
