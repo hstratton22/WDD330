@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>WDD330 W7</title>
+    <link rel="stylesheet" href="../../index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+
+    </script>
+
+
+</head>
+
+<body>
+    <section class=headline>
+        <h1>WDD330 Portfolio</h1>
+        <h2>Heather Stratton</h2>
+    </section>
+    <section class=weeks>
+        <h3>Further Functions</h3>
+        <ul>
+            <li>check console</li>
+            <li>Memoization<br>
+                Save the result in a cache property and laterreturn the value from the cache, rather than having to compute the result again. </li>
+                <li>IIFE ("iffy")<br>
+                    Immediately Invoked Function Expression<br>
+                    Useful way of performing a task while keeping any variables wrapped up within the scope of the function. This means the global namespace is not polluted with lots of variable names.
+                </li>
+                <li>Temporary Variables<br>
+                    Placing any code that uses the temporary variable inside an IIFE will ensure it’s only available while the IIFE is invoked.
+                </li>
+                <li>Lazy Definition Pattern
+                </li>
+                <li>Recursive Functions<br>
+                Invokes itself until a certain condition is met.</li>
+                <li>Event-driven Asynchronous Programming<br>
+                    JavaScript is a single-threaded environment, which means only one piece of code will ever be processed at a time. 
+                </li>
+                <li>
+                    Error-first Callbacks<br>
+                    The code example above uses theerror-firstcallback style popularized by Node.js. In this coding pattern, callbacks have 
+                    two arguments. The first is the error argument, which is an error object provided if something goes wrong when completing 
+                    the operation. The second argument is any data returned by the operation that can be used in the body of the callback.
+                </li>
+                <li>Promise<br>
+                    A promise represents the future result of an asynchronous operation. Promises don't do anything that can't already be achieved 
+                    using callbacks, but they help simplify the process, and avoid the convoluted code that can result from using multiple callbacks.<br>
+                    Pending, unsettled, settled
+                    <br>
+                    Resolved- the asynchronous operation was completed successfully.<br>
+                    Rejected-the asynchronous operation didn’t work as expected, wasn't 
+                    successfully completed or resulted in an error.<br>
+                    <br>
+                    A promise is created using a constructor function. This takes a function called anexecutoras an argument. The executor initializes the 
+                    promise and starts the asynchronous operation. It also accepts two functions as arguments: the resolve() function is called if the operation 
+                    is successful, and the reject() function is called if the operation fails.<br>
+                    Once a promise has been settled, the then() method can be used to deal with the outcome. This method accepts two arguments. The first is afulfilment 
+                    functionthat’s called when the promise is resolved. Any data returned from the resolve() function will be passed along to this function. The second 
+                    argument is a rejection function that’s called if the promise is rejected. Similar to the fulfilment function, the rejection function receives any 
+                    data returned from the reject() function.
+                </li>
+                <li>Async Functions<br>
+                    These functions are preceded by the async keyword and allow you to write asynchronous code as if it was synchronous. This is achieved by using the 
+                    await operator before an asynchronous function. This will wrap the return value of the function in a promise that can then be assigned to a variable. 
+                    The next line of code is not executed until the promise is resolved.
+                </li>
+
+        </ul>
+    </section>
+</body>
+<script src="script.js"></script>
+</html>
