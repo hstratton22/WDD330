@@ -21,6 +21,60 @@
     <section class=weeks>
         <h3>Ajax</h3>
         <ul>
+            <li>
+                CORS-Cross-origin resource sharing
+            </li>
+            <li>AJAX-Asybchormoous JavaScript and XML</li>
+            <li>API-application programming interface</li>
+            <li>Fetch API<br>
+                The Fetch API uses promises to avoid callback hell, and also streamlines a number of concepts that had become cumbersome when using the XMLHttpRequest object.
+            </li>
+            <li>HTTP status code<br>
+            200-successful<br>
+            201-resource was created<br>
+            204-request successful but no content returned<br>
+            ok-between 200 and 299
+        </li>
+        <li>Response object properties<br>
+            headers – A Headers object (see later section) containing any headers associated with the response<br>
+            url – A string containing the URL of response<br>
+            redirected – A boolean value that specifies if the response is the result of a redirect<br>
+            type – A string value of 'basic', 'cors', 'error' or 'opaque'. A value of 'basic' is used for a response 
+            from the same domain. A value of 'cors' means the data was received from a valid cross-origin request from 
+            a different domain. A value of 'opaque' is used for a response received from 'no-cors' request from another domain, 
+            which means access to the data will be severely restricted. A value of 'error' is used when a network error occurs.
+        </li>
+        <li>Redirects<br>
+        </li>
+        <li>Request Constructor<br>
+            url – The URL of the requested resource (the only property that is required).<br>
+            method – a string that specifies which HTTP method should be used for the request. By default, this is 'GET'.<br>
+            headers – This is a Headers object (see later section) that provides details of the request's headers.<br>
+            mode – Allows you to specify if CORS is used or not. CORS is enabled by default.<br>
+            cache – Allows you to specify how the request will use the browser's cache. For example, you can force it to request a 
+            resource and update the cache with the result, or you can force it to only look in the cache for the resource.<br>
+            credentials – Lets you specify if cookies should be allowed with the request.<br>
+            redirect – Specifies what to do if the response returns a redirect. There’s a choice of three values: 'follow' 
+            (the redirect is followed), 'error' (an error is thrown) or 'manual' (the user has to click on a link to follow the redirect).
+        </li>
+        <li>HTTP Transfers<br>
+            GET (default)requests to retrieve resources<br>
+
+            POST requests, usually used to create a resource but can actually perform any task<br>
+            
+            PUT requests toupsert, which means insert a resource or update it entirely<br>
+            
+            PATCH requests to make partial updates to a resource<br>
+            
+            DELETE requests to delete a resources.</li>
+            <li>Headers<br>
+                HTTP headers are used to pass on any additional information about a request or response. 
+                Typical information contained in headers includes the file-type of the resource, cookie information, 
+                authentication information and when the resource was last modified.
+            </li>
+            <li><a href="ajax.html">ajax.html</a> </li>
+            <li><a href="todo.html">todo.html</a> </li>
+
         </ul>
     </section>
 </body>

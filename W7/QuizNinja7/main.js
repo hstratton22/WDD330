@@ -1,3 +1,12 @@
+//const url = 'http://spbooks.github.io/questions.json';
+const url = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/questions.json';
+fetch(url)
+.then(res => res.json())
+.then(quiz => {
+    view.start.addEventListener('click', () => game.start(quiz.questions), false);
+    view.response.addEventListener('click', (event) => game.check(event), false);
+});
+/*
 const quiz = [
     { name: "Superman",realName: "Clark Kent" },
     { name: "Wonder Woman",realName: "Diana Prince" },
@@ -6,6 +15,7 @@ const quiz = [
     { name: "Spider-man",realName: "Peter Parker" },
     { name: "Cyclops",realName: "Scott Summers" }
 ];
+*/
 // Utility functions
 function random(a,b=1) {
     // if only 1 argument is provided, we need to swap the values of a and b
@@ -25,12 +35,7 @@ function random(a,b=1) {
 // View Object
 const view = {
     response: document.querySelector('#response'),
-    show(element) {
-        element.style.display = 'block';
-    },
-    hide(element) {
-        element.style.display = 'none';
-    },
+    
     start: document.getElementById('start'),
     score: document.querySelector('#score strong'),
     question: document.getElementById('question'),
@@ -43,6 +48,12 @@ const view = {
             target.setAttribute(key, attributes[key]);
         }
         target.innerHTML = content;
+    },
+    show(element) {
+        element.style.display = 'block';
+    },
+    hide(element) {
+        element.style.display = 'none';
     },
     setup(){
         this.show(this.question);
@@ -108,7 +119,7 @@ const game = {
     }
 }
 //game.start(quiz);
-view.start.addEventListener('click', () => game.start(quiz), false);
-view.response.addEventListener('click', (event) => game.check(event), false);
+//view.start.addEventListener('click', () => game.start(quiz), false);
+//view.response.addEventListener('click', (event) => game.check(event), false);
 
 //start(quiz);
