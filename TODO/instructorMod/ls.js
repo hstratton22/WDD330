@@ -2,13 +2,13 @@ function saveTodo(todo) {
     const toDoList = getTodoList();
 
     toDoList.push(todo);
-    localStorage.setItem("toDoList",JSON.stringify(toDoList));
+    localStorage.setItem("toDoList", JSON.stringify(toDoList));
 }
 function deleteTodo(id) {
     const toDoList = getTodoList();
-    
 
-    const updatedTodos = toDoList.filter( todo => todo.id != id)
+
+    const updatedTodos = toDoList.filter(todo => todo.id != id)
     localStorage.setItem("toDoList", JSON.stringify(updatedTodos));
 }
 
@@ -16,10 +16,10 @@ function toggleCompleted(id) {
     const toDoList = getTodoList();
     console.log(id);
     toDoList.forEach(todo => {
-        
-        if(todo.id==id){
 
-            if(todo.completed) {
+        if (todo.id == id) {
+
+            if (todo.completed) {
                 todo.completed = false;
 
             }
@@ -30,8 +30,8 @@ function toggleCompleted(id) {
         }
     });
     localStorage.setItem("toDoList", JSON.stringify(toDoList));
-    
-    
+
+
 
 }
 
@@ -39,8 +39,8 @@ function getTodoList() {
     const toDoListString = localStorage.getItem("toDoList");
     let todoList = [];
     if (toDoListString) {
-        todoList=JSON.parse(toDoListString);
-        
+        todoList = JSON.parse(toDoListString);
+
     }
     return todoList;
 }

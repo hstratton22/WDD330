@@ -26,6 +26,8 @@ function newTodo() {
     const todoDiv = createTodoElement(todo);
     addToList(todoDiv);
     ls.saveTodo(todo);
+    createFilters();//?
+    
 
 }
 function createTodo() {
@@ -44,8 +46,6 @@ function createTodoElement(todo) {
     const completeBtn = document.createElement("button");
     completeBtn.setAttribute("data-id", todo.id);
     completeBtn.classList.add("complete-btn");
-
-
     completeBtn.onclick = toggleCompleted;
 
     //todo content
@@ -95,8 +95,6 @@ function createFilters() {
     const filters = document.querySelector(".todo-filters");
     filters.innerHTML="";
     const tasksLeft = document.createElement("p");
-    //tasksLeft.classList.add("todo-filters-item");
-    
     const tasksSpan = document.createElement("span");
     tasksLeft.innerHTML="tasks left: ";
     tasksSpan.innerText=utils.getTasksCount();
@@ -108,14 +106,12 @@ function createFilters() {
     selectAll.classList.add("filter-button");
     selectAll.innerText="All";
     selectAll.id="filterAll";
-    //selectAll.onclick = ls.getTodoList;//or utils.getAll
     selectAll.onclick = applyFilter;
 
     const selectActive = document.createElement("button");
     selectActive.classList.add("filter-button");
     selectActive.innerText="Active"
     selectActive.id="filterActive";
-    //selectActive.onclick = utils.getActive;
     selectActive.onclick = applyFilter;
 
     const selectComplete = document.createElement("button");
@@ -145,7 +141,7 @@ function applyFilter(e) {
     }else {
         btn.classList.add("activated-button");
     }*/
-    btn.classList.add("activated-button");
+    //btn.classList.add("activated-button");
     
     //declare variables
     let filteredTodos = [];

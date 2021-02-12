@@ -1,5 +1,4 @@
-//maybe?
-
+//filters
 function getComplete() {
     const list = getList();
     let allDone = list.filter(todo => todo.complete == true);
@@ -18,7 +17,7 @@ function getTasksCount() {
             count++;
         }
     });return count;
-    //let notDone = list.filter(todo => !todo.complete );
+
     
 }
 function getAll() {
