@@ -38,7 +38,8 @@ console.log(squareCache(3));
 squareCache(-11);
 console.log(squareCache.cache);
 
-//iffe
+//iffe: Immediately Invoked Function Expression
+
 (function(){
     const temp = 'World';
     console.log(`Hello ${temp}`);
