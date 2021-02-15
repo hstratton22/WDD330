@@ -26,7 +26,7 @@ console.log(square.apply(null, [4]));
 
 //custom properties
 square.description = 'Squares a number that is provided as an argument'
-
+//memoization
 function squareCache(x){
     squareCache.cache = squareCache.cache || {};
     if (!squareCache.cache[x]) {
