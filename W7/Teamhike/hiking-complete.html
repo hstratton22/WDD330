@@ -56,13 +56,22 @@
       .light h3 {
         margin-bottom: -0.5em;
       }
-      .hikeComments {
-        list-style-type: none;
+      #comments {
+        padding: 0.5em;
       }
-    .addComment{
-        margin-left: 1em;
-
-    }
+      .addComment > h2 {
+        text-align:center;
+        background-color: indianred;
+      }
+      .addComment input {
+        width:100%;
+        border:1px solid;
+        font-size: 1.2em;
+      }
+      .addComment button {
+        padding: 0.5em;
+        border: 1px solid;
+      }
     </style>
   </head>
 
@@ -70,16 +79,7 @@
     <main>
       <h1>Great hikes</h1>
       <ul id="hikes" class="hikeStyles"></ul>
-      <div>
-          
-      <ul id="hikeComments" class="hikeComments">
-         
-      </ul>
-    </div>
-    <div id="addComment" class="addComment">
-        <input type="text" id="commentInput" placeholder="Comment on hike" >
-        <button id="addBtn">Submit</button>
-    </div>
+      <section id="comments"></section>
     </main>
 
     <script src="app5.js" type="module"></script>

@@ -4,4 +4,4 @@ const myHikes = new Hikes("hikes");
 window.addEventListener("load", () => {
     myHikes.showHikeList();
 });
-myHikes.hikeList;
+//myHikes.hikeList;
