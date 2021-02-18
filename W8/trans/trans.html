@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>WDD330 W7</title>
+    <link rel="stylesheet" href="../../index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /*IE9 and earlier require
+        -webkit-transform: translate(45px,-45px); /* iOS8, Android 
+        ↵4.4.3, BB10 */
+        /*-ms-transform: translate(45px,-45px); /* IE9 only */
+        /*transform: translate(45px,-45px);*/
+
+        .weeks h1 span {
+            /*-webkit-transition-property: -webkit-transform;if needed in older browser*/
+            /*transition-property: transform;
+            transition-duration: 0.2s;  
+            transition-timing-function: ease-out;
+            transition-delay: 50ms;*/
+            /*transition: transform 0.2s ease-out 50ms;/* if a delay is included, you must also include a duration, and the duration must precede the delay.*/
+            transition: transform 0.2s ease-out 50ms, color 0.1s linear 50ms;
+            /*or all transition: all 0.2s ease-out 50ms;*/
+        }
+
+        .weeks h1:hover span {
+            font-size: 30px;
+            color: #999999;
+            display: inline-block;
+            color: #484848;
+            transform: rotate(10deg) translateX(40px) scale(1.5);
+        }
+
+        /*support for IE8 and earlier
+        .translate {
+            position: relative;
+            top: 200px;
+            left: 200px;
+        }*/
+        /*
+        keyframes examples
+        @keyframes moveRight { 
+    from {
+    transform: translateX(-50%);
+    }
+    to {
+    transform: translateX(50%);
+    }
+}
+@keyframes appearDisappear { 
+    0%, 100% {
+    opacity: 0;
+    }
+    20%, 80% {
+    opacity: 1;
+    }
+}
+@keyframes bgMove {
+    100% {
+    background-position: 120% 0;
+    }
+*/
+/*keyframes timing with bike example
+.ad-ad3 :after {
+    content: '';
+    width: 90px;
+    height: 92px;
+    background-image: url(../images/bike_sprite.png);
+    display: block;
+    margin: auto;
+}
+@keyframes bike {
+    0% {
+    background-position: 0 0;
+    }
+    100% {
+        background-position: -360px 0;
+    }
+}
+animation-timing-function: steps(4, end);
+*/
+
+/*
+multiple animations on an element
+.target {
+    animation: 
+    animationOne 300ms ease-in backwards, 
+    animationTwo 600ms ease-out 1s forwards;
+}*/
+/*
+translate bike
+@keyframes bike {
+    0% {
+    background-position: 0 0;
+    }
+    100% {
+    background-position: -360px 0;
+    }
+}
+@keyframes move {
+    0% {
+    transform: translateX(-100px);
+    }
+    100% {
+    transform: translateX(100px);
+    }
+}  
+    
+h1:after {
+    content: '';
+    width: 90px;
+    height: 92px;
+    background-image: url(../images/bike_sprite.png);
+    display: block;
+    margin: auto;
+    animation: 
+        0.4s steps(4, end) infinite 50ms bike,
+        8s linear infinite 50ms move;
+    animation-play-state: paused;
+}
+h1:hover:after {
+    animation-play-state: running;
+}*/
+
+
+    </style>
+
+
+</head>
+
+<body>
+    <section class=headline>
+        <h1>WDD330 Portfolio</h1>
+        <h2>Heather Stratton</h2>
+    </section>
+    <section class=weeks>
+        <h3>Transforms and transitions</h3>
+        <ul>
+            <li>Transform<br>
+                translate, rotate, scale, and/or skew any element </li>
+            <ul>
+
+                <li>Translation<br>
+                    moving elements up and down or left and right along the x and y axesfrom current position<br>
+                    transform: translate(45px, -45px);
+                </li>
+                <li>Scaling<br>
+                    scales an element by the defined factors horizontally then vertically. If only one value is
+                    provided,
+                    it will be used for both the x and y values, growing or shrinking your element or pseudo-element
+                    while
+                    maintaining the original aspect ratio.
+                    Default the point of origin is the element’s center.<br>
+                    transform: scale(1.5, 0.25);
+                </li>
+                <li>Rotation<br>
+                    rotates an element around the point of origin by a specified angle value. Default the point of
+                    origin is
+                    the element’s center. Degrees, grads, radians, or turns.
+                </li>
+                <li>Skew<br>
+                    transform: skew(15deg, 4deg);
+                </li>
+                <li>Transform-origin<br>
+                    transform-origin: 0 0;
+                    transform-origin: 50% 50%;//default
+                    transform-origin: 10% 10%;
+                </li>
+            </ul>
+            <li>
+                Transition<br>
+                allow the values of CSS properties to change over time, essentially providing simple animations.<br>
+                Steps:<br>
+                Declare the original state of the element in the default style declaration.<br>
+                Declare the final state of your transitioned element; for example, a :hover state.<br>
+                Include the transition functions in your default style declaration using the transition properties,
+                including: transition-property , transition-duration , transition-timing-function , and
+                transition-delay.<br>
+                <br>
+                The exception to this “if there is a valid midpoint, it can be transitioned” rule is visibility:
+                although there is no
+                valid midpoint between the values visible and hidden , when transitioned, the value changes at the
+                endpoint of the transition.
+            </li>
+            <li>Transition-duration<br>
+                Sets how long the transition will take: the duration of time it takes to go from the default state to
+                the transitioned state.
+                You can specify this either in seconds ( s ) or milliseconds ( ms ).
+            </li>
+            <li>Transition-timing-functions<br>
+                ease: slow start, then speeds up, and ends slowly<br>
+                ease-in-out: similar to ease but accelerates more sharply at beginning<br>
+                linear: creates a transition that animates at a constant speed, same as (cubic-bezier(0, 0, 1, 1))<br>
+                ease-in: slow to start but gains speed, and ends abruptly<br>
+                ease-out: starts full speed then slows progressively until conclusion of transition<br>
+                steps<br>
+                define the number of steps and the direction of either start or end<br>
+                For example, steps(5, start) would jump through the equidistant steps of 0%, 20%, 40%, 60%, and 80%, and
+                steps(5, end) would jump
+                throught the equidistant steps of 20%, 40%, 60%, 80%, and 100%.
+            </li>
+            <li>transition-delay<br>
+                negative delays<br>
+                a negative time delay that’s less than the duration of the entire transition will cause it to start
+                immediately, but it will start partway through the animation.
+            </li>
+            <li>Animations<br>
+                @-webkit-keyframes myAnimation { <br>
+                /* put animation keyframes here */<br>
+                }<br>
+                @keyframes myAnimation { <br>
+                /* put animation keyframes here */<br>
+                }<br>
+                from/to: evaluate to 0% and 100% respectively. <br>
+
+            </li>
+            <ul>
+                <li>keyframe</li>
+                <li>Animation Properties<br>
+                    animation-name:appearDisapper(no quotes around name)<br>
+                    animation-duration:300ms<br>
+                    animation-timing-function:linear<br>
+                    options: ease, linear, ease-in, ease-out, ease-in-out, a developer-defined cubic-bezier() function,
+                    step-start, step-end, or a developer-defined number of steps with the steps(number, direction)
+                    function
+                </li>
+                <li>
+                    animation-iteration-count<br>
+                    how many times the animation will play through. Use interger, decimal for partial complete  or infinite. Default is 1.
+                </li>
+                <li>animation-direction<br>
+                reverse, alternate, alternate-reverse<br>
+                When animations are played in reverse, timing functions are also reversed; for example, ease-in becomes ease-out .
+            </li>
+            <li>animation-delay<br>
+                how many milliseconds or seconds to wait before the browser begins the animation:
+            </li>
+            <li>animation-fill-mode<br>
+                defines what happens before the first animation iteration begins and after the last animation iteration concludes<br>
+                none: default<br>
+                forwards: hold the element at the last keyframe, with last keyframe property values overriding the element's original property values, without 
+                reverting to the original values at the conclusion of the last animation iteration <br>
+                The animation continues to apply the values of the last keyframes after the animation end<br>
+                backwards: sit and wait on the first keyframe from the moment the animation is applied to the element, through the duration of the animation delay, 
+                until the animation starts iterating <br>
+                The animation’s initial keyframes are applied as soon as the animation style is applied to an element. <br>
+
+                both:<br>
+            </li>
+            <li>animation-play-state<br>
+            running or paused
+        </li>
+        <li>shorthand<br>
+            .verbose {<br>
+                animation-name: appearDisappear; <br>
+                animation-duration: 300ms; <br>
+                animation-timing-function: ease-in;<br>
+                animation-iteration-count: 1;<br>
+                animation-direction: alternate;<br>
+                animation-delay: 5s;<br>
+                animation-fill-mode: backwards;<br>
+                animation-play-state: running;<br>
+            }<br>
+            /* shorthand */<br>
+            .concise {<br>
+                animation: 300ms ease-in alternate 5s backwards appearDisappear;<br>
+            }<br>
+            (left out the animation-iteration-count and animation-play-state since both were set to default.)
+        </li>
+        <li>*<br>
+            If using the shorthand property, be careful with your animation-name . You want to avoid accidentally 
+            using any animation property key term such as forwards , running , or alternate . Those three key terms 
+            in particular have caused many developers hours of debugging. If you include a key term, the browser will 
+            assume that the first occurrence of a valid value for any of the longhand properties is the value for that 
+            property, not the value for the animation-name property.
+        </li>
+            </ul>
+            <h1>Put your <span>dukes</span> up, sire</h1>
+
+
+        </ul>
+    </section>
+</body>
+
+</html>

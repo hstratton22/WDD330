@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>WDD330 W7</title>
+    <link rel="stylesheet" href="../../index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .myCanvas {
+            border: dotted 2px black;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <section class=headline>
+        <h1>WDD330 Portfolio</h1>
+        <h2>Heather Stratton</h2>
+    </section>
+    <section class=weeks>
+        <h3>Canvas</h3>
+        <ul>
+            <li>
+                developed by Apple
+            </li>
+            <li>
+                <canvas id="myCanvas" class="myCanvas" width="200" height="200">
+                    Sorry! Your browser doesn’t support Canvas.
+                </canvas>
+                <br>
+                Text between tags only shown if canvas element is not supported by browser
+            </li>
+            <li>Drawing done in JS. Give canvas id for access. Must set width and height to determine size of coordinate
+                system. Defaul width 300 and height 150.</li>
+            <li>strokeStyle, fillStyle<br>
+                set on context object, 3 values: string "color", CanvasGradent object, or CanvasPattern object
+            </li>
+            <li>fillRect, strokeRect</li>
+            <li>coordinate system<br>
+            (0,0) top left<br>
+        (200, 200) bottom right
+    </li>
+    <li>
+        <canvas id="demo3" width="200" height="200"></canvas>
+    </li>
+    <li>Paths<br>
+        layout the path, stroke the path, and fill the path.<br>
+        arc method: arc(x, y, radius, startAngle, endAngle, anticlockwise). (x, y where begin center)<br>
+        startAngle, endAngle in radians (2pi = complete circle, 1 rad = 180 degrees)<br>
+        anticlockwise:true/false
+    </li>
+    <li>toDataURL<br>
+    creates URL with image (pg or jpg). Can right-click and save as JGP or PNG.</li>
+    <li>
+        <canvas id="demo4" width="200" height="200" class="myCanvas"></canvas>
+    </li>
+    <li>
+        <canvas id="demo5" width="200" height="200" class="myCanvas"></canvas>
+        <button name="saveButton" id="saveButton">Save Drawing</button>
+    </li>
+        </ul>
+    </section>
+</body>
+<script src="canvas.js"></script>
+
+</html>
