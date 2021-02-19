@@ -63,7 +63,8 @@ drawCircle2();
 
 function saveDrawing() {
     var canvas5 = document.getElementById("demo5");
-    window.open(canvas5.toDataURL("image/png"));
+    //window.open(canvas5.toDataURL("image/png"));
+    console.log(canvas5.toDataURL("image/png"));
 }
 var button = document.getElementById("saveButton");
 button.addEventListener("click", saveDrawing, false);
