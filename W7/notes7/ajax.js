@@ -183,3 +183,15 @@ function addTask(event) {
 $.ajax('http://numbersapi.com/random')
 .done(text => outputDiv.innerHTML = text );
 */
+
+
+/* from Abel
+function selectFood(bodyFat) {
+  return new Promise( (resolve, reject) => {
+    bodyFat < .12 ? resolve('pizza') : reject('salad');
+})};
+//to use
+selectFood(.09)
+  .then((selection) => {console.log(`I want to eat ${selection}!`)})
+  .catch((selection) => {console.log(`I "want" to eat ${selection} :/`)});
+  */
