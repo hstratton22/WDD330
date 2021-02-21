@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>WDD330 W8</title>
+    <link rel="stylesheet" href="../../index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .spin {
+            position: absolute;
+            top: 8px;
+            left: 55px;
+        }
+
+        .draganddrop .mc {
+            text-align: center;
+
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <section class=headline>
+        <h1>WDD330 Portfolio</h1>
+        <h2>Heather Stratton</h2>
+    </section>
+    <section class=weeks>
+        <h3>Drad n Drop notes</h3>
+        <ul>
+            <li>Drag and Drop<br>
+                Set the draggable attribute on any HTML elements you’d like to be draggable.<br>
+                Add an event listener for the dragstart event on any draggable HTML elements.<br>
+                Add an event listener for the dragover and drop events on any elements that you want to have accept
+                dropped items.</li>
+        </ul>
+        <div>
+            <p>What fruits do you like?</p>
+            <ol ondragstart="dragStartHandler(event)">
+                <li draggable="true" data-value="fruit-apple">Apples</li>
+                <li draggable="true" data-value="fruit-orange">Oranges</li>
+                <li draggable="true" data-value="fruit-pear">Pears</li>
+            </ol>
+          <!--  <p>Drop your favorite fruits below:</p>
+            <ol ondragenter="dragEnterHandler(event)" ondragover="dragOverHandler(event)" ondrop="dropHandler(event)">
+            </ol>-->
+        </div>
+        <script>
+            //https://html.spec.whatwg.org/multipage/dnd.html#dnd
+            //not working yet
+            var internalDNDType = 'text/x-example'; // set this to something specific to your site
+            function dragStartHandler(event) {
+                if (event.target instanceof HTMLLIElement) {
+                    // use the element's data-value="" attribute as the value to be moving:
+                    event.dataTransfer.setData(internalDNDType, event.target.dataset.value);
+                    event.dataTransfer.effectAllowed = 'move'; // only allow moves
+                } else {
+                    event.preventDefault(); // don't allow selection to be dragged
+                }
+            }
+            function dragEndHandler(event) {
+                if (event.dataTransfer.dropEffect == 'move') {
+                    // remove the dragged element
+                    event.target.parentNode.removeChild(event.target);
+                }
+            }
+            /*
+            function dragEnterHandler(event) {
+                var items = event.dataTransfer.items;
+                for (var i = 0; i < items.length; ++i) {
+                    var item = items[i];
+                    if (item.kind == 'string' && item.type == internalDNDType) {
+                        event.preventDefault();
+                        return;
+                    }
+                }
+            }
+            function dragOverHandler(event) {
+                event.dataTransfer.dropEffect = 'move';
+                event.preventDefault();
+            }
+            function dropHandler(event) {
+                var li = document.createElement('li');
+                var data = event.dataTransfer.getData(internalDNDType);
+                if (data == 'fruit-apple') {
+                    li.textContent = 'Apples';
+                } else if (data == 'fruit-orange') {
+                    li.textContent = 'Oranges';
+                } else if (data == 'fruit-pear') {
+                    li.textContent = 'Pears';
+                } else {
+                    li.textContent = 'Unknown Fruit';
+                }
+                event.target.appendChild(li);
+            }*/
+        </script>
+
+</html>

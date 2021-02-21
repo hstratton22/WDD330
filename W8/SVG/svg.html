@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>WDD330 W8</title>
+    <link rel="stylesheet" href="../../index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .spin {
+    position: absolute;
+    top: 8px;
+    left: 55px;
+}
+    </style>
+    
+
+
+</head>
+
+<body>
+    <section class=headline>
+        <h1>WDD330 Portfolio</h1>
+        <h2>Heather Stratton</h2>
+    </section>
+    <section class=weeks>
+        <h3>SVG notes</h3>
+        <ul>
+            <li>Scalable Vector Graphics<br>
+                preserve quality in resizing
+            </li>
+            <li>XML<br>
+                eXtensible Markup Language</li>
+            <svg viewBox="0 0 100 100"><!--add xmlns="http://www.w3.org/2000/svg" if not in html-->
+                <circle cx="50" cy="50" r="25" fill="red" />
+            </svg>
+            <svg viewbox="0 0 200 200">
+                <desc>Drawing a rectangle</desc>
+                <rect x="10" y="10" width="100" height="100" fill="blue" stroke="red" stroke-width="3" />
+            </svg>
+            <li><a href="http://inkscape.org/" target="_blank">inkscape.org</a> </li>
+            <li><a href="http://openclipart.org/" target="blank">openclipart.org </a> for public domain images</li>
+            <li><a href="http://raphaeljs.com/" target="_blank">Raphael</a>library </li>
+            <li><a href="raphael.html">raphael.html</a> </li>
+            <article class="ad-ad4">
+                <div id="mapDiv">        
+                <h1 id="geoHeading">Where in the world are you?</h1>
+                <form id="geoForm">
+                    <input type="button" id="geobutton" value="Tell us!">
+                </form>    
+                <div class="spin" id="spinner"></div> 
+                </div>
+            </article>
+            <li>SVG accessible by DOM because retained mode.  Is a file format, not a method to dynamically draw or manipulate.</li>
+
+
+
+        </ul>
+        
+    </section>
+</body>
+
+</html>
