@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pokemon API</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h1>Pokemon</h1>
+        <div id="pokemon">
+            <h2>Pokemon List</h2>
+            <ul id="pokemonList">
+
+            </ul>
+            <button id="pokemonBtn" onclick="getPokemon('https://pokeapi.co/api/v2/pokemon')">List Pokemon</button>
+        </div>
+        <script>
+            const btn=document.querySelector("#pokemonBtn");
+            async function getPokemon(url){
+                try {
+                    const response = await fetch(url)
+                    if(!response.ok) {
+                        throw Error(response.statusText)
+                    } else {
+                        const fetchjson = await response.json();
+                        console.log(fetchjson);
+                        renderPokemon(fetchjson)
+                    }
+                }catch (error) {
+                    console.log(error);
+                }
+
+            }
+            function renderPokemon(data){
+                const pokemonContainer = document.querySelector("#pokemonList");
+
+                if (data.next){
+                    btn.textContent="Show more";
+                    btn.setAttribute('onclick', `getPokemon('${data.next}')`);
+
+                }
+
+                data.results.forEach( pokemon => {
+                    const listItem = document.createElement('li');
+                    //listItem.textContent= pokemon.name;
+                    listItem.innerHTML=
+                    `<span class="poke-name">${pokemon.name}</span> <button class="view-btn" onclick="getDetails('${pokemon.name}', '${pokemon.url}')">View</button>`
+                    listItem.id=pokemon.name;
+                    pokemonContainer.appendChild(listItem);
+                })
+            }
+            function getDetails(id, url){
+                fetch(url)
+                .then( res => res.json())
+                .then (json => {
+                    console.log('DETAILS', json)
+                    var li = document.getElementById(id);
+                    var div = document.createElement('div');
+                    div.innerHTML=
+                    `<img src="${json.sprites.front_default }"/>`
+                    li.lastElementChild.remove();
+                    li.appendChild(div);
+
+               
+            })}
+
+        </script>
+    </body>
+</html>

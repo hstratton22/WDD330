@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Instructor Fetch example</title>
+    <style>
+        h1 {text-align:center;}
+        button {margin-top:20px;}
+    </style>
+</head>
+<body>
+    <div>
+    <h2 id="title"></h2>
+    <div id="desc"></div>
+</div>
+<button onclick="doSomething()">Fetch Data</button>
+<script>
+    
+    function doSomething() {
+      /*  let somePromise = new Promise ((resolve, reject)=>{
+            setTimeout(() => {
+                resolve('5 seconds later')
+            }, 5000);
+        })
+        somePromise.then ((result)=>{
+            console.log(result)
+        })
+        console.log('waiting...')
+    */
+
+    fetch('data.json')
+    .then(res=> res.json())
+    .then(data =>{
+        let title= document.querySelector('#title');
+        let desc = document.querySelector('#desc');
+
+        title.innerHTML=data.title
+        desc.innerHTML=data.desc
+    })
+}
+</script>
+</body>
+</html>
