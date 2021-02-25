@@ -59,6 +59,8 @@ function getJSON(url) {
   
       // enable the next and prev buttons.
       if (data.next) {
+        data.next= data.next.replace('http', 'https');
+
         const next = document.getElementById("next");
         // normally we would prefer the addEventListener method of adding a listener. Using something like 'element.onEvent = event_function' has the limitation of only being able to hold one listener of the type we choose. In this case that is a good thing however. Because we are not re-creating the buttons each time we load a new batch of data we could end up with several listeners attached to each button by the last page. We won't have that issue here.
         next.ontouchend = () => {

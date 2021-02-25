@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>WDD330 W9</title>
+    <link rel="stylesheet" href="../../index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <section class=headline>
+        <h1>WDD330 Portfolio</h1>
+        <h2>Heather Stratton</h2>
+    </section>
+    <section class=weeks>
+        <h3>Browser Object notes</h3>
+        <ul>
+            <li>most notes in js file</li>
+            <li>BOM<br>
+            Browser Object Model (window)</li>
+            <li>global</li>
+            <li>navigator - property that returns a reference to the Navigator object</li>
+            <li>Navigator object - contains information about the browser being used.</li>
+            <li>userAgent - property will return information about the browser and operating system being used. (deprecated)</li>
+            <li>Location<br>
+                The reload() method can be used to force a reload of the current page. If it’s given a parameter of true, 
+                it will force the browser to reload the page from the server, instead of using a cached page.<br>
+
+                The assign() method can be used to load another resource from a URL provided as a parameter.<br>
+                The replace() method is almost the same as the assign() method, except the current page will not 
+                be stored in the session history, so the user will be unable to navigate back to it using the back button.<br>
+
+                The toString() method returns a string containing the whole URL.</li>
+                <li>Window History</li>
+                <li>document<br>
+                document.write() will completely replace the current document.<br>
+            Placed in script tags, can inject a string.<br>
+            <h3>
+                <script>document.write("Hello, world!")</script>
+            </h3></li>
+            <li>Cookies<br>
+                Store information that can then be retrieved between requests. Can only be read by a web page from the same domain that set them.
+                Limited to storing up to 4KB of data, although 20 cookies are allowed per domain. Useful for retaining state information (such as 
+                if a user is logged in) because they’re passed between the client and server on every HTTP request.<br>
+                Displayed as a text file that contain a list of name/value pairs separated by semicolons.
+
+            </li>
+
+        </ul>
+
+</body>
+<script src="BOM.js"></script>
+</html>
