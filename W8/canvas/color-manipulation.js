@@ -1,3 +1,4 @@
+//https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 var img = new Image();
 img.crossOrigin = 'anonymous';
 img.src = 'https://upload.wikimedia.org/wikipedia/commons/6/69/Crystal_Project_browser.png';

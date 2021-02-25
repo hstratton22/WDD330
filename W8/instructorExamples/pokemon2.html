@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pokemon API</title>
+        <title>Pokemon2 API</title>
         <style>
             ul {
                 list-style-type: none;
@@ -11,17 +11,18 @@
             }
             ul li{
                 font-size: 2;
-                margin-bottom: 1.5rem;
+                margin-top: 1.5rem;
             }
             button {
                 margin-left:1.5rem;
                 font-size: 2;
+                margin-bottom:.5rem;
             }
 
         </style>
     </head>
     <body>
-        <h1>Pokemon</h1>
+        <h1>Pokemon2</h1>
         <div id="pokemon">
             <h2>Pokemon List</h2>
             <ul id="pokemonList">
@@ -48,13 +49,40 @@
             }
             function renderPokemon(data){
                 const pokemonContainer = document.querySelector("#pokemonList");
-
-                if (data.next){
-                    btn.textContent="Show more";
-                    console.log(data.next);
-                    btn.setAttribute('onclick', `getPokemon('${data.next}')`);
-
+                pokemonContainer.innerHTML="";
+                for (let i=0; i< 12;i++){
+                    let page= 1 +i;
+                    console.log(page);
+                    const btn = document.createElement("button");
+                    btn.textContent="page "+ page;
+                    let inc= 100 * i;
+                    console.log(inc);
+                    let link = "https://pokeapi.co/api/v2/pokemon?offset=" + inc + "&limit=100";
+                    console.log(link);
+                    btn.setAttribute('onclick', "getPokemon('"+link+"')");
+                    //"https://pokeapi.co/api/v2/pokemon?offset="' + inc + '0&limit=100)
+                    pokemonContainer.appendChild(btn);
                 }
+               /* const btn1= document.createElement("button");
+                const btn2= document.createElement("button");
+                const btn3 = document.createElement("button");
+
+                btn1.textContent="page 1";
+                btn2.textContent="page 2";
+                btn3.textContent="page 3";
+                btn1.setAttribute('onclick', 'getPokemon("https://pokeapi.co/api/v2/pokemon?offset=0&limit=100")');//https://pokeapi.co/api/v2/pokemon?offset=20&limit=20
+                btn2.setAttribute('onclick', 'getPokemon("https://pokeapi.co/api/v2/pokemon?offset=100&limit=100")');//https://pokeapi.co/api/v2/pokemon?offset=40&limit=20
+                btn3.setAttribute('onclick', 'getPokemon("https://pokeapi.co/api/v2/pokemon?offset=200&limit=100")');
+
+                pokemonContainer.appendChild(btn1);
+                pokemonContainer.appendChild(btn2);
+                pokemonContainer.appendChild(btn3);*/
+
+               // if (data.next){
+                  //  btn.textContent="Show more";
+                   // btn.setAttribute('onclick', `getPokemon('${data.next}')`);
+
+         //  }
 
                 data.results.forEach( pokemon => {
                     const listItem = document.createElement('li');
