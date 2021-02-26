@@ -94,3 +94,62 @@ Number.isNaN(4.2);
 
 //document
 //document.write('Hello, world!');
+//document.cookie = 'name=Superman';
+//<< "name=Superman"
+/*string so adding doesn't overwrite but adds to
+document.cookie = 'hero=true';
+<< "hero=true"
+document.cookie = 'city=Metropolis';
+<< "city=Metropolis"*/
+
+//reassign (change values) by renaming
+/*document.cookie = 'name=Batman'
+<< "name=Batman"
+document.cookie = 'city=Gotham'
+<< "city=Gotham"*/
+//to read
+//document.cookie:
+//<< "name=Batman; hero=true; city=Gotham"
+
+//break into readable key:value pairs
+/*
+const cookies = document.cookie.split("; ");
+for (crumb of cookies){
+    const [key,value] = crumb.split("=");
+    console.log(`The value of ${key} is ${value}`);
+}
+<< The value of name is Batman
+The value of hero is true
+The value of city is Gotham*/
+
+//can add expiry date, otherwise end with session
+/*
+const expiryDate = new Date(); 
+const tomorrow = expiryDate.getTime() + 1000 * 60 * 60 * 24;
+expiryDate.setTime(tomorrow);
+document.cookie = `name=Batman; expires=${ expiryDate.toUTCString()}`;
+*/
+//any page in root directory has access
+/*document.cookie = 'name=Batman; path=/'*/
+//can set domain, allowing subdomains access as well
+//document.cookie = 'name=Batman; domain=sitepoint.com';
+
+//adding secure only allows over secure networks https
+//document.cookie = 'name=Batman; secure';
+
+//to remove cookie, set it to expire in past
+//document.cookie = 'name=Batman; expires=Thu, 01 Jan 1970 00:00:01 GMT';
+//unless is a session cookie, it will expire when the tab or window is closed.
+
+//timeout
+//window.setTimeout( () => alert("Time's Up!"), 3000);
+//window.clearTimeout(5); //if number is 5
+
+//function chant(){ console.log('Beetlejuice'); }
+
+//const summon = window.setInterval(chant,1000);in the console every second (1,000 milliseconds).
+//window.clearInterval()
+/*
+To stop this, we can use the window.clearInterval() method and the variable repeat as an argument (this is because the window.setInterval() method returns its ID, so this will be assigned to the variable repeat ):
+
+window.clearInterval(summon);*/

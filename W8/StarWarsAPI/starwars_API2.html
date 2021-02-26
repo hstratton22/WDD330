@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title> WDD 330 | Jacob Carl | W_08</title>
-  <link href="../css/main.css" rel="stylesheet"/>
-  <script src=""></script>
+  <title> WDD 330 W8</title>
+  
 </head>
 <body>
   <h1> Starwars API</h1>
@@ -59,11 +58,13 @@ function get_data(url)
     let html = "";
     if(next != null)
     {
+		next = next.replace('http', 'https');
       html += "<div> <a href='#' onclick=\"get_data('" + next + "');\">Next</a></div>";
     }
     
     if(prev != null)
     {
+		prev = prev.replace('http', 'https');
       html += "<div> <a href='#' onclick=\"get_data('" + prev + "');\">Previous</a></div>";
     }
     return html;
