@@ -64,6 +64,7 @@ const view = {
         this.render(this.score, game.score);
         this.render(this.result, '');
         this.render(this.info, '');
+        this.render(this.hiScore, game.hiScore());
     },
     buttons(array) {
         return array.map(value => `<button>${value}</button>`).join('');
@@ -73,6 +74,7 @@ const view = {
         this.hide(this.question);
         this.hide(this.response);
         this.show(this.start);
+        this.render(this.hiScore, game.hiScore());
     }
 
 };
@@ -89,7 +91,7 @@ const game = {
     countdown() {
         game.secondsRemaining--;
         view.render(view.timer,game.secondsRemaining);
-        if(game.secondsRemaining < 0) {
+        if(game.secondsRemaining <= 0) {
             game.gameOver();
         }
     },
@@ -117,17 +119,27 @@ const game = {
             this.score++;
             view.render(view.score, this.score);
         } else {
+            console.log('wrong');
             view.render(view.result, `Wrong! The correct answer was ${answer}`, { 'class': 'wrong' });
         }
         this.ask();
     },
+    
 
     gameOver() {
         console.log('gameOver() invoked');
         view.render(view.info, `Game Over, you scored ${this.score} point${this.score !== 1 ? 's' : ''}`);
         view.teardown();
         clearInterval(this.timer);
-    }
+    },
+    hiScore(){
+        const hi = localStorage.getItem('highScore') || 0;
+        if(this.score > hi || hi === 0) {
+          localStorage.setItem('highScore',this.score);
+          view.render(view.info,'** NEW HIGH SCORE! **');
+        }
+        return localStorage.getItem('highScore');
+      }
 }
 //game.start(quiz);
 //view.start.addEventListener('click', () => game.start(quiz), false);

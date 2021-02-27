@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>WDD330 W9</title>
+    <link rel="stylesheet" href="../../index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <section class=headline>
+        <h1>WDD330 Portfolio</h1>
+        <h2>Heather Stratton</h2>
+    </section>
+    <section class=weeks>
+        <h3>HTML5 notes</h3>
+        <ul>
+            <li>see console</li>
+            <li>data-Attribute<br>
+                a way of embedding data in a web page using custom attributes that are ignored by the browser. <br>
+                Start with data- <br>
+                Contain only lowercase letters, numbers, hyphens, dots, colons or underscores.<br>
+                Include an optional string value.<br>
+            </li>
+            <div id='hero' data-powers='flight superSpeed'>
+                Superman
+            </div>
+            <li>APIs<br></li>
+            <li>web storage API<br>
+                local storage and session storage<br>
+                Differences from cookies:<br>
+                Information stored isnotshared with the server on every request.<br>
+
+                Information is available in multiple windows of the browser (but only if the domain is the same).<br>
+
+                Storage capacity limit is much larger than the 4KB limit for cookies ( There is no actual limit in the
+                specification, but most browsers have a limit set at 5GB per domain.).<br>
+
+                Any data stored does not automatically expire as it does with cookies. This potentially makes cookies a
+                better choice for something like showing a popup once a day.</li>
+            <li>storage event<br>
+                only fired on anyotherwindows or tabs from the same domain, and only if the value of the item being
+                saved changes. <br>
+                key tells us the key of the item that changed<br>
+
+                newValue tells us the new value to which it has been changed<br>
+
+                oldValue tells us the previous value before it was changed<br>
+
+                storageArea tells us if it is stored in local or session storage.</li>
+            <li>Geolocation API<br>
+                The Geolocation API is used to obtain the geographical position of the device. This means it can be used
+                to find the user’s exact location, then link to nearby places or measure the speed at which the user is
+                moving. This information can then be used to filter data based on the user's location or speed and
+                direction of travel. An example of this might be a search function that returns results based on your
+                location. Because of privacy concerns, permission to use this has to be granted by the user first.<br>
+                getCurrentPosition()<br>
+                youAreHere()<br>
+                position.speed property returns the ground speed of the device in meters per second.<br>
+
+                position.altitude property returns an estimate of the device’s altitude in meters above the WGS84
+                ellipsoid, which is a standard measurement for the center of the Earth.<br>
+
+                position.heading property returns the direction the device is moving in. This is measured as a bearing
+                in degrees, clockwise from North.<br>
+
+                position.timestamp property returns the time that the position information was recorded.<br>
+                position.accuracy property returns the accuracy of the latitude and longitude properties in meters
+                (lower the returned value, the more accurate the measurements are)<br>
+                watchPosition() method that will call a callback function every time the position of the device is
+                updated. <br>
+                clearWatch() method can be used to stop the callback being called, using the ID of the watch as an
+                argument<br>
+            </li>
+            <li>Web Workers API<br>
+                allow processes to be run in the background</li>
+            <li> <a href="html5.js">factors.html</a> </li>
+            <li>Shared Web Workers<br>
+                allow lots of different scripts on the same domain to access the same worker object.</li>
+            <li>Service Workers API<br>
+                allows a worker script to run in the background with the added benefit of being able to intercept
+                network requests.
+                This allows you to take alternative action if the network is offline, and effectively create app-like
+                offline experiences. Service workers also allow access to push notifications and background syncing.
+                Service workers require a secure network to run on HTTPS to avoid any malicious code hijacking network
+                requests.
+
+            </li>
+            <li>Websocket<br>
+                allows two-way communication with a server – also known as push messaging. This means that a connection
+                is kept open and responses are ‘pushed’ to the client as soon as they are received.
+            </li>
+            <li><a href="websocket/websocket.html">websocket.html</a> </li>
+            <li>Notifications API<br>
+                allows you to show messages using the system's notifications. This is usually a popup in the corner of
+                the screen, but it changes depending on the operating system. An advantage of using the system
+                notification is that they will still be displayed even if the web page that calls them isn't the current
+                tab.<br>
+                requestPermission() to get permission for notifications
+            </li>
+            <li>Multimedia<br>
+                The play event, which fires when the clip starts and when it resumes after a pause.<br>
+
+                The pause event, which fires when the clip is paused.<br>
+
+                The volumechange event, which fires when the volume is changed.<br>
+
+                The loadedmetadata event, which we saw in the note above, and which fires when all the video's metadata
+                has loaded.
+            </li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank">mozilla web APIs</a> </li>
+            <li>More canvas</li>
+            <canvas id='canvas' width='400' height='400'>Sorry, but your browser does not support the canvas element</canvas>
+            <li>Shims and Polyfills<br>
+            filler code if user doesn't have updated browser for API</li>
+            
+
+
+
+
+
+
+        </ul>
+    </section>
+</body>
+<script src="html5.js"></script>
+
+</html>
