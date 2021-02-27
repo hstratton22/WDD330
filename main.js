@@ -34,7 +34,7 @@ const links = [
       url:"W8/index.html"
     },
     {
-      lable:"Week9 work & notes",
+      label:"Week9 work & notes",
       url: "W9/index.html"
     }
     
