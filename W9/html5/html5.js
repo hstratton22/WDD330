@@ -119,7 +119,7 @@ video.currentTime += 10; // jumps forward 10 seconds
 video.playbackRate = 8; // fast-forward at 8 times as fast; 1 is normal
 video.loop = true;
 video.duration;
-//ad event listener
+//add event listener
 video.addEventListener('loadedmetadata', () => { console.log(video.duration); });
 
 video.addEventListener('pause', () => {
