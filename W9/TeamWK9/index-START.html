@@ -75,16 +75,19 @@
     document.querySelectorAll(".key").forEach(function(ele){
   ele.addEventListener('click', function(e){
     var dataKey = this.dataset.key;
+    console.dir(dataKey);
     document.querySelector("audio[data-key='"+dataKey +"']").play();
   });
 })
 
-document.querySelectorAll(".key").forEach(function(ele){
-  ele.addEventListener('keydown', function(e){
+//document.querySelectorAll(".key").forEach(function(el){
+ // el.addEventListener('keydown', function(eL){
+   window.addEventListener("keydown", function(kd){
     var dataKey = this.dataset.key;
+    //console.dir(dataKey);
     document.querySelector("audio[data-key='"+dataKey +"']").play();
   });
-})
+//})
 
     //audio.classList.add('playing');
 
