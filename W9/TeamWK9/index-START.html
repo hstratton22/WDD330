@@ -60,41 +60,69 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
   <script>
-    
-    const audio = document.getElementsByTagName('audio');
-    //audio.addEventListener('loadedmetadata', () => { console.log(audio.duration); });
+    /*//click works great!
+        const audio = document.getElementsByTagName('audio');
+        document.querySelectorAll(".key").forEach(function (ele) {
+          ele.addEventListener('click', function (e) {
+            var dataKey = this.dataset.key;
+            console.dir(dataKey);
+            document.querySelector("audio[data-key='" + dataKey + "']").play();
+          });
+        })
+    */
 
-    var i;
-    for (i = 0; i < audio.length; i++) {
-      audio[i].addEventListener('click', () => {
-        console.log('The audio has been clicked');
-        audio.play;
-      }, false);
-    }
+    window.addEventListener("keydown", function (kd) {
+      var dataKey = kd.keyCode;
 
-    document.querySelectorAll(".key").forEach(function(ele){
-  ele.addEventListener('click', function(e){
-    var dataKey = this.dataset.key;
-    console.dir(dataKey);
-    document.querySelector("audio[data-key='"+dataKey +"']").play();
-  });
-})
+      const aud = document.querySelector("audio[data-key='" + dataKey + "']");
+      aud.currentTime = 0;
+      aud.play();
+      const audDiv = document.querySelector("div[data-key='" + dataKey + "']");
+      audDiv.classList.add("playing");
+      
+      let tens= 100;
 
-//document.querySelectorAll(".key").forEach(function(el){
- // el.addEventListener('keydown', function(eL){
-   window.addEventListener("keydown", function(kd){
-    var dataKey = this.dataset.key;
-    //console.dir(dataKey);
-    document.querySelector("audio[data-key='"+dataKey +"']").play();
-  });
-//})
+      audDiv.style.marginTop=tens+"px";
+      
+      /*let currentPOS = audDiv.style.marginTop;
+      console.log(currentPOS);
+      if (currentPOS > 10) {
+        currentPOS = 0;
+        console.log(currentPOS);
+      } else currentPOS += 10;
+      audDiv.style.marginTop = currentPOS + "px";
+*/
 
-    //audio.classList.add('playing');
+      aud.addEventListener('ended', function (event) {
+        //var dataKey = event.target.dataset.key;
+        //console.log(dataKey);
+        audDiv.classList.remove("playing");
+        //document.querySelector("div[data-key='" + dataKey + "']").classList.remove("playing");
 
-    /*audio.addEventListener('click', () => {
-console.log('The audio has been clicked');
-audio.play; }, false);
-//audio.play();*/
+
+      });
+    })
+/*
+    document.getElementById("moveDiv").style.left = left + "px";
+        document.getElementById("moveDiv").style.top = top + "px";
+        if (spacePressed)
+            document.getElementById("show").style.display = "block";
+        else
+            document.getElementById("show").style.display = "none";*/
+
+    //})
+    /*
+        //audio.classList.add('playing');//isn't working
+        const aud = document.querySelector('audio');
+        aud.addEventListener('playing', (event) => {
+          console.log('audio is playing');
+        });
+      */
+    /*
+          var div = document.getElementById("yourDiv");
+    var rect = div.getBoundingClientRect();
+    alert("Coordinates: " + rect.left + "px, " + rect.top + "px");*/
+
   </script>
 
 

@@ -3,7 +3,7 @@ var img = new Image();
 img.crossOrigin = 'anonymous';
 img.src = 'https://upload.wikimedia.org/wikipedia/commons/6/69/Crystal_Project_browser.png';
 
-
+//img.src ="https:\/\/www.superherodb.com\/pictures2\/portraits\/10\/100\/65.jpg";
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 

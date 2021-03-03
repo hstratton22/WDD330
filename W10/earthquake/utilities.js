@@ -20,4 +20,4 @@ export function getJSON(url){
         navigator.geolocation.getCurrentPosition(resolve, reject, options);
     });
 };
-     
+     //getLocation(options).then(response => // do something with the response) 
