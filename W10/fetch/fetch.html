@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>WDD330 W10</title>
+    <link rel="stylesheet" href="../../index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <section class=headline>
+        <h1>WDD330 Portfolio</h1>
+        <h2>Heather Stratton</h2>
+    </section>
+    <section class=weeks>
+        <h3>Fetch notes</h3>
+        <ul>
+            <li>Fetch API<br>
+                provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline,
+                such as requests and responses. It also provides a global fetch() method that provides an easy,
+                logical way to fetch resources asynchronously across the network.</li>
+            <li>Differes from ajax<br>
+                The Promise returned from fetch() won’t reject on HTTP error status even if the response is an HTTP 404
+                or 500. Instead, it will resolve normally (with ok status set to false), and it will only reject on
+                network failure or if anything prevented the request from completing.
+                fetch() won’t send cross-origin cookies unless you set the credentials init option. (Since April 2018.
+                The spec changed the default credentials policy to same-origin. Firefox changed since 61.0b13.)
+            </li>
+            <li>mode: "no-cors" only allows a limited set of headers in the request: <br>
+                Accept<br>
+                Accept-Language<br>
+                Content-Language<br>
+                Content-Type with a value of application/x-www-form-urlencoded, multipart/form-data, or text/plain
+            </li>
+            <li>clone()<br>
+                There is also a clone() method that creates a copy. Both methods of creating a copy will fail if the
+                body of the original request or response has already been read, but reading the body of a cloned
+                response or request will not cause it to be marked as read in the original.
+            </li>
+            <li>Headers<br>
+                Interface allows you to create your own headers object via the Headers() constructor. A headers object
+                is a simple multi-map of names to values</li>
+            <li>TypeError<br>
+                Thrown if a header name is used that is not a valid HTTP Header name. </li>
+            <li>Guard property<br>
+                possible values<br>
+                none: default.<br>
+                request: guard for a headers object obtained from a request (Request.headers).<br>
+                request-no-cors: guard for a headers object obtained from a request created with Request.mode
+                no-cors.<br>
+                response: guard for a headers object obtained from a response (Response.headers).<br>
+                immutable: guard that renders a headers object read-only; mostly used for ServiceWorkers.<br>
+
+            </li>
+            <li>Response objects<br>
+                response properties<br>
+                Response.status — An integer (default value 200) containing the response status code.<br>
+                Response.statusText — A string (default value ""), which corresponds to the HTTP status code message.
+                Note that HTTP/2 does not support status messages.<br>
+                Response.ok — seen in use above, this is a shorthand for checking that status is in the range 200-299
+                inclusive. This returns a Boolean.
+            </li>
+            <li>Both requests and responses may contain body data. A body is an instance of any of the following
+                types:<br>
+                ArrayBuffer<br>
+                ArrayBufferView (Uint8Array and friends)<br>
+                Blob/File<br>
+                string<br>
+                URLSearchParams<br>
+                FormData<br>
+            </li>
+            <li>The Body mixin defines the following methods to extract a body (implemented by both Request and
+                Response). These all return a promise that is eventually resolved with the actual content.<br>
+                arrayBuffer()<br>
+                blob()<br>
+                json()<br>
+                text()<br>
+                formData()<br>
+
+            </li>
+            <li><a href="fetching.js">JS commented out doc</a> </li>
+
+        </ul>
+    </section>
+</body>
+
+
+</html>

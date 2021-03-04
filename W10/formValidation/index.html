@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>WDD330 W10</title>
+    <link rel="stylesheet" href="../../index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <section class=headline>
+        <h1>WDD330 Portfolio</h1>
+        <h2>Heather Stratton</h2>
+    </section>
+    <section class=weeks>
+        <h3>Client-side Form Validation notes</h3>
+        <ul>
+            <li>We want to get the right data, in the right format.<br>
+                We want to protect our users' data.<br>
+                We want to protect ourselves.<br>
+
+            </li>
+            <li>Built-in form validation uses HTML5 form validation features.<br>
+                or<br>
+                JavaScript validation is coded using JavaScript.</li>
+            <li>
+                built-in<br>
+                required: Specifies whether a form field needs to be filled in before the form can be submitted.<br>
+                minlength and maxlength: Specifies the minimum and maximum length of textual data (strings)<br>
+                min and max: Specifies the minimum and maximum values of numerical input types<br>
+                type: Specifies whether the data needs to be a number, an email address, or some other specific preset
+                type. <br>
+                pattern: Specifies a regular expression that defines a pattern the entered data needs to follow.<br>
+            </li>
+            <li><a href="example.html"></a>example </li>
+            <li>regex<br>
+                examples<br>
+                a — Matches one character that is a (not b, not aa, and so on).<br>
+                abc — Matches a, followed by b, followed by c.<br>
+                ab?c—Matches a, optionally followed by a single b, followed by c. ( ac or abc)<br>
+                ab*c—Matches a, optionally followed by any number of bs, followed by c. ( ac , abc, abbbbbc, and so
+                on).<br>
+                a|b — Matches one character that is a or b.<br>
+                abc|xyz — Matches exactly abc or exactly xyz (but not abcxyz or a or y, and so on).<br>
+            </li>
+            <li><a href="fullExample.html">full example</a> </li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation#validation-related_attributes"
+                    target="_blank">validation-related attributes developer.mozilla.org</a> </li>
+            <li>Validation with JS</li>
+            <li> Constraint Validation API<br>
+                a set of methods and properties available on the following form element DOM interfaces:<br>
+                HTMLButtonElement (represents a button element)<br>
+                HTMLFieldSetElement (represents a fieldset element)<br>
+                HTMLInputElement (represents an input element)<br>
+                HTMLOutputElement (represents an output element)<br>
+                HTMLSelectElement (represents a select element)<br>
+                HTMLTextAreaElement (represents a textarea element)<br>
+            </li>
+            <li><strong>properties</strong> available to each of previous<br>
+                validationMessage: Returns a localized message describing the validation constraints that the control
+                doesn't satisfy (if any). If the control is not a candidate for constraint validation (willValidate is
+                false) or the element's value satisfies its constraints (is valid), this will return an empty
+                string.<br>
+                validity: Returns a ValidityState object that contains several properties describing the validity state
+                of the element. You can find full details of all the available properties in the ValidityState reference
+                page; below is listed a few of the more common ones:<br>
+                <ul>
+            <li>patternMismatch: Returns true if the value does not match the specified pattern, and false if it does
+                match. If true, the element matches the :invalid CSS pseudo-class.</li>
+            <li>tooLong: Returns true if the value is longer than the maximum length specified by the maxlength
+                attribute, or false if it is shorter than or equal to the maximum. If true, the element matches the
+                :invalid CSS pseudo-class.</li>
+            <li>tooShort: Returns true if the value is shorter than the minimum length specified by the minlength
+                attribute, or false if it is greater than or equal to the minimum. If true, the element matches the
+                :invalid CSS pseudo-class.</li>
+            <li>rangeOverflow: Returns true if the value is greater than the maximum specified by the max attribute, or
+                false if it is less than or equal to the maximum. If true, the element matches the :invalid and
+                :out-of-range CSS pseudo-classes.</li>
+            <li>rangeUnderflow: Returns true if the value is less than the minimum specified by the min attribute, or
+                false if it is greater than or equal to the minimum. If true, the element matches the :invalid and
+                :out-of-range CSS pseudo-classes.</li>
+            <li>typeMismatch: Returns true if the value is not in the required syntax (when type is email or url), or
+                false if the syntax is correct. If true, the element matches the :invalid CSS pseudo-class.</li>
+            <li>valid: Returns true if the element meets all its validation constraints, and is therefore considered to
+                be valid, or false if it fails any constraint. If true, the element matches the :valid CSS pseudo-class;
+                the :invalid CSS pseudo-class otherwise.</li>
+            <li>valueMissing: Returns true if the element has a required attribute, but no value, or false otherwise. If
+                true, the element matches the :invalid CSS pseudo-class.</li>
+            <li>willValidate: Returns true if the element will be validated when the form is submitted; false otherwise.
+            </li>
+        </ul>
+            
+            <li><strong>methods</strong> available on previous elements<br>
+            checkValidity(): Returns true if the element's value has no validity problems; false otherwise. If the
+                element is invalid, this method also fires an invalid event on the element.<br>
+            setCustomValidity(message): Adds a custom error message to the element; if you set a custom error
+                message, the element is considered to be invalid, and the specified error is displayed. This lets you
+                use JavaScript code to establish a validation failure other than those offered by the standard HTML5
+                validation constraints. The message is shown to the user when reporting the problem.
+            </li>
+            <li>novalidate<br>
+                novalidate attribute on the form is what stops the form from showing its own error message bubbles, 
+                and allows us to instead display the custom error messages in the DOM in some manner of our own choosing.</li>
+                <li><a href="exampleJSAPI.html">example using API</a> </li>
+
+        </ul>
+    </section>
+</body>
+<script src="form.js"></script>
+
+</html>
