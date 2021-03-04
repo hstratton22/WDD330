@@ -70,7 +70,8 @@
           });
         })
     */
-
+    let tens = 10;
+    let times = 0;
     window.addEventListener("keydown", function (kd) {
       var dataKey = kd.keyCode;
 
@@ -79,11 +80,16 @@
       aud.play();
       const audDiv = document.querySelector("div[data-key='" + dataKey + "']");
       audDiv.classList.add("playing");
-      
-      let tens= 100;
+      if (times < 10) {
+        tens += 10;
+        times++;
+      }
+      else {
+        tens = 0;
+      }
 
-      audDiv.style.marginTop=tens+"px";
-      
+      audDiv.style.marginTop = tens + "px";
+
       /*let currentPOS = audDiv.style.marginTop;
       console.log(currentPOS);
       if (currentPOS > 10) {
@@ -98,17 +104,15 @@
         //console.log(dataKey);
         audDiv.classList.remove("playing");
         //document.querySelector("div[data-key='" + dataKey + "']").classList.remove("playing");
-
-
       });
     })
 /*
-    document.getElementById("moveDiv").style.left = left + "px";
-        document.getElementById("moveDiv").style.top = top + "px";
-        if (spacePressed)
-            document.getElementById("show").style.display = "block";
-        else
-            document.getElementById("show").style.display = "none";*/
+        document.getElementById("moveDiv").style.left = left + "px";
+            document.getElementById("moveDiv").style.top = top + "px";
+            if (spacePressed)
+                document.getElementById("show").style.display = "block";
+            else
+                document.getElementById("show").style.display = "none";*/
 
     //})
     /*

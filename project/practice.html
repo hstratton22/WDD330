@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>WDD330 Project</title>
+    <!--<link rel="stylesheet" href="../index.css">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #c0ded9;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            /*background-image:url("images/salt_lake.jpeg");*/
+            
+            /*
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            */
+        }
+
+        h1 {
+            background-color: #eaece5;
+            color: #3b3a30;
+            border-bottom: 2px solid #b2c2bf;
+            text-align: center;
+
+        }
+
+        h2 {}
+
+        .displayContainer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 1rem;
+            /*background-color: #c0ded9;*/
+
+        }
+
+        .indDisplay {
+            display: flex;
+            flex-direction: column-reverse;
+            /*background-color:#b2c2bf;
+          color:#fff;*/
+            color: #fff;
+            background-color: #3b3a30;
+        }
+
+        img {
+            max-width: 100%;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Temples Matching Game</h1>
+    <div id="templeList"></div>
+    <div>
+        <h2 id="name"></h2>
+        <div class="displayContainer" id="image"></div>
+    </div>
+    <button onclick="doSomething()">Fetch Data</button>
+
+</body>
+<script src="main2.js"></script>
+
+</html>

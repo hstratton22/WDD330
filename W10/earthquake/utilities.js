@@ -20,4 +20,7 @@ export function getJSON(url){
         navigator.geolocation.getCurrentPosition(resolve, reject, options);
     });
 };
-     //getLocation(options).then(response => // do something with the response) 
+     
+/*The activity has you returning a Promise so you can call .then()on the getLocation() function. The documented use of the getCurrentPostion function is taking callbacks that will be called in the case of success or error. Instead of using the callbacks the author is Promise-ifying this call by giving it the Promise resolve and reject callbacks used in the Promise declaration. These are what get called when you do a .then() */
+
+//getLocation(options).then(response => // do something with the response) 

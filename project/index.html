@@ -6,6 +6,48 @@
   <title>WDD330 Project</title>
   <link rel="stylesheet" href="../index.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /*
+    https://www.w3schools.com/colors/colors_palettes.asp
+    background:#eaece5 neutral
+    background:#b2c2bf greyish
+    background:#c0ded9 greenish
+    color:#fff;background:#3b3a30 dark background with white font
+    */
+    body{
+      /*background-color: #eaece5;*/
+      background-color: #c0ded9;
+      font-family:Georgia, 'Times New Roman', Times, serif;
+
+    }
+    .headline {
+      background-color:#b2c2bf;
+    }
+    h3{
+      background-color: #eaece5;
+      color:#3b3a30;
+      border-bottom:2px solid #b2c2bf ;
+
+    }
+    h4{
+      /*background-color:#b2c2bf ;
+      background-color: #eaece5;*/
+      color:#fff;
+      background-color:#3b3a30;
+      /*display:inline-block;*/
+      padding:.25rem;
+    }
+    a{
+      color: #3b3a30;
+      background-color:#eaece5 ;
+    }
+    a:hover{
+      color:#eaece5 ;
+      background-color: #3b3a30;
+    }
+
+
+  </style>
 </head>
 
 <body>
@@ -15,10 +57,6 @@
   </section>
   <section class=weeks>
     <h3>Project Proposal </h3>
-    
-    Wireframes for each view of your application
-    Colors/Typography/specific Element styling
-    Schedule to provide yourself mile markers along the way to help you stay on target.
   </section>
   <div>
     <h4>Purpose</h4>
@@ -26,37 +64,69 @@
       useful API
       that was free. I was excited for studio ghibli and LOTR but neither had much useful information in them. I
       considered making a matching
-      game of prophets and their names. I was going to create a local json file, but the church website has been down
-      for image links a couple days,
-      and I haven’t patience to wait and see if that would work. I then decided a temple matching game with image to
-      location would be fun, but there
-      are almost 200 of them. I remembered I no longer have photo shop since I’m on a different computer, and it would
-      be very time consuming to download
-      and resize each one. So, I decided to make a matching game with names to images of superheroes. It’s not quite as
-      uplifting, but it is accessible.
+      game of prophets and their names, but I have decided to use temples instead because the church website's images have been inaccessible the past few days. 
+      I am hoping to have an image match to its 
+      name, but if that fails, I will have matching images.  There are so many temples, that I have decided to limit it to United States, and
+      I am only using ones that have the closest needed dimensions.  I will only need to resize  and slightly crop them. I will first create a temple's quiz similar to the 
+      superhero quiz from our readings.  If I can make that work, I will progress to the memory matching game.
+      
     </p>
     <h4>Audience</h4>
     <p>
-      I think that any superhero fans will enjoy testing their skills.
-      It is specifically intended for my teenage boys and young daughter. I spend too much time doing schoolwork,
-      and they should see some benefit from it.
+      This project is intended for my 6-year old daughter.  My teenagers may find some use as well. 
+      I think it will be a challenge for anyone since there are so many now.
     </p>
     <h4>Data Sources</h4>
-    <p>I will be using <a href="https://superheroapi.com/" target="_blank">superheroapi.com </a> for my external API.</p>
+    
+    <p>I will be using a local json file that I will create holding the names and images.</p>
     <h4>Initial Module List</h4>
-    <p>I project will include:
+    <p>Each project will include:
     <ul>
       <li>index.html</li>
       <li>styles.css</li>
       <li>main.js</li>
-      <li>utilities.js or model.js, controller.js, view.js (not sure yet)</li>
+      <li>possibly utilities.js or model.js, controller.js, view.js (not sure yet)</li>
     </ul>
     </p>
 
   </div>
   <div>
     <h4>Wireframes</h4>
+    <h5>Wireframe for Temple's Quiz</h5>
+    <p><a href="https://wireframe.cc/bQCpxD" target="_blank">Large and Small</a> </p>
 
+
+    <h5>Wireframes for matching game:</h5>
+
+    <p><a href="https://wireframe.cc/WoDJit" target="_blank">Large screen</a></p>
+    <p><a href="https://wireframe.cc/I0GUg4" target="_blank">Small screen</a></p>
+
+  </div>
+  <div>
+    <h4>Styling</h4>
+    <p>Coloring will be similar to this page. </p>
+    <ul>
+      <li style="background:#eaece5">#eaece5 neutral</li>
+      <li style="background:#b2c2bf">#b2c2bf greyish</li>
+        <li style="background:#c0ded9" >#c0ded9 greenish</li>
+        <li style="color:#fff;background:#3b3a30" >#3b3a30 dark</li>
+    </ul>
+    <p>Font</p>
+    <ul><li>Georgia- a simple serif for readability</li></ul>
+
+  </div>
+  <div>
+    <h4>Schedule</h4>
+    <ul>
+      <li>
+    First task is to create the local JSON file with temple images resized.</li>
+    <li>
+      Build the HTML and CSS for the quiz. <br> Build the JavaScript for the quiz.<br>  Adjust and polish as necessary.
+    </li>
+    <li>
+      Sketch basic UML for matching game. <br>Build HTML and CSS for matching game. <br>Build js, debug, and hope for success.
+    </li>
+  </ul>
   </div>
 
 
