@@ -1,0 +1,66 @@
+
+/*background:#eaece5 neutral
+    background:#b2c2bf greyish
+    background:#c0ded9 greenish
+    color:#fff;background:#3b3a30 dark background with white font*/
+body {
+    background:#c0ded9;
+    /*background: url(../images/salt_lake.jpeg);
+    background-position: center;
+            background-repeat: no-repeat;
+            height: 100%;
+            background-position: center;
+            background-size: 100% auto;*/
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.container {
+    background: url(../images/salt_lake.jpeg);
+   /*background-position: center;*/
+            background-repeat: no-repeat;
+           /* height: 100%;*/
+           width: 100%;
+           height:800px;
+
+            /*background-position: center;*/
+            background-size: 100% auto;
+            padding-top:10px;
+   /* background: url(../images/salt_lake.jpeg);
+    
+    background-size:cover;
+    height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;*/
+    
+}
+.quiz-body {
+    background-color: #b2c2bf;
+    margin: 6rem 33%;
+    padding: 1rem 2rem 4rem 2rem;
+    box-shadow: 4px 4px 11px 3px #3b3a30  ;
+}
+h1 {
+    color:#fff;
+    background:#3b3a30;
+    font-weight:bold;
+    text-align:center;
+    font-size:48px;
+    margin:0;
+    padding:.25rem;
+}
+button {
+    background-color:#b2c2bf;
+    color:#eaece5;
+    text-shadow: 2px 2px #3b3a30;
+    border-color:#3b3a30;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px 1px #3b3a30;
+    margin:.25rem 0;
+    display:block;
+    width:100%;
+    font-size:2rem;
+
+}
+#tImage {
+    max-width:100%;
+}

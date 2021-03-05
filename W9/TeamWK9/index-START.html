@@ -70,6 +70,8 @@
           });
         })
     */
+    //works but only for 10
+
     let tens = 10;
     let times = 0;
     window.addEventListener("keydown", function (kd) {
@@ -80,24 +82,19 @@
       aud.play();
       const audDiv = document.querySelector("div[data-key='" + dataKey + "']");
       audDiv.classList.add("playing");
+      //console.log(audDiv.style.marginTop);
       if (times < 10) {
         tens += 10;
         times++;
       }
       else {
-        tens = 0;
+        tens = 10;
       }
-
       audDiv.style.marginTop = tens + "px";
+      console.log(audDiv.style.marginTop);
 
-      /*let currentPOS = audDiv.style.marginTop;
-      console.log(currentPOS);
-      if (currentPOS > 10) {
-        currentPOS = 0;
-        console.log(currentPOS);
-      } else currentPOS += 10;
-      audDiv.style.marginTop = currentPOS + "px";
-*/
+
+
 
       aud.addEventListener('ended', function (event) {
         //var dataKey = event.target.dataset.key;
@@ -106,22 +103,23 @@
         //document.querySelector("div[data-key='" + dataKey + "']").classList.remove("playing");
       });
     })
-/*
-        document.getElementById("moveDiv").style.left = left + "px";
-            document.getElementById("moveDiv").style.top = top + "px";
-            if (spacePressed)
-                document.getElementById("show").style.display = "block";
-            else
-                document.getElementById("show").style.display = "none";*/
+
+    /* aud.addEventListener('ended', function (event) {
+         //var dataKey = event.target.dataset.key;
+         //console.log(dataKey);
+         audDiv.classList.remove("playing");
+         //document.querySelector("div[data-key='" + dataKey + "']").classList.remove("playing");
+       });*/
+    /*
+            document.getElementById("moveDiv").style.left = left + "px";
+                document.getElementById("moveDiv").style.top = top + "px";
+                if (spacePressed)
+                    document.getElementById("show").style.display = "block";
+                else
+                    document.getElementById("show").style.display = "none";*/
 
     //})
-    /*
-        //audio.classList.add('playing');//isn't working
-        const aud = document.querySelector('audio');
-        aud.addEventListener('playing', (event) => {
-          console.log('audio is playing');
-        });
-      */
+
     /*
           var div = document.getElementById("yourDiv");
     var rect = div.getBoundingClientRect();
