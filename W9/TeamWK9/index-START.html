@@ -70,10 +70,11 @@
           });
         })
     */
-    //works but only for 10
-
+    //works but only for 10 clicks total
+    //const audio = document.getElementsByTagName('audio');
     let tens = 10;
     let times = 0;
+    //audio.dataset.times = 0;
     window.addEventListener("keydown", function (kd) {
       var dataKey = kd.keyCode;
 
@@ -82,6 +83,8 @@
       aud.play();
       const audDiv = document.querySelector("div[data-key='" + dataKey + "']");
       audDiv.classList.add("playing");
+      //audio.dataset.times
+  
       //console.log(audDiv.style.marginTop);
       if (times < 10) {
         tens += 10;

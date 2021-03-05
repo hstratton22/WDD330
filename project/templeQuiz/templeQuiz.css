@@ -35,12 +35,12 @@ body {
 }
 .quiz-body {
     background-color: #b2c2bf;
-    margin: 6rem 33%;
+    margin: 6rem 30%;
     padding: 1rem 2rem 4rem 2rem;
     box-shadow: 4px 4px 11px 3px #3b3a30  ;
 }
 h1 {
-    color:#fff;
+    color:#eaece5;
     background:#3b3a30;
     font-weight:bold;
     text-align:center;
