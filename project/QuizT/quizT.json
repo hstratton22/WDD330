@@ -1,0 +1,164 @@
+{
+    "temples": [
+        {
+            "id": "60",
+            "name": "Washington DC",
+            "imageSrc": "images/washington_dc.jpg"
+        },
+        {
+            "id": "1",
+            "name": "Anchorage",
+            "imageSrc": "images/anchorage.jpg"
+        },
+        {
+            "id": "2",
+            "name": "Atlanta",
+            "imageSrc": "images/atlanta.jpg"
+        },
+        {
+            "id": "3",
+            "name": "Baton Rouge",
+            "imageSrc": "images/baton_rouge.jpg"
+        },
+        {
+            "id": "4",
+            "name": "Birmingham",
+            "imageSrc": "images/birmingham.jpg"
+        },
+        {
+            "id": "5",
+            "name": "Boston",
+            "imageSrc": "images/boston.jpg"
+        },
+        {
+            "id": "6",
+            "name": "Bountiful",
+            "imageSrc": "images/bountiful.jpg"
+        },
+        {
+            "id": "7",
+            "name": "Brigham City",
+            "imageSrc": "images/brigham_city.jpg"
+        },
+        {
+            "id": "8",
+            "name": "Cedar City",
+            "imageSrc": "images/cedar_city.jpg"
+        },
+        {
+            "id": "8",
+            "name": "Chicago",
+            "imageSrc": "images/chicago.jpg"
+        },
+        {
+            "id": "9",
+            "name": "Columbus",
+            "imageSrc": "images/columbus.jpg"
+        },
+        {
+            "id": "10",
+            "name": "Dallas",
+            "imageSrc": "images/dallas.jpg"
+        },
+        {
+            "id": "11",
+            "name": "Denver",
+            "imageSrc": "images/denver.jpg"
+        },
+        {
+            "id": "12",
+            "name": "Detroit",
+            "imageSrc": "images/detroit.jpg"
+        },
+        {
+            "id": "13",
+            "name": "Draper",
+            "imageSrc": "images/draper.jpg"
+        },
+        {
+            "id": "14",
+            "name": "Fort Collins",
+            "imageSrc": "images/fort_collins.jpg"
+        },
+        {
+            "id": "15",
+            "name": "Fort Lauderdale",
+            "imageSrc": "images/fort_lauderdale.jpg"
+        },
+        {
+            "id": "16",
+            "name": "Fresno",
+            "imageSrc": "images/fresno.jpg"
+        },
+        {
+            "id": "17",
+            "name": "Gila Valley",
+            "imageSrc": "images/gila_valley.jpg"
+        },
+        {
+            "id": "18",
+            "name": "Gilbert",
+            "imageSrc": "images/gilbert.jpg"
+        },
+        {
+            "id": "19",
+            "name": "Hartford",
+            "imageSrc": "images/hartford.jpg"
+        },
+        {
+            "id": "20",
+            "name": "Idaho Falls",
+            "imageSrc": "images/idaho_falls.jpg"
+        },
+        {
+            "id": "21",
+            "name": "Kansas City",
+            "imageSrc": "images/kansas_city.jpg"
+        },
+        {
+            "id": "22",
+            "name": "Los Vegas",
+            "imageSrc": "images/las_vegas.jpg"
+        },
+        {
+            "id": "23",
+            "name": "Los Angeles",
+            "imageSrc": "images/los_angeles.jpg"
+        },
+        {
+            "id": "24",
+            "name": "Louisville",
+            "imageSrc": "images/louisville.jpg"
+        },
+        {
+            "id": "25",
+            "name": "Lubbock",
+            "imageSrc": "images/lubbock.jpg"
+        },
+        {
+            "id": "26",
+            "name": "Manti",
+            "imageSrc": "images/manti.jpg"
+        },
+        {
+            "id": "27",
+            "name": "Medford",
+            "imageSrc": "images/medford.jpg"
+        },
+        {
+            "id": "28",
+            "name": "Memphis",
+            "imageSrc": "images/memphis.jpg"
+        },
+        {
+            "id": "29",
+            "name": "Meridian",
+            "imageSrc": "images/meridian.jpg"
+        },
+        {
+            "id": "30",
+            "name": "Mount Timpanogos",
+            "imageSrc": "images/mount_timpanogos.jpg"
+        }
+    ]
+}

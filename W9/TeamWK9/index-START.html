@@ -70,6 +70,39 @@
           });
         })
     */
+   document.addEventListener('keydown', playSound);
+   var audioPlayers = document.getElementsByTagName('audio');
+   for (player of audioPlayers){
+     player.dataset.count = 0;
+     player.addEventListener('ended', function (e) {
+       var keyCode = this.dataset.key;
+       var button = document.querySelector(`div[data-key="${keyCode}"]`);
+       button.classList.remove('playing');
+     });
+   }
+   function playSound(e) {
+     var keyCode = e.keyCode;
+     if ([65, 83, 68, 70, 71, 72, 74, 75, 76].includes(keyCode)){
+       var player = document.querySelector(`audio[data-key="${keyCode}"]`);
+       var button = document.querySelector(`div[data-key="${keyCode}"]`);
+       button.classList.add('playing');
+       player.dataset.count++;
+       if (player.dataset.count == 10){
+         player.dataset.count = 0;
+       }
+       var move = player.dataset.count * 10;
+       button.style.transform = `translateY(${move}px)`;
+       player.pause();
+       player.currentTime = 0;
+       player.play();
+     }
+   }
+
+
+
+
+   /*
+   ------------------------------
     //works but only for 10 clicks total
     //const audio = document.getElementsByTagName('audio');
     let tens = 10;
@@ -106,7 +139,8 @@
         //document.querySelector("div[data-key='" + dataKey + "']").classList.remove("playing");
       });
     })
-
+------------------------------
+*/
     /* aud.addEventListener('ended', function (event) {
          //var dataKey = event.target.dataset.key;
          //console.log(dataKey);
