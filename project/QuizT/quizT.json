@@ -1,11 +1,6 @@
 {
     "temples": [
         {
-            "id": "60",
-            "name": "Washington DC",
-            "imageSrc": "images/washington_dc.jpg"
-        },
-        {
             "id": "1",
             "name": "Anchorage",
             "imageSrc": "images/anchorage.jpg"
@@ -117,7 +112,7 @@
         },
         {
             "id": "22",
-            "name": "Los Vegas",
+            "name": "Las Vegas",
             "imageSrc": "images/las_vegas.jpg"
         },
         {
@@ -159,6 +154,106 @@
             "id": "30",
             "name": "Mount Timpanogos",
             "imageSrc": "images/mount_timpanogos.jpg"
+        },
+        {
+            "id": "31",
+            "name": "Nashville",
+            "imageSrc": "images/nashville.jpg"
+        },
+        {
+            "id": "32",
+            "name": "Nauvoo",
+            "imageSrc": "images/nauvoo.jpg"
+        },
+        {
+            "id": "33",
+            "name": "Newport Beach",
+            "imageSrc": "images/newport_beach.jpg"
+        },
+        {
+            "id": "34",
+            "name": "Orlando",
+            "imageSrc": "images/orlando.jpg"
+        },
+        {
+            "id": "35",
+            "name": "Payson",
+            "imageSrc": "images/payson.jpg"
+        },
+        {
+            "id": "36",
+            "name": "Philadelphia",
+            "imageSrc": "images/philadelphia.jpg"
+        },
+        {
+            "id": "37",
+            "name": "Phoenix",
+            "imageSrc": "images/phoenix.jpg"
+        },
+        {
+            "id": "38",
+            "name": "Raleigh",
+            "imageSrc": "images/raleigh.jpg"
+        },
+        {
+            "id": "39",
+            "name": "Rexburg",
+            "imageSrc": "images/rexburg.jpg"
+        },
+        {
+            "id": "40",
+            "name": "Sacramento",
+            "imageSrc": "images/sacramento.jpg"
+        },
+        {
+            "id": "41",
+            "name": "San Antonio",
+            "imageSrc": "images/san_antonio.jpg"
+        },
+        {
+            "id": "42",
+            "name": "San Diego",
+            "imageSrc": "images/san_diego.jpg"
+        },
+        {
+            "id": "43",
+            "name": "Seattle",
+            "imageSrc": "images/seattle.jpg"
+        },
+        {
+            "id": "44",
+            "name": "Snowflake",
+            "imageSrc": "images/snowflake.jpg"
+        },
+        {
+            "id": "45",
+            "name": "Spokane",
+            "imageSrc": "images/spokane.jpg"
+        },
+        {
+            "id": "46",
+            "name": "St George",
+            "imageSrc": "images/st_george.jpg"
+        },
+        {
+            "id": "47",
+            "name": "Star Valley",
+            "imageSrc": "images/star_valley.jpg"
+        },
+        {
+            "id": "48",
+            "name": "Tucson",
+            "imageSrc": "images/tucson.jpg"
+        },
+        {
+            "id": "49",
+            "name": "Vernal",
+            "imageSrc": "images/vernal.jpg"
+        },
+        {
+            "id": "50",
+            "name": "Washington DC",
+            "imageSrc": "images/washington_dc.jpg"
         }
     ]
 }

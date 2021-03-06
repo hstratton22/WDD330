@@ -18,7 +18,8 @@ body {
   padding-top: 10px;
 }
 .quiz-body {
-  background: #b2c2bf;
+  /*background: #b2c2bf;*/
+  background-color: #c0ded9;
   margin: 150px 33%;
   padding: 10px 20px 50px 20px;
   -webkit-box-shadow: 4px 4px 11px 3p x#3b3a30;
@@ -26,8 +27,11 @@ body {
   box-shadow: 4px 4px 11px 3px #3b3a30;
 }
 h1 {
-    color:#eaece5 ;
-    background:#3b3a30;
+    /*color:#eaece5 ;
+    background:#3b3a30;*/
+    background-color: #eaece5;
+      color:#3b3a30;
+      border-bottom:2px solid #b2c2bf ;
   
   font-weight: 900;
   text-align: center;

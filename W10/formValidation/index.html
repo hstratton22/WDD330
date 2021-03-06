@@ -66,43 +66,71 @@
                 of the element. You can find full details of all the available properties in the ValidityState reference
                 page; below is listed a few of the more common ones:<br>
                 <ul>
-            <li>patternMismatch: Returns true if the value does not match the specified pattern, and false if it does
-                match. If true, the element matches the :invalid CSS pseudo-class.</li>
-            <li>tooLong: Returns true if the value is longer than the maximum length specified by the maxlength
-                attribute, or false if it is shorter than or equal to the maximum. If true, the element matches the
-                :invalid CSS pseudo-class.</li>
-            <li>tooShort: Returns true if the value is shorter than the minimum length specified by the minlength
-                attribute, or false if it is greater than or equal to the minimum. If true, the element matches the
-                :invalid CSS pseudo-class.</li>
-            <li>rangeOverflow: Returns true if the value is greater than the maximum specified by the max attribute, or
-                false if it is less than or equal to the maximum. If true, the element matches the :invalid and
-                :out-of-range CSS pseudo-classes.</li>
-            <li>rangeUnderflow: Returns true if the value is less than the minimum specified by the min attribute, or
-                false if it is greater than or equal to the minimum. If true, the element matches the :invalid and
-                :out-of-range CSS pseudo-classes.</li>
-            <li>typeMismatch: Returns true if the value is not in the required syntax (when type is email or url), or
-                false if the syntax is correct. If true, the element matches the :invalid CSS pseudo-class.</li>
-            <li>valid: Returns true if the element meets all its validation constraints, and is therefore considered to
-                be valid, or false if it fails any constraint. If true, the element matches the :valid CSS pseudo-class;
-                the :invalid CSS pseudo-class otherwise.</li>
-            <li>valueMissing: Returns true if the element has a required attribute, but no value, or false otherwise. If
-                true, the element matches the :invalid CSS pseudo-class.</li>
-            <li>willValidate: Returns true if the element will be validated when the form is submitted; false otherwise.
-            </li>
-        </ul>
-            
+                    <li>patternMismatch: Returns true if the value does not match the specified pattern, and false if it
+                        does
+                        match. If true, the element matches the :invalid CSS pseudo-class.</li>
+                    <li>tooLong: Returns true if the value is longer than the maximum length specified by the maxlength
+                        attribute, or false if it is shorter than or equal to the maximum. If true, the element matches
+                        the
+                        :invalid CSS pseudo-class.</li>
+                    <li>tooShort: Returns true if the value is shorter than the minimum length specified by the
+                        minlength
+                        attribute, or false if it is greater than or equal to the minimum. If true, the element matches
+                        the
+                        :invalid CSS pseudo-class.</li>
+                    <li>rangeOverflow: Returns true if the value is greater than the maximum specified by the max
+                        attribute, or
+                        false if it is less than or equal to the maximum. If true, the element matches the :invalid and
+                        :out-of-range CSS pseudo-classes.</li>
+                    <li>rangeUnderflow: Returns true if the value is less than the minimum specified by the min
+                        attribute, or
+                        false if it is greater than or equal to the minimum. If true, the element matches the :invalid
+                        and
+                        :out-of-range CSS pseudo-classes.</li>
+                    <li>typeMismatch: Returns true if the value is not in the required syntax (when type is email or
+                        url), or
+                        false if the syntax is correct. If true, the element matches the :invalid CSS pseudo-class.</li>
+                    <li>valid: Returns true if the element meets all its validation constraints, and is therefore
+                        considered to
+                        be valid, or false if it fails any constraint. If true, the element matches the :valid CSS
+                        pseudo-class;
+                        the :invalid CSS pseudo-class otherwise.</li>
+                    <li>valueMissing: Returns true if the element has a required attribute, but no value, or false
+                        otherwise. If
+                        true, the element matches the :invalid CSS pseudo-class.</li>
+                    <li>willValidate: Returns true if the element will be validated when the form is submitted; false
+                        otherwise.
+                    </li>
+                </ul>
+
             <li><strong>methods</strong> available on previous elements<br>
-            checkValidity(): Returns true if the element's value has no validity problems; false otherwise. If the
+                checkValidity(): Returns true if the element's value has no validity problems; false otherwise. If the
                 element is invalid, this method also fires an invalid event on the element.<br>
-            setCustomValidity(message): Adds a custom error message to the element; if you set a custom error
+                checkValidity() is called <em>statically</em> validating the constraints and returns Boolean.
+                <br>
+                reportValidity() or submitting the form is called <em>interactively</em> validating the constraints and
+                reports any constraint failures to the user.<br>
+
+
+                setCustomValidity(message): Adds a custom error message to the element; if you set a custom error
                 message, the element is considered to be invalid, and the specified error is displayed. This lets you
                 use JavaScript code to establish a validation failure other than those offered by the standard HTML5
                 validation constraints. The message is shown to the user when reporting the problem.
             </li>
+            <li><a href="simpleJSAPI.html">example with API</a> </li>
+            <li><a href="postalwAPI.html">postal example with API</a> </li>
+            <li><a href="fileAPI.html">file example with API</a> </li>
             <li>novalidate<br>
-                novalidate attribute on the form is what stops the form from showing its own error message bubbles, 
-                and allows us to instead display the custom error messages in the DOM in some manner of our own choosing.</li>
-                <li><a href="exampleJSAPI.html">example using API</a> </li>
+                novalidate attribute on the form is what stops the form from showing its own error message bubbles,
+                and allows us to instead display the custom error messages in the DOM in some manner of our own
+                choosing.</li>
+            <li><a href="exampleJSAPI.html">example using novalidate and API</a><br>
+                If the novalidate attribute is set on the <form> element, interactive validation of the constraints
+                    doesn't happen.
+                    Calling the submit() method on the HTMLFormElement interface doesn't trigger a constraint
+                    validation. In other words,
+                    this method sends the form data to the server even if doesn't satisfy the constraints. Call the
+                    click() method on a submit button instead. </li>
 
         </ul>
     </section>

@@ -84,16 +84,17 @@ const game = {
       }
   },
   ask(name){
-    console.log('ask() invoked');
+    //console.log('ask() invoked');
     if(this.temples.length > 2) {
       shuffle(this.temples);
       this.question = this.temples.pop();
       const options = [this.temples[0].name, this.temples[1].name, this.question.name];
       shuffle(options);
-      //this.question.setAttribute("src", `"${this.question.imageSrc}"`);
-      //stuck here
-      const questionImage = document.createElement("div");
-      questionImage.innerHTML = `<img src="${this.question.imageSrc}"> `;
+      
+      const questionImage = `<img src="${this.question.imageSrc}" alt="temple image">`;
+      
+      //console.log(this.question.imageSrc);
+      
       view.render(view.question,questionImage);
       view.render(view.response,view.buttons(options));
     }
@@ -102,7 +103,7 @@ const game = {
     }
   },
   check(event){
-    console.log('check(event) invoked');
+    //console.log('check(event) invoked');
     const response = event.target.textContent;
     const answer = this.question.name;
     if(response === answer){
