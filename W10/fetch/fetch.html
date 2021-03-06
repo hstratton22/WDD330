@@ -51,6 +51,9 @@
                 no-cors.<br>
                 response: guard for a headers object obtained from a response (Response.headers).<br>
                 immutable: guard that renders a headers object read-only; mostly used for ServiceWorkers.<br>
+                Note: You may not append or set the Content-Length header on a guarded headers object for a response.
+                Similarly, inserting Set-Cookie into a response header is not allowed: ServiceWorkers are not allowed to
+                set cookies via synthesized responses.
 
             </li>
             <li>Response objects<br>
@@ -59,9 +62,13 @@
                 Response.statusText — A string (default value ""), which corresponds to the HTTP status code message.
                 Note that HTTP/2 does not support status messages.<br>
                 Response.ok — seen in use above, this is a shorthand for checking that status is in the range 200-299
-                inclusive. This returns a Boolean.
+                inclusive. This returns a Boolean.<br>
+                The static method error() returns an error response. Similarly, redirect() returns a response resulting
+                in a redirect to a specified URL. These are also only relevant to Service Workers.
             </li>
-            <li>Both requests and responses may contain body data. A body is an instance of any of the following
+            
+            <li>Body<br>
+                Both requests and responses may contain body data. A body is an instance of any of the following
                 types:<br>
                 ArrayBuffer<br>
                 ArrayBufferView (Uint8Array and friends)<br>
@@ -80,7 +87,13 @@
 
             </li>
             <li><a href="fetching.js">JS commented out doc</a> </li>
-
+            <li>FYI-Blob<br>
+                A blob is a data type that can store binary data. This is different than most other data types used in
+                databases, such as integers, floating point numbers, characters, and strings, which store letters and
+                numbers. Since blobs can store binary data, they can be used to store images or other multimedia files.
+            </li>
+            <li>Polyfill<br>
+            <a href="https://github.com/github/fetch" target="_blank">Fetch Polyfill for unsupported browsers.</a></li>
         </ul>
     </section>
 </body>
