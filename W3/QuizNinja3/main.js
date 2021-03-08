@@ -19,6 +19,9 @@ const view = {
     question: document.getElementById('question'),
     result: document.getElementById('result'),
     info: document.getElementById('info'),
+    // the first is the element that displays the content, the second is 
+    //for the content it’s to be updated with, and the last is an object 
+    //of any HTML attributes that can be added to the element.
     render(target,content,attributes) {
         for(const key in attributes) {
             target.setAttribute(key, attributes[key]);
