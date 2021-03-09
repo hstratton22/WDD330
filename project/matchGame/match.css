@@ -1,0 +1,42 @@
+
+/*background:#eaece5 neutral
+    background:#b2c2bf greyish
+    background:#c0ded9 greenish
+    color:#fff;background:#3b3a30 dark background with white font*/
+    
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    margin:20px 0;
+    background:#c0ded9;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.grid {
+    max-width:1260px;
+    margin:0 auto;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+}
+.card {
+    margin:5px;
+    background-color:#b2c2bf;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: center;
+    height:200px;
+    width:300px;
+
+}
+.center {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+  
+}
+.selected {
+    border:4px solid #eaece5;
+}
