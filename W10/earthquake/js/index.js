@@ -1,4 +1,10 @@
 import QuakesController from './QuakesController.js';
+
+const myQuakesController = new QuakesController('#quakeList');
+myQuakesController.init();
+
+
+/*import QuakesController from './QuakesController.js';
 import { getJSON, getLocation } from './utilities.js';
 
 
