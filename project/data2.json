@@ -2,258 +2,288 @@
     "temples": [
         {
             "id": "1",
-            "name": "Anchorage",
+            "name": "Anchorage, Alaska",
             "imageSrc": "images/anchorage.jpg"
         },
         {
             "id": "2",
-            "name": "Atlanta",
+            "name": "Atlanta, Georgia",
             "imageSrc": "images/atlanta.jpg"
         },
         {
             "id": "3",
-            "name": "Baton Rouge",
+            "name": "Baton Rouge, Louisiana",
             "imageSrc": "images/baton_rouge.jpg"
         },
         {
             "id": "4",
-            "name": "Birmingham",
+            "name": "Birmingham, Alabama",
             "imageSrc": "images/birmingham.jpg"
         },
         {
             "id": "5",
-            "name": "Boston",
+            "name": "Boston, Massachusetts",
             "imageSrc": "images/boston.jpg"
         },
         {
             "id": "6",
-            "name": "Bountiful",
+            "name": "Bountiful, Utah",
             "imageSrc": "images/bountiful.jpg"
         },
         {
             "id": "7",
-            "name": "Brigham City",
+            "name": "Brigham City, Utah",
             "imageSrc": "images/brigham_city.jpg"
         },
         {
             "id": "8",
-            "name": "Cedar City",
+            "name": "Cedar City, Utah",
             "imageSrc": "images/cedar_city.jpg"
         },
         {
             "id": "8",
-            "name": "Chicago",
+            "name": "Chicago, Illinois",
             "imageSrc": "images/chicago.jpg"
         },
         {
             "id": "9",
-            "name": "Columbus",
+            "name": "Columbus, Ohio",
             "imageSrc": "images/columbus.jpg"
         },
         {
             "id": "10",
-            "name": "Dallas",
+            "name": "Dallas, Texas",
             "imageSrc": "images/dallas.jpg"
         },
         {
             "id": "11",
-            "name": "Denver",
+            "name": "Denver, Colorado",
             "imageSrc": "images/denver.jpg"
         },
         {
             "id": "12",
-            "name": "Detroit",
+            "name": "Detroit, Michigan",
             "imageSrc": "images/detroit.jpg"
         },
         {
             "id": "13",
-            "name": "Draper",
+            "name": "Draper, Utah",
             "imageSrc": "images/draper.jpg"
         },
         {
             "id": "14",
-            "name": "Fort Collins",
+            "name": "Fort Collins, Colorado",
             "imageSrc": "images/fort_collins.jpg"
         },
         {
             "id": "15",
-            "name": "Fort Lauderdale",
+            "name": "Fort Lauderdale, Florida",
             "imageSrc": "images/fort_lauderdale.jpg"
         },
         {
             "id": "16",
-            "name": "Fresno",
+            "name": "Fresno, California",
             "imageSrc": "images/fresno.jpg"
         },
         {
             "id": "17",
-            "name": "Gila Valley",
+            "name": "The Gila Valley, Arizona",
             "imageSrc": "images/gila_valley.jpg"
         },
         {
             "id": "18",
-            "name": "Gilbert",
+            "name": "Gilbert, Arizona",
             "imageSrc": "images/gilbert.jpg"
         },
         {
             "id": "19",
-            "name": "Hartford",
+            "name": "Hartford, Connecticut",
             "imageSrc": "images/hartford.jpg"
         },
         {
             "id": "20",
-            "name": "Idaho Falls",
+            "name": "Idaho Falls, Idaho",
             "imageSrc": "images/idaho_falls.jpg"
         },
         {
             "id": "21",
-            "name": "Kansas City",
+            "name": "Kansas City, Missouri",
             "imageSrc": "images/kansas_city.jpg"
         },
         {
             "id": "22",
-            "name": "Las Vegas",
+            "name": "Las Vegas, Nevada",
             "imageSrc": "images/las_vegas.jpg"
         },
         {
             "id": "23",
-            "name": "Los Angeles",
+            "name": "Los Angeles, California",
             "imageSrc": "images/los_angeles.jpg"
         },
         {
             "id": "24",
-            "name": "Louisville",
+            "name": "Louisville, Kentucky",
             "imageSrc": "images/louisville.jpg"
         },
         {
             "id": "25",
-            "name": "Lubbock",
+            "name": "Lubbock, Texas",
             "imageSrc": "images/lubbock.jpg"
         },
         {
             "id": "26",
-            "name": "Manti",
+            "name": "Manti, Utah",
             "imageSrc": "images/manti.jpg"
         },
         {
             "id": "27",
-            "name": "Medford",
+            "name": "Medford, Oregon",
             "imageSrc": "images/medford.jpg"
         },
         {
             "id": "28",
-            "name": "Memphis",
+            "name": "Memphis, Tennessee",
             "imageSrc": "images/memphis.jpg"
         },
         {
             "id": "29",
-            "name": "Meridian",
+            "name": "Meridian, Idaho",
             "imageSrc": "images/meridian.jpg"
         },
         {
             "id": "30",
-            "name": "Mount Timpanogos",
+            "name": "Mount Timpanogos, Utah",
             "imageSrc": "images/mount_timpanogos.jpg"
         },
         {
             "id": "31",
-            "name": "Nashville",
+            "name": "Nashville, Tennessee",
             "imageSrc": "images/nashville.jpg"
         },
         {
             "id": "32",
-            "name": "Nauvoo",
+            "name": "Nauvoo, Illinois",
             "imageSrc": "images/nauvoo.jpg"
         },
         {
             "id": "33",
-            "name": "Newport Beach",
+            "name": "Newport Beach, California",
             "imageSrc": "images/newport_beach.jpg"
         },
         {
             "id": "34",
-            "name": "Orlando",
+            "name": "Orlando, Florida",
             "imageSrc": "images/orlando.jpg"
         },
         {
             "id": "35",
-            "name": "Payson",
+            "name": "Payson, Utah",
             "imageSrc": "images/payson.jpg"
         },
         {
             "id": "36",
-            "name": "Philadelphia",
+            "name": "Philadelphia, Pennsylvania",
             "imageSrc": "images/philadelphia.jpg"
         },
         {
             "id": "37",
-            "name": "Phoenix",
+            "name": "Phoenix, Arizona",
             "imageSrc": "images/phoenix.jpg"
         },
         {
             "id": "38",
-            "name": "Raleigh",
+            "name": "Raleigh, North Carolina",
             "imageSrc": "images/raleigh.jpg"
         },
         {
             "id": "39",
-            "name": "Rexburg",
+            "name": "Rexburg, Idaho",
             "imageSrc": "images/rexburg.jpg"
         },
         {
             "id": "40",
-            "name": "Sacramento",
+            "name": "Sacramento, California",
             "imageSrc": "images/sacramento.jpg"
         },
         {
             "id": "41",
-            "name": "San Antonio",
+            "name": "San Antonio, Texas",
             "imageSrc": "images/san_antonio.jpg"
         },
         {
             "id": "42",
-            "name": "San Diego",
+            "name": "San Diego, Califoria",
             "imageSrc": "images/san_diego.jpg"
         },
         {
             "id": "43",
-            "name": "Seattle",
+            "name": "Seattle, Washington",
             "imageSrc": "images/seattle.jpg"
         },
         {
             "id": "44",
-            "name": "Snowflake",
+            "name": "Snowflake, Arizona",
             "imageSrc": "images/snowflake.jpg"
         },
         {
             "id": "45",
-            "name": "Spokane",
+            "name": "Spokane, Washington",
             "imageSrc": "images/spokane.jpg"
         },
         {
             "id": "46",
-            "name": "St George",
+            "name": "St George, Utah",
             "imageSrc": "images/st_george.jpg"
         },
         {
             "id": "47",
-            "name": "Star Valley",
+            "name": "Star Valley, Wyoming",
             "imageSrc": "images/star_valley.jpg"
         },
         {
             "id": "48",
-            "name": "Tucson",
+            "name": "Tucson, Arizona",
             "imageSrc": "images/tucson.jpg"
         },
         {
             "id": "49",
-            "name": "Vernal",
+            "name": "Vernal, Utah",
             "imageSrc": "images/vernal.jpg"
         },
         {
             "id": "50",
             "name": "Washington DC",
             "imageSrc": "images/washington_dc.jpg"
+        },
+        {
+            "id": "51",
+            "name": "Albuquerque, New Mexico",
+            "imageSrc": "images/albuquerque.jpg"
+        },
+        {
+            "id": "52",
+            "name": "Billings, Montana",
+            "imageSrc": "images/billings.jpg"
+        },
+        {
+            "id": "53",
+            "name": "Bismark, North Dakota",
+            "imageSrc": "images/bismark.jpg"
+        },
+        {
+            "id": "54",
+            "name": "Boise, Idaho",
+            "imageSrc": "images/boise.jpg"
+        },
+        {
+            "id": "55",
+            "name": "Columbia, South Carolina",
+            "imageSrc": "images/columbia.jpg"
+        },
+        {
+            "id": "56",
+            "name": "Indianapolis, Indiana",
+            "imageSrc": "images/indianapolis.jpg"
         }
     ]
 }

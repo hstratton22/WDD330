@@ -6,51 +6,125 @@ fetch(url)
 
     });
 
-const game=document.getElementById("game");
-const grid=document.createElement("section");
-grid.setAttribute("class","grid");
-let gameGrid;
+let firstGuess = '';
+let secondGuess = '';
+let count = 0;
+let previousTarget = null;
+let start=1;//1;
+let round=56;//9;
+let delay = 1000;
+let matchCount;
+
+const game = document.getElementById("game");
+const grid = document.createElement("section");
+grid.setAttribute("class", "grid");
+let gameGrid = [];
+
 //game.appendChild(grid);
 
 function renderData(data) {
-    
+
     data.temples.forEach((item) => {
-        
+
         let card = document.createElement('div');
         card.classList.add("card");
         let label = document.createElement('div');
         label.classList.add("card");
         label.classList.add("center");
 
-        //card.dataset.name = item.name;
-        let round=9;
-        if(item.id < round) {console.log(item.id);
-        card.dataset.id=item.id;
-        //card.dataset.name = item.name;
-        card.name=item.name;
-        label.name= item.name;
-        //card.innerHTML = `<img src="${item.imageSrc}" alt="temple image">`;
-        card.style.backgroundImage = `url(${item.imageSrc})`;
-        label.innerText=label.name;
-        grid.appendChild(card);
-        grid.appendChild(label);
-        game.appendChild(grid);
+
+        //round = 9;
+        if (item.id >= start && item.id < round) {
+            console.log(item.id);
+            card.dataset.id = item.id;
+            label.dataset.id = item.id;
+
+            card.name = item.name;
+            label.name = item.name;
+            //card.innerHTML = `<img src="${item.imageSrc}" alt="temple image">`;
+            card.style.backgroundImage = `url(${item.imageSrc})`;
+            label.innerText = label.name;
+            gameGrid.push(card);
+            gameGrid.push(label);
+            gameGrid.sort(() => 0.5 - Math.random());
+            //grid.append(gameGrid);
+            gameGrid.forEach((item) => {
+                grid.append(item);
+            })
+
+            //grid.appendChild(card);
+            //grid.appendChild(label);
+            game.appendChild(grid);
 
         }
 
     })
 }
 
-grid.addEventListener("click", function(event){
+
+
+const match = () => {
+    const selected = document.querySelectorAll(".selected");
+    selected.forEach((card) => {
+        card.classList.add('match')
+        card.classList.add('hide');
+        
+    });
+    matchCount++;
+    checkForLevelUp();
+}
+
+function checkForLevelUp(){
+    if (matchCount === 8){
+        start +=8;
+        round +=8;
+        matchCount=0;
+        //setTimeout(renderData(data), delay);
+    }
+}
+const resetGuesses = () => {
+    firstGuess = '';
+    secondGuess = '';
+    count = 0;
+
+    const selected = document.querySelectorAll('.selected');
+    selected.forEach((card) => {
+        card.classList.remove('selected')
+    })
+}
+
+grid.addEventListener("click", function (event) {
     let clicked = event.target;
-    if (clicked.nodeName ==="SECTION"){
+
+    if (clicked.nodeName === "SECTION" || clicked === previousTarget) {
         return;
-    
+
     }
     clicked.classList.add("selected");
+
+    if (count < 2) {
+        count++;
+
+        if (count === 1) {
+            //firstGuess = clicked.dataset.name;
+            firstGuess = clicked.dataset.id;
+            clicked.classList.add("selected");
+        } else {
+            ///secondGuess = clicked.dataset.name;
+            secondGuess = clicked.dataset.id;
+            clicked.classList.add("selected");
+        }
+        if (firstGuess !== '' && secondGuess !== '') {
+            if (firstGuess === secondGuess) {
+                setTimeout(match, delay);
+                setTimeout(resetGuesses, delay);
+                //match();
+                //resetGuesses();
+            } else {
+                setTimeout(resetGuesses, delay);
+                //resetGuesses();
+            }
+        }
+        previousTarget = clicked;
+    }
 })
-let count=0;
-if (count < 2){
-    count++;
-    clicked.classList.add("selected");
-}
