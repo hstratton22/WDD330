@@ -22,6 +22,17 @@ const grid = document.createElement("section");
 grid.setAttribute("class", "grid");
 let gameGrid = [];
 
+//const btn8 = document.createElement('button');
+//const btn16 = document.createElement('button');
+//btn8.classList.add('');
+//btn8.innerText= "8";
+//btn16.innerText="16";
+//game.appendChild(btn8);
+//game.appendChild(btn16);
+
+
+
+
 //game.appendChild(grid);
 
 function renderData(data) {
@@ -112,7 +123,10 @@ function checkForLevelUp() {
         //round += 8;
         matchCount = 0;
         first=level;
+        //console.log("level-1="+(level -1));
         level+=8;
+        //level+=(level -1)
+        //8;
         console.log("level= "+level);
         setTimeout(displayGrid(), delay);
     }
@@ -165,3 +179,15 @@ grid.addEventListener("click", function (event) {
         previousTarget = clicked;
     }
 })
+/*
+btn8.addEventListener('click', setEight());
+btn16.addEventListener('click', setSixteen());
+
+function setEight(){
+    level= 5;
+    displayGrid();
+}
+function setSixteen(){
+    level = 9;
+    displayGrid();
+}*/

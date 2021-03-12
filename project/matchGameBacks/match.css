@@ -88,6 +88,21 @@ color:#c0ded9;
 border:none;
 
 }
+button {
+    border:1px solid #3b3a30;
+    border-radius: 10px;
+    background-color:#b2c2bf;
+    color:#3b3a30;
+    padding:.25rem 1rem;
+    margin-left:1rem;
+    margin-top:.5rem;
+}
+/*
+@media (max-width:500px) {
+    img {
+        max-width: 75%;
+    }
+}
 /*
 @media (max-width:768px) {
     .displayContainer {
