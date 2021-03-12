@@ -41,11 +41,12 @@ h1 {
   margin: 0;
 }
 button {
-  color: #b2c2bf;
+  /*color: #b2c2bf;*/
+  color:#eaece5;
   background-color: #3b3a30;
   border-color: #b2c2bf;
   border-radius: 20px;
-  /*box-shadow: 2px 2px 11px 3px #eaece5;*/
+  /*box-shadow: 3px 5px 10px  #3b3a30;*//*#eaece5;*/
   margin: 0.2em 0;
   display: block;
   width: 100%;
@@ -57,5 +58,6 @@ button {
 }
 img {
   max-width:100%;
-  margin:0 auto;
+  margin:.5rem auto;
+  box-shadow: 3px 5px 10px  #3b3a30;
 }
