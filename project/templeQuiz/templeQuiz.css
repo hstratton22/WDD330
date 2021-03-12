@@ -19,7 +19,7 @@ body {
             background-repeat: no-repeat;
            /* height: 100%;*/
            width: 100%;
-           height:800px;
+           height:1200px;
 
             /*background-position: center;*/
             background-size: 100% auto;
@@ -40,8 +40,12 @@ body {
     box-shadow: 4px 4px 11px 3px #3b3a30  ;
 }
 h1 {
+    /*
     color:#eaece5;
-    background:#3b3a30;
+    background:#3b3a30;*/
+    background-color: #eaece5;
+  color:#3b3a30;
+  border-bottom:2px solid #b2c2bf ;
     font-weight:bold;
     text-align:center;
     font-size:48px;
@@ -49,9 +53,11 @@ h1 {
     padding:.25rem;
 }
 button {
-    background-color:#b2c2bf;
-    color:#eaece5;
-    text-shadow: 2px 2px #3b3a30;
+    background-color:#b2c2bf;/*#c0ded9;*/
+    /*color:#eaece5;
+    text-shadow: 2px 3px #3b3a30;*/
+    color: #3b3a30;
+    text-shadow: 2px 2px 2px #eaece5;
     border-color:#3b3a30;
     border-radius: 20px;
     box-shadow: 1px 1px 1px 1px #3b3a30;
@@ -63,4 +69,10 @@ button {
 }
 #tImage {
     max-width:100%;
+    text-align:center;
 }
+img {
+    max-width:100%;
+    margin:.5rem auto;
+    box-shadow: 3px 5px 10px  #3b3a30;
+  }
