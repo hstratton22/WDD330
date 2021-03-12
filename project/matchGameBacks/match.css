@@ -41,6 +41,12 @@ h1 {
     box-shadow: 3px 5px 10px #3b3a30; /*#eaece5;*/
 
 }
+.back {
+    background-color:#3b3a30;
+    border:4px solid #b2c2bf;/* #eaece5;*/
+    background-image:none !important;
+
+}
 .center {
     display:flex;
     justify-content: center;

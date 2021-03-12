@@ -34,6 +34,11 @@ function renderData(data) {
         label.classList.add("card");
         label.classList.add("center");
 
+        //const front = document.createElement('div');
+        //front.classList.add('front');
+        //const back = document.createElement('div');
+        //back.classList.add('back');
+
 
         //round = 9;
         if (item.id >= start && item.id < round) {
@@ -43,6 +48,7 @@ function renderData(data) {
 
             card.name = item.name;
             label.name = item.name;
+            //back.st
             //card.innerHTML = `<img src="${item.imageSrc}" alt="temple image">`;
             card.style.backgroundImage = `url(${item.imageSrc})`;
             label.innerText = label.name;
@@ -71,6 +77,7 @@ function displayGrid() {
     //grid.append(gameGrid);
     gameGrid.forEach((item) => {
         if (item.dataset.id>= first && item.dataset.id <level){
+            item.classList.add('back');
             showList.push(item);
             
         //grid.append(item);
@@ -117,7 +124,8 @@ const resetGuesses = () => {
 
     const selected = document.querySelectorAll('.selected');
     selected.forEach((card) => {
-        card.classList.remove('selected')
+        card.classList.remove('selected');
+        card.classList.add('back');
     })
 }
 
@@ -129,6 +137,7 @@ grid.addEventListener("click", function (event) {
 
     }
     clicked.classList.add("selected");
+    clicked.classList.remove('back');
 
     if (count < 2) {
         count++;
