@@ -18,9 +18,9 @@ matchBtn.classList.add('button');
 quizBtn.innerHTML=`<a href="QuizT/quizT.html">Quiz</a>`;
 matchBtn.innerText="Matching";
 //matchCovered.innerText="Covered";
-matchCovered.innerHTML=`<a href="matchGame/index.html">Covered</a>`;
+matchVisible.innerHTML=`<a href="matchGame/index.html">Visible</a>`;
 //matchVisible.innerText="Visible";
-matchVisible.innerHTML=`<a href="matchGameBacks/index.html">Visible</a>`;
+matchCovered.innerHTML=`<a href="matchGameBacks/index.html">Covered</a>`;
 
 matchDiv.classList.add('hidden');
 matchDiv.appendChild(matchVisible);
