@@ -24,7 +24,7 @@ body {
   background-color: #c0ded9;
   margin: 150px 33%;
   padding: 10px 20px 50px 20px;
-  -webkit-box-shadow: 4px 4px 11px 3p x#3b3a30;
+  -webkit-box-shadow: 4px 4px 11px 3px#3b3a30;
   -moz-box-shadow: 4px 4px 11px 3px #3b3a30;
   box-shadow: 4px 4px 11px 3px #3b3a30;
 }
