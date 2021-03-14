@@ -2,6 +2,9 @@ body {
     background:#c0ded9;
     /*max-height:1200px; try to fix*/
     font-family: Georgia, 'Times New Roman', Times, serif;
+    max-width: 800px;
+    margin:0 auto;
+    
 }
 
 .hidden {
@@ -15,6 +18,7 @@ h1 {
     background-color: #eaece5;
     color:#3b3a30;
     border-bottom:2px solid #b2c2bf ;
+    
 }
 .button {
     display: block;
