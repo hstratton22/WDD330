@@ -284,6 +284,41 @@
             "id": "56",
             "name": "Indianapolis, Indiana",
             "imageSrc": "images/indianapolis.jpg"
+        },
+        {
+            "id": "58",
+            "name": "Houston, Texas",
+            "imageSrc": "images/houston.jpg"
+        },
+        {
+            "id": "59",
+            "name": "Jordan River, Utah",
+            "imageSrc": "images/jordan_river.jpg"
+        },
+        {
+            "id": "60",
+            "name": "Kona, Hawaii",
+            "imageSrc": "images/kona.jpg"
+        },
+        {
+            "id": "61",
+            "name": "Laii, Hawaii",
+            "imageSrc": "images/laie_hawaii.jpg"
+        },
+        {
+            "id": "62",
+            "name": "St. Louis, Missouri",
+            "imageSrc": "images/st_louis.jpg"
+        },
+        {
+            "id": "63",
+            "name": "St. Paul, Minnesota",
+            "imageSrc": "images/st_paul.jpg"
+        },
+        {
+            "id": "64",
+            "name": "Winter Quarters, Nebraska",
+            "imageSrc": "images/winter_quarters.jpg"
         }
     ]
 }

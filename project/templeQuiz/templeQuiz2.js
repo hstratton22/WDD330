@@ -68,7 +68,7 @@ const view = {
 
 const game = {
   start(quiz){
-    console.log('start() invoked');
+    //console.log('start() invoked');
     this.score = 0;
     this.temples = [...quiz];
     view.setup();
@@ -93,7 +93,7 @@ const game = {
       
       const questionImage = `<img src="${this.question.imageSrc}" alt="temple image">`;
       
-      console.log(this.question.imageSrc);
+      //console.log(this.question.imageSrc);
       
       view.render(view.question,questionImage);
       view.render(view.response,view.buttons(options));
@@ -103,22 +103,22 @@ const game = {
     }
   },
   check(event){
-    console.log('check(event) invoked');
+    //console.log('check(event) invoked');
     const response = event.target.textContent;
     const answer = this.question.name;
     if(response === answer){
-      console.log('correct');
+      //console.log('correct');
       view.render(view.result,'Correct!',{'class':'correct'});
       this.score++;
       view.render(view.score,this.score);
     } else {
-      console.log('wrong');
+      //console.log('wrong');
       view.render(view.result,`Wrong! The correct answer was ${answer}`,{'class':'wrong'});
     }
     this.ask();
   },
   gameOver(){
-    console.log('gameOver() invoked');
+    //console.log('gameOver() invoked');
     view.render(view.info,`Game Over, you scored ${this.score} point${this.score !== 1 ? 's' : ''}`);
     view.teardown();
    //clearInterval(this.timer);

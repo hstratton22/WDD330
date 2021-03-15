@@ -62,7 +62,7 @@ const view = {
 const game= {
     start(quiz){
         //this.score = 0;
-        console.log("in start");
+        //console.log("in start");
         this.temples = [...quiz];
         view.setup();
         this.ask();
@@ -88,19 +88,19 @@ const game= {
         const response=event.target.textContent;
         const answer = this.question.name;
         if(response === answer){
-            console.log('correct');
+            //console.log('correct');
             view.render(view.result, 'Correct!',{'class':'correct'});
             this.score++;
             view.render(view.score, this.score);
         } else {
-            console.log('wrong');
+            //console.log('wrong');
             view.render(view.result,`Wrong! The correct answer was ${answer}`, {'class':'wrong'});
 
         }
         this.ask();
     },
     gameOver(){
-        console.log('in gameOver');
+        //console.log('in gameOver');
         view.teardown();
 
     }
