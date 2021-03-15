@@ -102,6 +102,11 @@ img {
         background:transparent;
     }
   }
+  @media screen and (max-width:299px){
+      h1 {
+          font-size: 1.75rem;
+      }
+  }
   /*
   @media screen and (min-width: 500px){/*(max-width: 600px)*/
     /*body {
