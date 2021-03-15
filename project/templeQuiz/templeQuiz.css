@@ -90,13 +90,13 @@ img {
     
     body {
         background: url(../images/salt_lake.jpeg);
-        background-size: auto;
+        background-size: cover;/*auto;*/
     }
     .quiz-body {
         /*margin:33% 27%;
-        
-        margin:150px 30%;*/
-        margin:1rem 10%;
+        */
+        margin:150px 10%;
+        /*margin:1rem 10%;*/
     }
     .container {
         background:transparent;
