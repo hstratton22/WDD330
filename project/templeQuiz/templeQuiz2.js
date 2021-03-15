@@ -72,7 +72,7 @@ const game = {
   },
 
   ask(name){
-    console.log('ask() invoked');
+    //console.log('ask() invoked');
     if(this.temples.length > 2) {
       shuffle(this.temples);
       this.question = this.temples.pop();
