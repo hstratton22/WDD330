@@ -29,19 +29,9 @@ matchDiv.appendChild(matchCovered);
 menu.appendChild(quizBtn);
 menu.appendChild(matchBtn);
 menu.appendChild(matchDiv);
-//menu.appendChild(matchVisible);
-//menu.appendChild(matchCovered);
-
-
 
 function chooseMatching(){
-    /*matchVisible.classList.remove('hidden');
-    matchVisible.classList.add('buttonCtr');
-    matchCovered.classList.remove('hidden');
-    matchCovered.classList.add('buttonCtr');*/
     matchDiv.classList.remove('hidden');
     matchDiv.classList.add("matchDiv");
 }
-matchBtn.addEventListener('click', chooseMatching );
-//quizBtn.addEventListener('click', 
-//})
+matchBtn.addEventListener('click', chooseMatching);

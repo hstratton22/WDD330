@@ -49,3 +49,6 @@ a {
     color:#eaece5;
     background-color:#3b3a30 ;
 }
+.button:hover {
+    border:4px solid #eaece5;/*#b2c2bf;*/
+}
