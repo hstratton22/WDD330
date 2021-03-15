@@ -1,4 +1,4 @@
-//const url = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/questions.json';
+//adapted from Ninja Quiz from Novice to Ninja
 const url ="templeQuiz.json"
 fetch(url)
   .then(res => res.json())
