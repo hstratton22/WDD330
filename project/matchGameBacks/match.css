@@ -97,12 +97,16 @@ button {
     margin-left:1rem;
     margin-top:.5rem;
 }
-/*
-@media (max-width:500px) {
+/*experimental size*/
+@media (max-width:620px) {
+    .card {
+        height:150px;
+    width:225px;
+}
     img {
         max-width: 75%;
     }
-}
+}/**/
 /*
 @media (max-width:768px) {
     .displayContainer {
