@@ -84,12 +84,10 @@ img {
     transition-timing-function: linear;
   }
 img:hover {
-    transform: scale(1.5);
+    transform: scale(1.25);
       
   }
-  h1:hover {
-      color:purple;
-  }
+  
 .correct, .wrong , #info{
       /*margin-left:.5rem;*/
       text-align: center;
