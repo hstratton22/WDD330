@@ -67,3 +67,8 @@ img:hover {
     transform: scale(1.25);
       
   }
+  .correct, .wrong , #info{
+    /*margin-left:.5rem;*/
+    text-align: center;
+    color:#3b3a30;
+}
