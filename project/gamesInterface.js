@@ -22,7 +22,7 @@ matchBtn.classList.add('button');
 quizBtn.innerText="Quiz";
 matchBtn.innerText="Matching";
 
-quizTimer.innerHTML=`<a href="QuizT/quizT.html">Timer</a>`;
+quizTimer.innerHTML=`<a href="QuizTmodules/quizTmodules.html">Timer</a>`;
 quizNoTimer.innerHTML=`<a href="templeQuiz/templeQuiz.html">No Timer</a>`;
 
 matchVisible.innerHTML=`<a href="matchGame/index.html">Visible</a>`;
