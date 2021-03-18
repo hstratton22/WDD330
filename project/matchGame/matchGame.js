@@ -18,6 +18,7 @@ let level=9;
 let first=1;
 
 const game = document.getElementById("game");
+const end = document.createElement('div');
 const grid = document.createElement("section");
 grid.setAttribute("class", "grid");
 let gameGrid = [];
@@ -25,6 +26,17 @@ let gameGrid = [];
 //game.appendChild(grid);
 
 function renderData(data) {
+    //end.classList.add('hidden');
+    end.classList.add('finished');
+    end.innerText="You did it!";
+    const confetti = document.createElement('div');
+    confetti.classList.add('confetti');
+    for (i = 0; i < 15; i++) {
+        const confetti = document.createElement('div');
+        confetti.classList.add('confetti');
+        end.appendChild(confetti);
+    }
+    game.appendChild(end);
 
     data.temples.forEach((item) => {
 
@@ -100,10 +112,13 @@ const match = () => {
 }
 
 function checkForLevelUp() {
-    if (matchCount == 8) {
+    if (matchCount == 64){
+        end.classList.remove('hidden');
+    }
+    else if (matchCount % 8 == 0) {
         //start += 8;
         //round += 8;
-        matchCount = 0;
+        //matchCount = 0;
         first=level;
         level+=8;
         console.log("level= "+level);
