@@ -26,7 +26,7 @@ let gameGrid = [];
 //game.appendChild(grid);
 
 function renderData(data) {
-    //end.classList.add('hidden');
+    end.classList.add('hidden');
     end.classList.add('finished');
     end.innerText="You did it!";
     const confetti = document.createElement('div');
