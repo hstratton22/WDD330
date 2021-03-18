@@ -1,72 +1,108 @@
 /*background:#eaece5 neutral
     background:#b2c2bf greyish
-    background:#c0ded9 greenish
+    background:#c0ded9 greenish //rbga: 192	222	217
     color:#fff;background:#3b3a30 dark background with white font*/
     
-    body {
+body {
         background: #c0ded9;
         font-family: Georgia, 'Times New Roman', Times, serif;
       }
-      .container {
-        background: url(../images/salt_lake.jpeg)
-          no-repeat;
+.container {
+        background: url(../images/salt_lake.jpeg);
+        background-repeat: no-repeat;
         width: 100%;
-        /*height: 800px;*/
         height: 1200px;
-        
-        background-size: 100% auto;
+        background-position:center;/*?*/
+        background-size: auto 100%;
         padding-top: 10px;
       }
-      .quiz-body {
-        /*background: #b2c2bf;*/
-        background-color: #c0ded9;
-        margin: 150px 33%;
+.quiz-body {
+        /*background-color: #c0ded9;rgba in hex*/
+        background: rgba(192, 222, 217, .9);
+        /*margin: 150px 33%;keep?*/
+        margin:33% 30%;
         padding: 10px 20px 50px 20px;
-        -webkit-box-shadow: 4px 4px 11px 3px#3b3a30;
-        -moz-box-shadow: 4px 4px 11px 3px #3b3a30;
+        /*-webkit-box-shadow: 4px 4px 11px 3px#3b3a30;
+        -moz-box-shadow: 4px 4px 11px 3px #3b3a30;*/
         box-shadow: 4px 4px 11px 3px #3b3a30;
       }
-      h1 {
+h1 {
           /*color:#eaece5 ;
           background:#3b3a30;*/
         background-color: #eaece5;
         color:#3b3a30;
         border-bottom:2px solid #b2c2bf ;
-        
-        font-weight: 900;
+        /*font-weight: 900;keep?*/
+        font-weight: bold;
         text-align: center;
         font-size: 48px;
         margin: 0;
+        padding:.25rem;/*keep or no?*/
       }
-      button {
+button {
         /*color: #b2c2bf;*/
         color:#eaece5;
         background-color: #3b3a30;
         border-color: #b2c2bf;
         border-radius: 20px;
         /*box-shadow: 3px 5px 10px  #3b3a30;*//*#eaece5;*/
-        margin: 0.2em 0;
+        /*margin: 0.2em 0;keep?*/
+        margin:.25rem 0;
         display: block;
         width: 100%;
         font-size: 24px;
+        padding:.5rem 0;
       }
-      #question {
-        font-size: 24px;
+.question {
+        /*font-size: 24px;keep?*/
+        max-width:100%;
         text-align:center;
       }
-      img {
+img {
         max-width:100%;
         margin:.5rem auto;
         box-shadow: 3px 5px 10px  #3b3a30;
         transition: transform .2s;
         transition-timing-function: linear;
         }
-      img:hover {
+img:hover {
           transform: scale(1.25);
             
         }
-        .correct, .wrong , #info{
+.correct, .wrong , #info{
           /*margin-left:.5rem;*/
           text-align: center;
           color:#3b3a30;
       }
+      /*
+@media screen and (min-width:600px){
+  h1 {
+    color:green;
+  }
+}
+
+@media screen and (max-width:600px){
+        /*h1 {
+          color:yellow;
+        }*/
+    /*
+        body {
+            background: url(../images/salt_lake.jpeg);
+            background-size: auto;/*cover;/*/
+   /*         background-position:center;
+        }
+        .quiz-body {
+            /*margin:33% 27%;
+            */
+   /*         margin:100px 10%;
+            /*margin:1rem 10%;*/
+   /*     }
+        .container {
+            background:transparent;
+        }
+      }
+@media screen and (max-width:299px){
+          h1 {
+              font-size: 1.75rem;
+          }
+      }*/

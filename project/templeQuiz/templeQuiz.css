@@ -5,7 +5,6 @@
     color:#fff;background:#3b3a30 dark background with white font*/
 body {
     background:#c0ded9;
-    /*max-height:1200px; try to fix*/
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .container {
@@ -15,29 +14,17 @@ body {
     width: 100%;
     height:1200px;
     background-size: auto 100%;
-    background-position:center;/*;100%/* auto;
-    /*background-size: auto;*/
     padding-top:10px;
-   /* background: url(../images/salt_lake.jpeg);
+    background-position:center;/*;100%/* auto;
+    /*background-size: auto;
     background-size:cover;
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;*/
-    
+    height: 100%;*/
 }
 .quiz-body {
-    /*background-color: #b2c2bf;*/
     /*background:#c0ded9;*/
     background: rgba(192, 222, 217, .9);
-   /*margin: 6rem 30%;*/
-   /* padding: 1rem 2rem 4rem 2rem;*/
-    
-    /*margin: 5% 5%;try to fix*/
-     /*margin: 150px 33%;*/
     padding: 10px 20px 50px 20px;
-    margin:33% 30%;/*2rem;
-    /*padding: 1rem 2rem 4rem 2rem;try to fix*/
+    margin:33% 30%;/*2rem;*/
     box-shadow: 4px 4px 11px 3px #3b3a30  ;
 }
 h1 {
