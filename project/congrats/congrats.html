@@ -8,7 +8,7 @@
     color:#fff;background:#3b3a30 dark background with white font*/
     
             body {
-                background-color: #eaece5; /*#c0ded9 ;*/
+                background-color: #c0ded9;/*#eaece5; /*#c0ded9 ;*/
             }
             .hidden {
                 display:none;
@@ -19,17 +19,31 @@
             .container {
                 display:flex;
                 flex-direction: column;
-                border:2px ridge #b2c2bf;
+                /*border:2px ridge #b2c2bf;*/
                 color:#3b3a30 ;
-                background-color:#c0ded9; /*:#b2c2bf;*/
+                background-color:transparent;/*:#c0ded9; /*:#b2c2bf;*/
                 margin:0 auto;
                 width:300px;
                 height:100px;
                 /*overflow:hidden;
                 position:relative;*/
             }
-            h1 {
+            .finished {
+                font-size: 4rem;
                 text-align: center;
+                color:#3b3a30;
+                /*
+                background-color:#f2d74e ;
+                background-image: linear-gradient(45deg,#ff9a91, #95c3de );
+                background-size:100%;
+                background-repeat: repeat;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color:transparent;
+                -moz-background-clip: text;
+                -moz-text-fill-color:transparent;
+           /*background: -webkit-linear-gradient(#ff9a91, #95c3de);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;*/
             }
             .confetti_container {
                 margin:0;
@@ -44,7 +58,7 @@
           background-color: #f2d74e;
           position: absolute;
           left: 50%;
-          animation: confetti 5s ease-in-out -2s infinite;
+          animation: confetti 5s ease-in-out -1s infinite;
           transform-origin: left top;
         }
         .confetti:nth-child(1) {
@@ -77,6 +91,28 @@
         .confetti:nth-child(10) {
           background-color: #f2d74e; left: 100%; animation-delay: -2.5s;
         }
+        .confetti:nth-child(11) {
+          background-color: #000; left: 75%; animation-delay: -1.75s;
+        }.confetti:nth-child(12) {
+          background-color: #fff; left: 25%; animation-delay: -2.75s;
+        }.confetti:nth-child(13) {
+          background-color: #000; left: 35%; animation-delay: -3.75s;
+        }.confetti:nth-child(14) {
+          background-color: #fff; left: 45%; animation-delay: -1.25s;
+        }.confetti:nth-child(15) {
+          background-color: #000; left: 55%; animation-delay: -5.5s;
+        }
+        .confetti:nth-child(16) {
+          background-color: #fff; left: 65%; animation-delay: -.75s;
+        }.confetti:nth-child(17) {
+          background-color: #000; left: 15%; animation-delay: -4.75s;
+        }.confetti:nth-child(18) {
+          background-color: #fff; left: 95%; animation-delay: -2.25s;
+        }.confetti:nth-child(19) {
+          background-color: #000; left: 55%; animation-delay: -.5s;
+        }.confetti:nth-child(20) {
+          background-color: #fff; left: 55%; animation-delay: -4.25s;
+        }
 
         @keyframes confetti {
           0% { transform: rotateZ(15deg) rotateY(0deg) translate(0,0); }
@@ -90,9 +126,19 @@
     </head>
     <body>
         <div class="container">
-            <h1>You did it!</h1>
+            <h1 class="finished ">You did it!</h1>
             <!--<canvas id="confetti" class="confetti" width="300" height="300"></canvas><-->
             <!--<div class="confetti_container"></div><-->
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
         <div class="confetti"></div>
         <div class="confetti"></div>
         <div class="confetti"></div>
