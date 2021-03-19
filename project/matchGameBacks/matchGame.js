@@ -32,7 +32,7 @@ async function getData() {
     //debugger
     renderData(data);
 };
-getData();
+//getData();
 
 function renderData(data) {
     end.classList.add('hidden');
@@ -192,3 +192,5 @@ grid.addEventListener("click", function (event) {
         previousTarget = clicked;
     }
 })
+window.addEventListener('load', getData());
+
