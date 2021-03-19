@@ -74,29 +74,28 @@ img:hover {
           text-align: center;
           color:#3b3a30;
       }
-      /*
-@media screen and (min-width:600px){
+     
+@media screen and (min-width:800px){
   h1 {
     color:green;
   }
 }
 
+
 @media screen and (max-width:600px){
-        /*h1 {
-          color:yellow;
-        }*/
-    /*
+        
+  
         body {
             background: url(../images/salt_lake.jpeg);
             background-size: auto;/*cover;/*/
-   /*         background-position:center;
+          background-position:center;
         }
         .quiz-body {
             /*margin:33% 27%;
             */
-   /*         margin:100px 10%;
+           margin:100px 10%;
             /*margin:1rem 10%;*/
-   /*     }
+        }
         .container {
             background:transparent;
         }
@@ -105,4 +104,4 @@ img:hover {
           h1 {
               font-size: 1.75rem;
           }
-      }*/
+      }
