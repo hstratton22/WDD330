@@ -8,7 +8,7 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .container {
-    background: url(../images/salt_lake.jpeg);
+    background: url(images/salt_lake.jpeg);
    /*background-position: center;*/
     background-repeat: no-repeat;
     width: 100%;
@@ -84,7 +84,7 @@ img:hover {
   @media screen and (max-width:600px){
     
     body {
-        background: url(../images/salt_lake.jpeg);
+        background: url(images/salt_lake.jpeg);
         background-size: auto;/*cover;/*/
         background-position:center;
     }
