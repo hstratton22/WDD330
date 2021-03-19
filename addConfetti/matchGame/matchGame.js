@@ -31,7 +31,7 @@ let gameGrid = [];
 async function getData() {
     const data = await getJSON();
     //return data;
-    debugger
+    //debugger
     renderData(data);
 };
 getData();

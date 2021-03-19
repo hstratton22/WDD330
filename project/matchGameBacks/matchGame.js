@@ -1,10 +1,13 @@
-const url = "matchGame.json"
+import getJSON from './matchGameUtilities.js';
+/*const url = "matchGame.json"
 fetch(url)
     .then(res => res.json())
     .then(data => {
         renderData(data);
 
     });
+    */
+
 
 let firstGuess = '';
 let secondGuess = '';
@@ -23,13 +26,21 @@ const grid = document.createElement("section");
 grid.setAttribute("class", "grid");
 let gameGrid = [];
 
+async function getData() {
+    const data = await getJSON();
+    //return data;
+    //debugger
+    renderData(data);
+};
+getData();
+
 function renderData(data) {
     end.classList.add('hidden');
     end.classList.add('finished');
     end.innerText="You did it!";
     const confetti = document.createElement('div');
     confetti.classList.add('confetti');
-    for (i = 0; i < 15; i++) {
+    for (let i = 0; i < 15; i++) {
         const confetti = document.createElement('div');
         confetti.classList.add('confetti');
         end.appendChild(confetti);
