@@ -30,7 +30,6 @@ let gameGrid = [];
 
 async function getData() {
     const data = await getJSON();
-    //return data;
     //debugger
     renderData(data);
 };
@@ -39,7 +38,7 @@ async function getData() {
 function renderData(data) {
     end.classList.add('hidden');
     end.classList.add('finished');
-    end.innerText="You did it!";
+    end.innerText = "You did it!";
     const confetti = document.createElement('div');
     confetti.classList.add('confetti');
     for (let i = 0; i < 15; i++) {
@@ -73,15 +72,6 @@ function renderData(data) {
             gameGrid.push(card);
             gameGrid.push(label);
             displayGrid();
-            //gameGrid.sort(() => 0.5 - Math.random());
-            //grid.append(gameGrid);
-            // gameGrid.forEach((item) => {
-            //     grid.append(item);
-            // })
-
-            //grid.appendChild(card);
-            //grid.appendChild(label);
-            // game.appendChild(grid);
 
         }
 
@@ -96,7 +86,6 @@ function displayGrid() {
     gameGrid.forEach((item) => {
         if (item.dataset.id >= first && item.dataset.id < level) {
             showList.push(item);
-
             //grid.append(item);
         }
         showList.sort(() => 0.5 - Math.random());
@@ -104,12 +93,10 @@ function displayGrid() {
             grid.append(it);
         })
     })
-
     //grid.appendChild(card);
     //grid.appendChild(label);
     game.appendChild(grid);
 }
-
 
 const match = () => {
     const selected = document.querySelectorAll(".selected");
@@ -124,13 +111,10 @@ const match = () => {
 }
 
 function checkForLevelUp() {
-    if (matchCount == 64){
+    if (matchCount == 64) {
         end.classList.remove('hidden');
     }
     else if (matchCount % 8 == 0) {
-        //start += 8;
-        //round += 8;
-        //matchCount = 0;
         first = level;
         level += 8;
         console.log("level= " + level);
@@ -148,15 +132,7 @@ const resetGuesses = () => {
     })
 }
 
-grid.addEventListener("click", function (event) {
-    let clicked = event.target;
-
-    if (clicked.nodeName === "SECTION" || clicked === previousTarget) {
-        return;
-
-    }
-    clicked.classList.add("selected");
-
+function addSelected(clicked){
     if (count < 2) {
         count++;
 
@@ -182,6 +158,43 @@ grid.addEventListener("click", function (event) {
         }
         previousTarget = clicked;
     }
-})
+}
+
+grid.addEventListener("click", function (event) {
+    let clicked = event.target;
+
+    if (clicked.nodeName === "SECTION" || clicked === previousTarget) {
+        return;
+
+    }
+    //clicked.classList.add("selected");
+    addSelected(clicked);
+/*
+    if (count < 2) {
+        count++;
+
+        if (count === 1) {
+            //firstGuess = clicked.dataset.name;
+            firstGuess = clicked.dataset.id;
+            clicked.classList.add("selected");
+        } else {
+            ///secondGuess = clicked.dataset.name;
+            secondGuess = clicked.dataset.id;
+            clicked.classList.add("selected");
+        }
+        if (firstGuess !== '' && secondGuess !== '') {
+            if (firstGuess === secondGuess) {
+                setTimeout(match, delay);
+                setTimeout(resetGuesses, delay);
+                //match();
+                //resetGuesses();
+            } else {
+                setTimeout(resetGuesses, delay);
+                //resetGuesses();
+            }
+        }
+        previousTarget = clicked;
+    }*/
+});
 
 window.addEventListener('load', getData());

@@ -71,16 +71,7 @@ function renderData(data) {
             gameGrid.push(card);
             gameGrid.push(label);
             displayGrid();
-            //gameGrid.sort(() => 0.5 - Math.random());
-            //grid.append(gameGrid);
-            // gameGrid.forEach((item) => {
-            //     grid.append(item);
-            // })
-
-            //grid.appendChild(card);
-            //grid.appendChild(label);
-            // game.appendChild(grid);
-
+            
         }
 
     })
@@ -126,9 +117,6 @@ function checkForLevelUp() {
         end.classList.remove('hidden');
     }
     else if (matchCount % 8 == 0) {
-        //start += 8;
-        //round += 8;
-        //matchCount = 0;
         first=level;
         level+=8;
         console.log("level= "+level);
@@ -146,15 +134,7 @@ const resetGuesses = () => {
     })
 }
 
-grid.addEventListener("click", function (event) {
-    let clicked = event.target;
-
-    if (clicked.nodeName === "SECTION" || clicked === previousTarget) {
-        return;
-
-    }
-    clicked.classList.add("selected");
-
+function addSelected(clicked){
     if (count < 2) {
         count++;
 
@@ -180,5 +160,17 @@ grid.addEventListener("click", function (event) {
         }
         previousTarget = clicked;
     }
-})
+
+}
+
+grid.addEventListener("click", function (event) {
+    let clicked = event.target;
+
+    if (clicked.nodeName === "SECTION" || clicked === previousTarget) {
+        return;
+
+    }
+    addSelected(clicked);
+
+});
 window.addEventListener('load', getData());

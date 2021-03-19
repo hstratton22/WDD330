@@ -156,16 +156,7 @@ const resetGuesses = () => {
     })
 }
 
-grid.addEventListener("click", function (event) {
-    let clicked = event.target;
-
-    if (clicked.nodeName === "SECTION" || clicked === previousTarget) {
-        return;
-
-    }
-    clicked.classList.add("selected");
-    clicked.classList.remove('back');
-
+function addSelected(clicked){
     if (count < 2) {
         count++;
 
@@ -191,6 +182,19 @@ grid.addEventListener("click", function (event) {
         }
         previousTarget = clicked;
     }
-})
+
+}
+grid.addEventListener("click", function (event) {
+    let clicked = event.target;
+
+    if (clicked.nodeName === "SECTION" || clicked === previousTarget) {
+        return;
+
+    }
+    //clicked.classList.add("selected");
+    clicked.classList.remove('back');
+    addSelected(clicked);
+
+});
 window.addEventListener('load', getData());
 
