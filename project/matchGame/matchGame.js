@@ -15,9 +15,9 @@ let previousTarget = null;
 let start = 1;//1;
 let round = 65;//9;
 let delay = 600;
-let matchCount=0;
-let level=9;
-let first=1;
+let matchCount = 0;
+let level = 9;
+let first = 1;
 
 const game = document.getElementById("game");
 const end = document.createElement('div');
@@ -29,7 +29,6 @@ let gameGrid = [];
 
 async function getData() {
     const data = await getJSON();
-    //return data;
     //debugger
     renderData(data);
 };
@@ -38,7 +37,7 @@ async function getData() {
 function renderData(data) {
     end.classList.add('hidden');
     end.classList.add('finished');
-    end.innerText="You did it!";
+    end.innerText = "You did it!";
     const confetti = document.createElement('div');
     confetti.classList.add('confetti');
     for (let i = 0; i < 15; i++) {
@@ -49,13 +48,11 @@ function renderData(data) {
     game.appendChild(end);
 
     data.temples.forEach((item) => {
-
         let card = document.createElement('div');
         card.classList.add("card");
         let label = document.createElement('div');
         label.classList.add("card");
         label.classList.add("center");
-
 
         //round = 9;
         if (item.id >= start && item.id < round) {
@@ -71,25 +68,22 @@ function renderData(data) {
             gameGrid.push(card);
             gameGrid.push(label);
             displayGrid();
-            
         }
-
     })
 }
 
 function displayGrid() {
-    let showList=[];
-    grid.innerHTML="";
+    let showList = [];
+    grid.innerHTML = "";
     //gameGrid.sort(() => 0.5 - Math.random());
     //grid.append(gameGrid);
     gameGrid.forEach((item) => {
-        if (item.dataset.id>= first && item.dataset.id <level){
+        if (item.dataset.id >= first && item.dataset.id < level) {
             showList.push(item);
-            
-        //grid.append(item);
-    }
-        showList.sort(()=>0.5 - Math.random());
-        showList.forEach((it)=>{
+            //grid.append(item);
+        }
+        showList.sort(() => 0.5 - Math.random());
+        showList.forEach((it) => {
             grid.append(it);
         })
     })
@@ -105,21 +99,20 @@ const match = () => {
     selected.forEach((card) => {
         card.classList.add('match')
         card.classList.add('hide');
-
     });
     matchCount++;
-    console.log("matchCount: "+matchCount);
+    console.log("matchCount: " + matchCount);
     checkForLevelUp();
 }
 
 function checkForLevelUp() {
-    if (matchCount == 64){
+    if (matchCount == 64) {
         end.classList.remove('hidden');
     }
     else if (matchCount % 8 == 0) {
-        first=level;
-        level+=8;
-        console.log("level= "+level);
+        first = level;
+        level += 8;
+        console.log("level= " + level);
         setTimeout(displayGrid(), delay);
     }
 }
@@ -133,34 +126,37 @@ const resetGuesses = () => {
         card.classList.remove('selected')
     })
 }
-
-function addSelected(clicked){
+function checkCount(clicked) {
     if (count < 2) {
         count++;
-
-        if (count === 1) {
-            //firstGuess = clicked.dataset.name;
-            firstGuess = clicked.dataset.id;
-            clicked.classList.add("selected");
-        } else {
-            ///secondGuess = clicked.dataset.name;
-            secondGuess = clicked.dataset.id;
-            clicked.classList.add("selected");
-        }
-        if (firstGuess !== '' && secondGuess !== '') {
-            if (firstGuess === secondGuess) {
-                setTimeout(match, delay);
-                setTimeout(resetGuesses, delay);
-                //match();
-                //resetGuesses();
-            } else {
-                setTimeout(resetGuesses, delay);
-                //resetGuesses();
-            }
-        }
-        previousTarget = clicked;
+        addSelected(clicked);
     }
+}
 
+function addSelected(clicked) {
+
+    if (count === 1) {
+        firstGuess = clicked.dataset.id;
+        clicked.classList.add("selected");
+    } else {
+        secondGuess = clicked.dataset.id;
+        clicked.classList.add("selected");
+    }
+    checkGuess(clicked, firstGuess, secondGuess);
+
+}
+
+function checkGuess(clicked, firstGuess, secondGuess) {
+    if (firstGuess !== '' && secondGuess !== '') {
+        if (firstGuess === secondGuess) {
+            setTimeout(match, delay);
+            setTimeout(resetGuesses, delay);
+
+        } else {
+            setTimeout(resetGuesses, delay);
+        }
+    }
+    previousTarget = clicked;
 }
 
 grid.addEventListener("click", function (event) {
@@ -170,7 +166,6 @@ grid.addEventListener("click", function (event) {
         return;
 
     }
-    addSelected(clicked);
-
+    checkCount(clicked);
 });
 window.addEventListener('load', getData());
