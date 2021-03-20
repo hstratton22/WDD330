@@ -1,4 +1,5 @@
 import getJSON from './matchGameUtilities.js';
+//import tools from './matchGamefunctions.js';
 /*
 const url = "matchGame.json"
 fetch(url)
@@ -99,6 +100,7 @@ function displayGrid() {
 }
 
 const match = () => {
+    console.log("inside match");
     const selected = document.querySelectorAll(".selected");
     selected.forEach((card) => {
         card.classList.add('match')
@@ -111,6 +113,7 @@ const match = () => {
 }
 
 function checkForLevelUp() {
+    console.log("inside checkForLevelUp");
     if (matchCount == 64) {
         end.classList.remove('hidden');
     }
@@ -121,7 +124,9 @@ function checkForLevelUp() {
         setTimeout(displayGrid(), delay);
     }
 }
+
 const resetGuesses = () => {
+    console.log("in resetGuesses");
     firstGuess = '';
     secondGuess = '';
     count = 0;
@@ -132,9 +137,18 @@ const resetGuesses = () => {
     })
 }
 
-function addSelected(clicked){
+function checkCount(clicked) {
+    console.log("in checkCount: count= "+ count);
     if (count < 2) {
         count++;
+        console.log("in checkCount: count= "+ count);
+
+        addSelected(clicked);
+    }
+}
+function addSelected(clicked){
+   /* if (count < 2) {
+        count++;*/
 
         if (count === 1) {
             //firstGuess = clicked.dataset.name;
@@ -145,7 +159,8 @@ function addSelected(clicked){
             secondGuess = clicked.dataset.id;
             clicked.classList.add("selected");
         }
-        if (firstGuess !== '' && secondGuess !== '') {
+        checkGuess(clicked, firstGuess, secondGuess);
+       /* if (firstGuess !== '' && secondGuess !== '') {
             if (firstGuess === secondGuess) {
                 setTimeout(match, delay);
                 setTimeout(resetGuesses, delay);
@@ -156,8 +171,39 @@ function addSelected(clicked){
                 //resetGuesses();
             }
         }
-        previousTarget = clicked;
+        previousTarget = clicked;*/
     }
+
+//}
+
+/*
+function addSelected(clicked) {
+    console.log("in addSelected");
+    if (count === 1) {
+        firstGuess = clicked.dataset.id;
+        clicked.classList.add("selected");
+        console.log("in addSelected, first: "+firstGuess)
+    } else {
+        secondGuess = clicked.dataset.id;
+        clicked.classList.add("selected");
+        console.log("in addSelected, second: "+secondGuess)
+    }
+
+    checkGuess();
+}
+*/
+function checkGuess(clicked, firstGuess, secondGuess){
+    console.log("in checkGuess, first: " + firstGuess + ", second: "+ secondGuess);
+    if (firstGuess !== '' && secondGuess !== '') {
+        if (firstGuess === secondGuess) {
+            setTimeout(match, delay);
+            setTimeout(resetGuesses, delay);
+
+        } else {
+            setTimeout(resetGuesses, delay);
+        }
+    }
+    previousTarget = clicked;
 }
 
 grid.addEventListener("click", function (event) {
@@ -167,34 +213,10 @@ grid.addEventListener("click", function (event) {
         return;
 
     }
-    //clicked.classList.add("selected");
-    addSelected(clicked);
-/*
-    if (count < 2) {
-        count++;
+    //addSelected(clicked);
+    checkCount(clicked);
+    //tools.checkCount(clicked, count);
 
-        if (count === 1) {
-            //firstGuess = clicked.dataset.name;
-            firstGuess = clicked.dataset.id;
-            clicked.classList.add("selected");
-        } else {
-            ///secondGuess = clicked.dataset.name;
-            secondGuess = clicked.dataset.id;
-            clicked.classList.add("selected");
-        }
-        if (firstGuess !== '' && secondGuess !== '') {
-            if (firstGuess === secondGuess) {
-                setTimeout(match, delay);
-                setTimeout(resetGuesses, delay);
-                //match();
-                //resetGuesses();
-            } else {
-                setTimeout(resetGuesses, delay);
-                //resetGuesses();
-            }
-        }
-        previousTarget = clicked;
-    }*/
 });
 
 window.addEventListener('load', getData());
