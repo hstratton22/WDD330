@@ -151,34 +151,3 @@ border:none;
     75% { transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw,80vh); }
     100% { transform: rotateZ(15deg) rotateY(1440deg) translate(10vw,110vh); }
   }
-
-
-/*
-button {
-    border:1px solid #3b3a30;
-    border-radius: 10px;
-    background-color:#b2c2bf;
-    color:#3b3a30;
-    padding:.25rem 1rem;
-    margin-left:1rem;
-    margin-top:.5rem;
-}
-*/
-/*experimental size
-@media (max-width:620px) {
-    .card {
-        height:150px;
-    width:225px;
-}
-    img {
-        max-width: 75%;
-    }
-}*/
-/*
-@media (max-width:768px) {
-    .displayContainer {
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    
-}*/

@@ -1,5 +1,5 @@
 import getJSON from './matchGameUtilities.js';
-//import tools from './matchGamefunctions.js';
+import tools from './matchGamefunctions.js';
 /*
 const url = "matchGame.json"
 fetch(url)
@@ -99,7 +99,9 @@ function displayGrid() {
     game.appendChild(grid);
 }
 
-const match = () => {
+//const match = () => {
+    
+function match(previousTarget){
     console.log("inside match");
     const selected = document.querySelectorAll(".selected");
     selected.forEach((card) => {
@@ -110,6 +112,7 @@ const match = () => {
     matchCount++;
     console.log("matchCount: " + matchCount);
     checkForLevelUp();
+    //tools.checkForLevelUp(matchCount);
 }
 
 function checkForLevelUp() {
@@ -172,7 +175,7 @@ function addSelected(clicked){
             }
         }
         previousTarget = clicked;*/
-    }
+   }
 
 //}
 
@@ -192,6 +195,7 @@ function addSelected(clicked) {
     checkGuess();
 }
 */
+
 function checkGuess(clicked, firstGuess, secondGuess){
     console.log("in checkGuess, first: " + firstGuess + ", second: "+ secondGuess);
     if (firstGuess !== '' && secondGuess !== '') {

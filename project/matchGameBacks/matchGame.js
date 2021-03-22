@@ -13,8 +13,8 @@ let firstGuess = '';
 let secondGuess = '';
 let count = 0;
 let previousTarget = null;
-let start = 1;//1;
-let round = 65;//9;
+let start = 1;
+let round = 65;
 let delay = 600;
 let matchCount = 0;
 let level = 9;
@@ -28,11 +28,8 @@ let gameGrid = [];
 
 async function getData() {
     const data = await getJSON();
-    //return data;
-    //debugger
     renderData(data);
 };
-//getData();
 
 function renderData(data) {
     end.classList.add('hidden');
@@ -55,7 +52,6 @@ function renderData(data) {
         label.classList.add("card");
         label.classList.add("center");
 
-        //round = 9;
         if (item.id >= start && item.id < round) {
             console.log(item.id);
             card.dataset.id = item.id;
@@ -76,13 +72,11 @@ function renderData(data) {
 function displayGrid() {
     let showList = [];
     grid.innerHTML = "";
-    //gameGrid.sort(() => 0.5 - Math.random());
-    //grid.append(gameGrid);
+    
     gameGrid.forEach((item) => {
         if (item.dataset.id >= first && item.dataset.id < level) {
             item.classList.add('back');
             showList.push(item);
-            //grid.append(item);
         }
         showList.sort(() => 0.5 - Math.random());
         showList.forEach((it) => {
@@ -142,11 +136,9 @@ function addSelected(clicked) {
          count++;*/
 
     if (count === 1) {
-        //firstGuess = clicked.dataset.name;
         firstGuess = clicked.dataset.id;
         clicked.classList.add("selected");
     } else {
-        ///secondGuess = clicked.dataset.name;
         secondGuess = clicked.dataset.id;
         clicked.classList.add("selected");
     }
@@ -158,11 +150,8 @@ function checkGuess(clicked, firstGuess, secondGuess) {
         if (firstGuess === secondGuess) {
             setTimeout(match, delay);
             setTimeout(resetGuesses, delay);
-            //match();
-            //resetGuesses();
         } else {
             setTimeout(resetGuesses, delay);
-            //resetGuesses();
         }
     }
     previousTarget = clicked;
