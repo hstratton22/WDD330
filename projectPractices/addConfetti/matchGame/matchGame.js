@@ -1,5 +1,5 @@
 import getJSON from './matchGameUtilities.js';
-import tools from './matchGamefunctions.js';
+//import tools from './matchGamefunctions.js';
 /*
 const url = "matchGame.json"
 fetch(url)
@@ -101,7 +101,7 @@ function displayGrid() {
 
 //const match = () => {
     
-function match(previousTarget){
+function match(){
     console.log("inside match");
     const selected = document.querySelectorAll(".selected");
     selected.forEach((card) => {
