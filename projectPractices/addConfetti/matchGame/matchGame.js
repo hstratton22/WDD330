@@ -1,21 +1,11 @@
 import getJSON from './matchGameUtilities.js';
-//import tools from './matchGamefunctions.js';
-/*
-const url = "matchGame.json"
-fetch(url)
-    .then(res => res.json())
-    .then(data => {
-        renderData(data);
-
-    });
-    */
 
 let firstGuess = '';
 let secondGuess = '';
 let count = 0;
 let previousTarget = null;
-let start = 1;//1;
-let round = 65;//9;
+let start = 1;
+let round = 65;
 let delay = 600;
 let matchCount = 0;
 let level = 9;
@@ -82,20 +72,17 @@ function renderData(data) {
 function displayGrid() {
     let showList = [];
     grid.innerHTML = "";
-    //gameGrid.sort(() => 0.5 - Math.random());
-    //grid.append(gameGrid);
+
     gameGrid.forEach((item) => {
         if (item.dataset.id >= first && item.dataset.id < level) {
             showList.push(item);
-            //grid.append(item);
         }
         showList.sort(() => 0.5 - Math.random());
         showList.forEach((it) => {
             grid.append(it);
         })
     })
-    //grid.appendChild(card);
-    //grid.appendChild(label);
+    
     game.appendChild(grid);
 }
 
@@ -150,51 +137,17 @@ function checkCount(clicked) {
     }
 }
 function addSelected(clicked){
-   /* if (count < 2) {
-        count++;*/
-
         if (count === 1) {
-            //firstGuess = clicked.dataset.name;
             firstGuess = clicked.dataset.id;
             clicked.classList.add("selected");
         } else {
-            ///secondGuess = clicked.dataset.name;
             secondGuess = clicked.dataset.id;
             clicked.classList.add("selected");
         }
         checkGuess(clicked, firstGuess, secondGuess);
-       /* if (firstGuess !== '' && secondGuess !== '') {
-            if (firstGuess === secondGuess) {
-                setTimeout(match, delay);
-                setTimeout(resetGuesses, delay);
-                //match();
-                //resetGuesses();
-            } else {
-                setTimeout(resetGuesses, delay);
-                //resetGuesses();
-            }
-        }
-        previousTarget = clicked;*/
+       
    }
 
-//}
-
-/*
-function addSelected(clicked) {
-    console.log("in addSelected");
-    if (count === 1) {
-        firstGuess = clicked.dataset.id;
-        clicked.classList.add("selected");
-        console.log("in addSelected, first: "+firstGuess)
-    } else {
-        secondGuess = clicked.dataset.id;
-        clicked.classList.add("selected");
-        console.log("in addSelected, second: "+secondGuess)
-    }
-
-    checkGuess();
-}
-*/
 
 function checkGuess(clicked, firstGuess, secondGuess){
     console.log("in checkGuess, first: " + firstGuess + ", second: "+ secondGuess);
@@ -217,7 +170,6 @@ grid.addEventListener("click", function (event) {
         return;
 
     }
-    //addSelected(clicked);
     checkCount(clicked);
     //tools.checkCount(clicked, count);
 
