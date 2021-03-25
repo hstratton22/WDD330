@@ -30,8 +30,7 @@ async function getData() {
     const data = await getJSON();
     renderData(data);
 };
-
-function renderData(data) {
+function buildFinished(){
     end.classList.add('hidden');
     end.classList.add('finished');
     end.innerText = "You did it!";
@@ -43,6 +42,9 @@ function renderData(data) {
         end.appendChild(confetti);
     }
     game.appendChild(end);
+}
+function renderData(data) {
+    buildFinished();
 
     data.temples.forEach((item) => {
 

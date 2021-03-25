@@ -34,9 +34,8 @@ async function getData() {
     //debugger
     renderData(data);
 };
-//getData();
 
-function renderData(data) {
+function buildFinished(){
     end.classList.add('hidden');
     end.classList.add('finished');
     end.innerText = "You did it!";
@@ -49,6 +48,9 @@ function renderData(data) {
     }
     game.appendChild(end);
 
+}
+function renderData(data) {
+    buildFinished();
 
     data.temples.forEach((item) => {
 
@@ -58,8 +60,6 @@ function renderData(data) {
         label.classList.add("card");
         label.classList.add("center");
 
-
-        //round = 9;
         if (item.id >= start && item.id < round) {
             console.log(item.id);
             card.dataset.id = item.id;
