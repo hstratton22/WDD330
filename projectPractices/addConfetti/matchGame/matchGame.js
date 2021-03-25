@@ -114,8 +114,7 @@ function checkForLevelUp() {
         setTimeout(displayGrid(), delay);
     }
 }
-
-const resetGuesses = () => {
+function resetGuesses(){
     console.log("in resetGuesses");
     firstGuess = '';
     secondGuess = '';

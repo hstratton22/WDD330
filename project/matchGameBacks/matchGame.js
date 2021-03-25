@@ -1,13 +1,4 @@
 import getJSON from './matchGameUtilities.js';
-/*const url = "matchGame.json"
-fetch(url)
-    .then(res => res.json())
-    .then(data => {
-        renderData(data);
-
-    });
-    */
-
 
 let firstGuess = '';
 let secondGuess = '';
@@ -86,13 +77,10 @@ function displayGrid() {
         })
     })
 
-    //grid.appendChild(card);
-    //grid.appendChild(label);
     game.appendChild(grid);
 }
 
-
-const match = () => {
+function match(){
     const selected = document.querySelectorAll(".selected");
     selected.forEach((card) => {
         card.classList.add('match')
@@ -115,7 +103,7 @@ function checkForLevelUp() {
         setTimeout(displayGrid(), delay);
     }
 }
-const resetGuesses = () => {
+function resetGuesses(){
     firstGuess = '';
     secondGuess = '';
     count = 0;
@@ -134,9 +122,6 @@ function checkCount(clicked) {
 }
 
 function addSelected(clicked) {
-    /* if (count < 2) {
-         count++;*/
-
     if (count === 1) {
         firstGuess = clicked.dataset.id;
         clicked.classList.add("selected");
