@@ -16,9 +16,6 @@ matchCovered.classList.add('buttonCtr');
 quizBtn.classList.add('button');
 matchBtn.classList.add('button');
 
-
-
-//quizBtn.innerText="Quiz";
 quizBtn.innerText="Quiz";
 matchBtn.innerText="Matching";
 
@@ -35,8 +32,6 @@ quizDiv.appendChild(quizTimer);
 quizDiv.appendChild(quizNoTimer);
 matchDiv.appendChild(matchVisible);
 matchDiv.appendChild(matchCovered);
-
-
 
 menu.appendChild(quizBtn);
 menu.appendChild(quizDiv);

@@ -1,6 +1,5 @@
 body {
     background:#c0ded9;
-    /*max-height:1200px; try to fix*/
     font-family: Georgia, 'Times New Roman', Times, serif;
     max-width: 800px;
     margin:0 auto;
@@ -28,9 +27,6 @@ h1 {
     background-color:#3b3a30 ;
     color:#eaece5;
     border:3px double  #b2c2bf ;
-    /*border-style:ridge;*/
-
-
 }
 .matchDiv {
     display:flex;
@@ -49,6 +45,6 @@ a {
     color:#eaece5;
     background-color:#3b3a30 ;
 }
-.button:hover {
+.button:hover, .buttonCtr:hover {
     border:4px solid #eaece5;/*#b2c2bf;*/
 }
