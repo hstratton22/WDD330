@@ -32,7 +32,6 @@ const view = {
       this.hide(this.question);
       this.hide(this.response);
       this.show(this.start);
-      this.render(this.hiScore, game.hiScore());
     },
     buttons(array){
       return array.map(value => `<button>${value}</button>`).join('');
@@ -48,7 +47,6 @@ const view = {
     },
   
     ask(name){
-      //console.log('ask() invoked');
       if(this.temples.length > 2) {
         shuffle(this.temples);
         this.question = this.temples.pop();
@@ -77,7 +75,7 @@ const view = {
       this.ask();
     },
     gameOver(){
-      view.render(view.info,`Game Over, you scored ${this.score} point${this.score !== 1 ? 's' : ''}`);
+      view.render(view.info,`Game Over`);
       view.teardown();
      
     } 

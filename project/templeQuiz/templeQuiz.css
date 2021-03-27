@@ -9,28 +9,21 @@ body {
 }
 .container {
     background: url(images/salt_lake.jpeg);
-   /*background-position: center;*/
     background-repeat: no-repeat;
     width: 100%;
     height:1200px;
     background-size: auto 100%;
     padding-top:10px;
-    background-position:center;/*;100%/* auto;
-    /*background-size: auto;
-    background-size:cover;
-    height: 100%;*/
+    background-position:center;
+    
 }
 .quiz-body {
-    /*background:#c0ded9;*/
     background: rgba(192, 222, 217, .9);
     padding: 10px 20px 50px 20px;
-    margin:33% 30%;/*2rem;*/
+    margin:33% 30%;
     box-shadow: 4px 4px 11px 3px #3b3a30  ;
 }
 h1 {
-    /*
-    color:#eaece5;
-    background:#3b3a30;*/
     background-color: #eaece5;
     color:#3b3a30;
     border-bottom:2px solid #b2c2bf ;
@@ -38,30 +31,24 @@ h1 {
     text-align:center;
     font-size:48px;
     margin:0;
-    padding:.25rem;/*try to fix*/
+    padding:.25rem;
 }
 button {
-    background-color:#b2c2bf;/*#c0ded9;*/
-    /*color:#eaece5;
-    text-shadow: 2px 3px #3b3a30;*/
+    background-color:#b2c2bf;
     color: #3b3a30;
     text-shadow: 2px 2px 2px #eaece5;
     border-color:#3b3a30;
     border-radius: 20px;
     box-shadow: 1px 1px 1px 1px #3b3a30;
-    /*margin:.25rem .25rem;//try to fix
-    margin: 0.2em 0;*/
     margin:.25rem 0;
     display:block;
     width:100%;
-    font-size: 24px;/*//trying*/
-    /*font-size:2rem;/*try to fix*/
-    padding:.5rem 0;/*try to fix*/
+    font-size: 24px;
+    padding:.5rem 0;
 
 }
 .tImage {
     max-width:100%;
-    /*font-size: 24px;*/
     text-align:center;
 }
 img {
@@ -77,7 +64,6 @@ img:hover {
   }
   
 .correct, .wrong , #info{
-      /*margin-left:.5rem;*/
       text-align: center;
       color:#3b3a30;
   }
@@ -89,10 +75,7 @@ img:hover {
         background-position:center;
     }
     .quiz-body {
-        /*margin:33% 27%;
-        */
         margin:100px 10%;
-        /*margin:1rem 10%;*/
     }
     .container {
         background:transparent;
@@ -103,14 +86,4 @@ img:hover {
           font-size: 1.75rem;
       }
   }
-  /*
-  @media screen and (min-width: 500px){/*(max-width: 600px)*/
-    /*body {
-        max-height:1200px;
-    }*/
-    /*
-    .quiz-body {
-        margin:33% 27%;
-    }
-
-  }*/
+  
