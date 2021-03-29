@@ -1,4 +1,5 @@
 import {view, game} from './quizTquiz.js';
+//modified from Ninja Quiz from Novice to Ninja
 
 const url="quizTmodules.json";
 fetch(url)
